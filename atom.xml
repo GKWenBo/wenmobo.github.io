@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WenBo丨星空灬</title>
+  
+  <subtitle>To strive, to seek, to find, and not to yield.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-01-20T12:18:22.080Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>WenBo</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHubPages+Hexo搭建个人博客</title>
+    <link href="http://yoursite.com/2018/01/20/GitHubPages-Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2018/01/20/GitHubPages-Hexo搭建个人博客/</id>
+    <published>2018-01-20T12:09:43.000Z</published>
+    <updated>2018-01-20T12:18:22.080Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近在浏览一个博客网站的时候，看到一篇GitHubPages+Hexo搭建静态博客的文章，我便产生了浓厚的兴趣，自己的第一博客文章是在<a href="https://www.jianshu.com/" target="_blank" rel="noopener">简书</a>平台上发表的，我也想从零开始搭建自己的静态博客，现在开始自己的静态博客之旅吧。</p><a id="more"></a><h3 id="一、GitHub创建项目"><a href="#一、GitHub创建项目" class="headerlink" title="一、GitHub创建项目"></a>一、GitHub创建项目</h3><ul><li>1.1 使用GitPages搭建自己静态博客前提要注册申请GitHub账号。GitHub相关配置可参考这篇文章：<a href="https://www.jianshu.com/p/7edb6b838a2e" target="_blank" rel="noopener">MAC上Git安装与GitHub基本使用</a>。</li><li>1.2 GitHub上新创建一个<a href="https://github.com/wenmobo/wenmobo.github.io" target="_blank" rel="noopener">wenmobo.github.io</a>仓库，<strong>wenmobo</strong>是我的账号名，这里替换成你自己的就可以了。项目格式名称为<code>[用户名].github.io</code>，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">username.github.io</span><br></pre></td></tr></table></figure></li></ul><p>创建成功之后如下：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-224c6bb8fcdf8ffd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-14 下午11.52.25.png"></p><ul><li>1.3 在桌面新建一个文件夹<strong>MyBlog</strong>，<code>cd</code>到该文件夹，将项目克隆到本地：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:wenmobo/wenmobo.github.io.git</span><br></pre></td></tr></table></figure></li></ul><h3 id="二、安装Node-js"><a href="#二、安装Node-js" class="headerlink" title="二、安装Node.js"></a>二、安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></h3><ul><li>2.1 Node.js支持用HomeBrew安装，首先要安装Homebrew，Homebrew安装可查看这篇文章：<a href="https://www.jianshu.com/p/c60789934af1" target="_blank" rel="noopener">MAC上Homebrew常用命令整理</a></li><li>2.2 Homebrew安装好之后，用Homebrew安装Node.js，终端输入：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew node</span><br></pre></td></tr></table></figure></li></ul><h3 id="三、安装hexo"><a href="#三、安装hexo" class="headerlink" title="三、安装hexo"></a>三、安装<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo</a></h3><ul><li><p>3.1 安装hexo，终端输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li><li><p>3.2 在本地仓库<strong>MyBlog</strong>新建文件夹<strong>Blog</strong>，然后在终端<code>cd [Blog文件夹路径]</code>，执行以下命令初始化博客：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line"></span><br><span class="line">//或者</span><br><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm instal</span><br></pre></td></tr></table></figure></li></ul><p>成功之后，目录文件如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p><ul><li>3.3 查看本地效果，终端输入：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li></ul><p>终端输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WMBdeMacBook-Pro:Hexo WENBO$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p><p>将<a href="http://localhost:4000/.拷贝到Chome浏览器，查看效果，如下图所示：" target="_blank" rel="noopener">http://localhost:4000/.拷贝到Chome浏览器，查看效果，如下图所示：</a><br><img src="http://upload-images.jianshu.io/upload_images/3072214-9ce7b0f78ef70404.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-14 下午11.01.57.png"></p><h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><blockquote><p>GitHubPages+Hexo搭建静态博客的准备工作到这里都完成了，下面一篇文章会介绍Hexo相关文件配置。</p><h3 id="五、参考文章"><a href="#五、参考文章" class="headerlink" title="五、参考文章"></a>五、参考文章</h3><p>1、<a href="http://blog.csdn.net/yanzhenjie1003/article/details/51703370" target="_blank" rel="noopener">GithubPages教程 在GithubPages上搭建个人主页</a><br>2、<a href="https://itgoyo.github.io/2019/12/28/%E5%9C%A8Github%E4%B8%8A%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" target="_blank" rel="noopener">在Github上使用Hexo搭建个人博客</a><br>3、<a href="https://www.jianshu.com/p/6d2ec4ca6186" target="_blank" rel="noopener">如何使用hexo搭建个人博客（Mac OS系统，windows仅作参考）</a><br>4、<a href="https://www.jianshu.com/p/bcdbe7347c8d" target="_blank" rel="noopener">Hexo博客主题推荐</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;最近在浏览一个博客网站的时候，看到一篇GitHubPages+Hexo搭建静态博客的文章，我便产生了浓厚的兴趣，自己的第一博客文章是在&lt;a href=&quot;https://www.jianshu.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;简书&lt;/a&gt;平台上发表的，我也想从零开始搭建自己的静态博客，现在开始自己的静态博客之旅吧。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
