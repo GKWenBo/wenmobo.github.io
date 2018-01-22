@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="Hexo,GitHub," />
 
 
 
@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="前言 GitPages+Hexo搭建个人博客这篇文章已经介绍了GitHubPages创建博客和Hexo的安装，下面开始介绍Hexo使用方法吧。">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="前言GitPages+Hexo搭建个人博客这篇文章已经介绍了GitHubPages创建博客和Hexo的安装，下面开始介绍Hexo基本配置。">
+<meta name="keywords" content="Hexo,GitHub">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo配置与使用">
 <meta property="og:url" content="http://blogwenbo.com/2018/01/20/Hexo配置与使用/index.html">
 <meta property="og:site_name" content="WenBo丨星空灬">
-<meta property="og:description" content="前言 GitPages+Hexo搭建个人博客这篇文章已经介绍了GitHubPages创建博客和Hexo的安装，下面开始介绍Hexo使用方法吧。">
+<meta property="og:description" content="前言GitPages+Hexo搭建个人博客这篇文章已经介绍了GitHubPages创建博客和Hexo的安装，下面开始介绍Hexo基本配置。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-21T11:40:11.404Z">
+<meta property="og:updated_time" content="2018-01-22T15:57:18.056Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo配置与使用">
-<meta name="twitter:description" content="前言 GitPages+Hexo搭建个人博客这篇文章已经介绍了GitHubPages创建博客和Hexo的安装，下面开始介绍Hexo使用方法吧。">
+<meta name="twitter:description" content="前言GitPages+Hexo搭建个人博客这篇文章已经介绍了GitHubPages创建博客和Hexo的安装，下面开始介绍Hexo基本配置。">
 
 
 
@@ -411,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  706
+                  892
                 </span>
               
 
@@ -427,7 +427,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -448,71 +448,63 @@
       
 
       
-        <blockquote>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p><a href="https://www.jianshu.com/p/201283bcd64a" target="_blank" rel="noopener">GitPages+Hexo搭建个人博客</a>这篇文章已经介绍了GitHubPages创建博客和Hexo的安装，下面开始介绍Hexo使用方法吧。</p>
-</blockquote>
-</blockquote>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><a href="https://www.jianshu.com/p/201283bcd64a" target="_blank" rel="noopener">GitPages+Hexo搭建个人博客</a>这篇文章已经介绍了GitHubPages创建博客和Hexo的安装，下面开始介绍Hexo基本配置。</p>
 <a id="more"></a>
-<h3 id="配置-config-yml文件"><a href="#配置-config-yml文件" class="headerlink" title="配置_config.yml文件"></a>配置_config.yml文件</h3><p><strong>目录</strong></p>
-<blockquote>
-<ul>
-<li>网站配置</li>
-<li>URL配置</li>
-<li>目录配置</li>
-<li>部署配置</li>
-<li>配置README.md</li>
-<li>切换主题</li>
-<li>Hexo安装Git插件</li>
-<li>网站配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: WenBo丨星空灬  //网站标题</span><br><span class="line">subtitle: To strive, to seek, to find, and not to yield.  //网站副标题</span><br><span class="line">description: To strive, to seek, to find, and not to yield.  //网站副标题</span><br><span class="line">author: WenBo  //您的名字</span><br><span class="line">language: zh-Hans  //网站使用的语言 简体中文 zh-Hans</span><br><span class="line">timezone:   //网站时区。Hexo 默认使用您电脑的时区</span><br></pre></td></tr></table></figure>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>配置_config.yml文件</li>
+<li>Hexo常用命令</li>
+<li>Hexo插件安装<h4 id="配置-config-yml文件"><a href="#配置-config-yml文件" class="headerlink" title="配置_config.yml文件"></a>配置_config.yml文件</h4></li>
+<li><p>站点配置（重要）</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: WenBo丨星空灬  <span class="comment">//网站标题</span></span><br><span class="line">subtitle: <span class="keyword">To</span> strive, <span class="keyword">to</span> seek, <span class="keyword">to</span> find, <span class="keyword">and</span> <span class="keyword">not</span> <span class="keyword">to</span> <span class="keyword">yield</span>.  <span class="comment">//网站副标题</span></span><br><span class="line">description: <span class="keyword">To</span> strive, <span class="keyword">to</span> seek, <span class="keyword">to</span> find, <span class="keyword">and</span> <span class="keyword">not</span> <span class="keyword">to</span> <span class="keyword">yield</span>.  <span class="comment">//网站副标题</span></span><br><span class="line">author: WenBo  <span class="comment">//您的名字</span></span><br><span class="line">language: zh-Hans  <span class="comment">//网站使用的语言 简体中文 zh-Hans</span></span><br><span class="line">timezone:   <span class="comment">//网站时区。Hexo 默认使用您电脑的时区</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-</blockquote>
-<ul>
 <li><p>URL配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: http://yoursite.com  //网址</span><br><span class="line">root: /  //网站根目录</span><br><span class="line">permalink: :year/:month/:day/:title/  //| 文章的 [永久链接](https://hexo.io/zh-cn/docs/permalinks.html) 格式 | `:year/:month/:day/:title/` |</span><br><span class="line"></span><br><span class="line">permalink_defaults:  //永久链接中各部分的默认值</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># URL</span></span><br><span class="line"><span class="section">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line">url: http://blogwenbo.com/  //网址</span><br><span class="line">root: /  //网站根目录</span><br><span class="line">permalink: :year/:month/:day/:title/  //| 文章的 [<span class="string">永久链接</span>](<span class="link">https://hexo.io/zh-cn/docs/permalinks.html</span>) 格式 | <span class="code">`:year/:month/:day/:title/`</span> |</span><br><span class="line"></span><br><span class="line">permalink_defaults:  //永久链接中各部分的默认值</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>目录配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Directory</span><br><span class="line">source_dir: source  //资源文件夹，这个文件夹用来存放内容。默认值：source</span><br><span class="line">public_dir: public  //公共文件夹，这个文件夹用于存放生成的站点文件。默认值：public</span><br><span class="line">tag_dir: tags  //标签文件夹 默认值：tags</span><br><span class="line">archive_dir: archives  //归档文件夹 默认值：archives</span><br><span class="line">category_dir: categories  //分类文件夹  默认值：categories</span><br><span class="line">code_dir: downloads/code  //Include code 文件夹 默认值：downloads/code</span><br><span class="line">i18n_dir: :lang  //国际化（i18n）文件夹 默认值：:lang</span><br><span class="line">skip_render: README.md  //跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/isaacs/node-glob)来匹配路径。</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Directory</span></span><br><span class="line"><span class="symbol">source_dir:</span> source  <span class="comment">//资源文件夹，这个文件夹用来存放内容。默认值：source</span></span><br><span class="line"><span class="symbol">public_dir:</span> public  <span class="comment">//公共文件夹，这个文件夹用于存放生成的站点文件。默认值：public</span></span><br><span class="line"><span class="symbol">tag_dir:</span> tags  <span class="comment">//标签文件夹 默认值：tags</span></span><br><span class="line"><span class="symbol">archive_dir:</span> archives  <span class="comment">//归档文件夹 默认值：archives</span></span><br><span class="line"><span class="symbol">category_dir:</span> categories  <span class="comment">//分类文件夹  默认值：categories</span></span><br><span class="line"><span class="symbol">code_dir:</span> downloads/code  <span class="comment">//Include code 文件夹 默认值：downloads/code</span></span><br><span class="line"><span class="symbol">i18n_dir:</span> :lang  <span class="comment">//国际化（i18n）文件夹 默认值：:lang</span></span><br><span class="line"><span class="symbol">skip_render:</span> README.md  <span class="comment">//跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/isaacs/node-glob)来匹配路径。</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>部署配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git //填git</span><br><span class="line">  repo: git@github.com:wenmobo/wenmobo.github.io.git  //SSH地址</span><br><span class="line">  branch: master  //分支</span><br></pre></td></tr></table></figure>
+<li><p>Git部署配置（重要）</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git <span class="comment">//填git</span></span><br><span class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:wenmobo/wenmobo.github.io.git  <span class="comment">//SSH地址</span></span><br><span class="line">  <span class="attribute">branch</span>: master  <span class="comment">//分支</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>配置README.md<br>找到<strong>skip_render</strong>，并添加<strong>README.md</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: README.md</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">skip_render:</span> README.md</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换主题</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例如：切换成<span class="keyword">NexT</span>主题，在hexo根文件加下，编辑**_config.yml**文件</span><br><span class="line">theme: <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//配置之后，执行以下命令清除一下缓存</span></span><br><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h3><ul>
-<li><p>初始化文件夹网站</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//Hexo 默认在目前的文件夹建立网站</span><br><span class="line">hexo init</span><br><span class="line"></span><br><span class="line">//指定文件夹</span><br><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
+<h4 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h4><ul>
+<li><p>初始化文件夹网站（重要）</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Hexo 默认在目前的文件夹建立网站</span></span><br><span class="line">hexo <span class="keyword">init</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//指定文件夹</span></span><br><span class="line">hexo <span class="keyword">init</span> [folder]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>新建一篇文章</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;my blog&quot;</span><br></pre></td></tr></table></figure>
+<li><p>新建一篇文章（重要）</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"my blog"</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>生成静态文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line">//简写</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">选项	描述</span><br><span class="line">-d, --deploy	文件生成后立即部署网站</span><br><span class="line">-w, --watch	监视文件变动</span><br></pre></td></tr></table></figure>
+<li><p>生成静态文件（重要）</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">generate</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//简写</span></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">选项	描述</span><br><span class="line">-d, --deploy	文件生成后立即部署网站</span><br><span class="line">-w, --watch	监视文件变动</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>发表草稿</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish <span class="string">[layout]</span> &lt;filename&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br><span class="line"></span><br><span class="line">//简写</span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line">选项	描述</span><br><span class="line">-p, --port	重设端口</span><br><span class="line">-s, --static	只使用静态文件</span><br><span class="line">-l, --log	启动日记记录，使用覆盖记录格式</span><br></pre></td></tr></table></figure>
+<li><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/（重要）" target="_blank" rel="noopener">http://localhost:4000/（重要）</a></p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br><span class="line"></span><br><span class="line"><span class="comment">//简写</span></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line">选项	描述</span><br><span class="line">-<span class="ruby">p, --port	重设端口</span></span><br><span class="line"><span class="ruby">-s, --static	只使用静态文件</span></span><br><span class="line"><span class="ruby">-l, --log	启动日记记录，使用覆盖记录格式</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>部署网站</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> hexo deploy</span><br><span class="line"></span><br><span class="line">//简写</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<li><p>部署网站（重要）</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> hexo <span class="keyword">deploy</span></span><br><span class="line"></span><br><span class="line"><span class="string">//</span>简写</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看hexo版本</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br><span class="line"></span><br><span class="line">//简写 </span><br><span class="line">hexo v</span><br></pre></td></tr></table></figure>
+<figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">version</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//简写 </span></span><br><span class="line">hexo v</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>切换主题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如：切换成NexT主题，在hexo根文件加下，编辑**_config.yml**文件</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Hexo安装Git插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<li>新建页面（重要）<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如说新建标签页面，执行命令之后会在根目录source文件夹下创建tags文件夹</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h4 id="Hexo插件安装"><a href="#Hexo插件安装" class="headerlink" title="Hexo插件安装"></a>Hexo插件安装</h4><ul>
+<li>Hexo安装Git插件（重要）<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save hexo-deployer-git</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>参看了一些博客，配置好上面这些内容，和熟悉上面这些常用命令，自己也能用Hexo创建博客了，自己也是才开始搭建自己的博客，有些整理的还不是很完善，以后会继续补充。下面一片文章是讲解如何安装使用<strong>Next</strong>主题的博客：<a href="https://www.jianshu.com/p/9f0e90cc32c2" target="_blank" rel="noopener">Hexo-NexT配置超炫网页效果</a>。有兴趣的同学，可以来看看吧。</p>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
 <li><a href="http://blog.csdn.net/xuezhisdc/article/details/53130383" target="_blank" rel="noopener">hexo教程系列——hexo配置教程</a></li>
 <li><a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">指令 | Hexo</a></li>
@@ -547,7 +539,7 @@
   <p><span>本文标题:</span><a href="/2018/01/20/Hexo配置与使用/">Hexo配置与使用</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 WenBo 的个人博客">WenBo</a></p>
   <p><span>发布时间:</span>2018年01月20日 - 20:01</p>
-  <p><span>最后更新:</span>2018年01月21日 - 19:01</p>
+  <p><span>最后更新:</span>2018年01月22日 - 23:01</p>
   <p><span>原始链接:</span><a href="/2018/01/20/Hexo配置与使用/" title="Hexo配置与使用">http://blogwenbo.com/2018/01/20/Hexo配置与使用/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blogwenbo.com/2018/01/20/Hexo配置与使用/"  aria-label="复制成功！"></i></span>
   </p>
@@ -582,6 +574,8 @@
           
             <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
           
+            <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+          
         </div>
       
 
@@ -602,10 +596,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/20/Hexo-NexT主题配置/" rel="prev" title="Hexo-NexT主题配置">
-                Hexo-NexT主题配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -719,7 +709,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -729,7 +719,7 @@ var jiathis_config={
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
+                <a href="/archives/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
@@ -821,7 +811,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-config-yml文件"><span class="nav-number">2.</span> <span class="nav-text">配置_config.yml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo命令"><span class="nav-number">3.</span> <span class="nav-text">Hexo命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录"><span class="nav-number">2.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-config-yml文件"><span class="nav-number">2.1.</span> <span class="nav-text">配置_config.yml文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo命令"><span class="nav-number">2.2.</span> <span class="nav-text">Hexo命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo插件安装"><span class="nav-number">2.3.</span> <span class="nav-text">Hexo插件安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>
@@ -857,7 +847,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.8k</span>
+    <span title="Site words total count">1.5k</span>
   
 -->
 
@@ -899,7 +889,7 @@ var jiathis_config={
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-  <span class="post-count">博客全站共6.8k字</span>
+  <span class="post-count">博客全站共1.5k字</span>
 </div>
 
         
