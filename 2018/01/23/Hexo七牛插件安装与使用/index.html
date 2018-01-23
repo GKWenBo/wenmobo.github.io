@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="Hexo,七牛云," />
 
 
 
@@ -99,20 +99,22 @@
 
 
 <meta name="description" content="前言我之前写的三篇博客已经介绍如何用GitPages+Hexo搭建自己博客，并发表博客。但是还是没有解决图片存储问题，之前的文章都是外链的其他博客平台的图片，下面开始介绍如何使用七牛云插件同步博客中的图片文件吧。">
-<meta name="keywords" content="Hexo">
+<meta name="keywords" content="Hexo,七牛云">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo七牛插件安装与使用">
 <meta property="og:url" content="http://blogwenbo.com/2018/01/23/Hexo七牛插件安装与使用/index.html">
 <meta property="og:site_name" content="WenBo丨星空灬">
 <meta property="og:description" content="前言我之前写的三篇博客已经介绍如何用GitPages+Hexo搭建自己博客，并发表博客。但是还是没有解决图片存储问题，之前的文章都是外链的其他博客平台的图片，下面开始介绍如何使用七牛云插件同步博客中的图片文件吧。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p2zukkwm9.bkt.clouddn.com/static/images/createQzone?imageView2/2/w/550">
+<meta property="og:image" content="http://p2zukkwm9.bkt.clouddn.com/static/images/添加到万网.png?imageView2/2/w/550">
 <meta property="og:image" content="http://p2zukkwm9.bkt.clouddn.com/static/images/七牛云.png?imageView2/2/w/550">
 <meta property="og:image" content="http://p2zukkwm9.bkt.clouddn.com/static/images/HexoError.png?imageView2/2/w/550">
-<meta property="og:updated_time" content="2018-01-23T15:08:44.805Z">
+<meta property="og:updated_time" content="2018-01-23T16:59:38.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo七牛插件安装与使用">
 <meta name="twitter:description" content="前言我之前写的三篇博客已经介绍如何用GitPages+Hexo搭建自己博客，并发表博客。但是还是没有解决图片存储问题，之前的文章都是外链的其他博客平台的图片，下面开始介绍如何使用七牛云插件同步博客中的图片文件吧。">
-<meta name="twitter:image" content="http://p2zukkwm9.bkt.clouddn.com/static/images/七牛云.png?imageView2/2/w/550">
+<meta name="twitter:image" content="http://p2zukkwm9.bkt.clouddn.com/static/images/createQzone?imageView2/2/w/550">
 
 
 
@@ -414,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  678
+                  932
                 </span>
               
 
@@ -430,7 +432,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -458,25 +460,39 @@
 <li><a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="noopener">hexo-qiniu-sync</a></li>
 <li><a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a></li>
 </ul>
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><h4 id="注册七牛个人账号"><a href="#注册七牛个人账号" class="headerlink" title="注册七牛个人账号"></a>注册七牛个人账号</h4><h4 id="安装七牛云插件"><a href="#安装七牛云插件" class="headerlink" title="安装七牛云插件"></a>安装七牛云插件</h4><ul>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><h4 id="注册七牛个人账号"><a href="#注册七牛个人账号" class="headerlink" title="注册七牛个人账号"></a>注册七牛个人账号</h4><ul>
+<li><p>首先需要到<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>官网注册个人账号。</p>
+</li>
+<li><p>进入控制台创建存储空间，如下图所示：</p>
+<img title="创建存储空间" alt="创建存储空间" src="http://p2zukkwm9.bkt.clouddn.com/static/images/createQzone?imageView2/2/w/550">
+</li>
+<li><p>将融合 CDN默认域名添加到<a href="https://www.aliyun.com/?spm=a2c1d.8251892.0.0.7b61a3c0xNylGH" target="_blank" rel="noopener">万网</a>中，配置格式如下图所示：</p>
+<img title="添加到万网" alt="添加到万网" src="http://p2zukkwm9.bkt.clouddn.com/static/images/添加到万网.png?imageView2/2/w/550">
+</li>
+</ul>
+<h4 id="安装七牛云插件"><a href="#安装七牛云插件" class="headerlink" title="安装七牛云插件"></a>安装七牛云插件</h4><ul>
 <li><p>安装七牛云插件</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-qiniu-<span class="keyword">sync</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="配置相关信息"><a href="#配置相关信息" class="headerlink" title="配置相关信息"></a>配置相关信息</h4><ul>
-<li>配置站点文件<strong>_config.yml</strong>，配置入内容</li>
+<li>配置站点文件<strong>_config.yml</strong>，配置入内容（<strong>注意</strong>：添加到配置文件时，把//去掉）</li>
 </ul>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#plugins:</span></span><br><span class="line"><span class="meta"># - hexo-qiniu-sync</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">qiniu:</span></span><br><span class="line"><span class="symbol">  offline:</span> false</span><br><span class="line"><span class="symbol">  sync:</span> true</span><br><span class="line"><span class="symbol">  bucket:</span> blogwenbo</span><br><span class="line">  <span class="comment">//这里将其注释掉，不注释，执行hexo g报错</span></span><br><span class="line">  <span class="meta"># secret_file: sec/qn.json or C:</span></span><br><span class="line"><span class="symbol">  access_key:</span> your access_key</span><br><span class="line"><span class="symbol">  secret_key:</span> your secret_key</span><br><span class="line">  <span class="comment">// 上传的资源子目录前缀.如设置，需与urlPrefix同步</span></span><br><span class="line"><span class="symbol">  dirPrefix:</span> static</span><br><span class="line">  <span class="comment">//外链前缀</span></span><br><span class="line"><span class="symbol">  urlPrefix:</span> http:<span class="comment">//blogwenbo.com/static</span></span><br><span class="line">  <span class="comment">//使用默认配置即可</span></span><br><span class="line"><span class="symbol">  up_host:</span> http:<span class="comment">//upload.qiniu.com</span></span><br><span class="line">  <span class="comment">//本地目录</span></span><br><span class="line"><span class="symbol">  local_dir:</span> static</span><br><span class="line">  <span class="comment">// 是否更新已经上传过的文件(仅文件大小不同或在上次上传后进行更新的才会重新上传)</span></span><br><span class="line"><span class="symbol">  update_exist:</span> true</span><br><span class="line"><span class="symbol">  image:</span> </span><br><span class="line"><span class="symbol">    folder:</span> images</span><br><span class="line"><span class="symbol">    extend:</span> </span><br><span class="line"><span class="symbol">  js:</span></span><br><span class="line"><span class="symbol">    folder:</span> js</span><br><span class="line"><span class="symbol">  css:</span></span><br><span class="line"><span class="symbol">    folder:</span> css</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#plugins:</span></span><br><span class="line"><span class="meta"># - hexo-qiniu-sync</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">qiniu:</span></span><br><span class="line"><span class="symbol">  offline:</span> false</span><br><span class="line"><span class="symbol">  sync:</span> true</span><br><span class="line"><span class="symbol">  bucket:</span> blogwenbo</span><br><span class="line">  <span class="comment">//这里将其注释掉，不注释，执行hexo g报错</span></span><br><span class="line">  <span class="meta"># secret_file: sec/qn.json or C:</span></span><br><span class="line"><span class="symbol">  access_key:</span> your access_key</span><br><span class="line"><span class="symbol">  secret_key:</span> your secret_key</span><br><span class="line">  <span class="comment">// 上传的资源子目录前缀.如设置，需与urlPrefix同步</span></span><br><span class="line"><span class="symbol">  dirPrefix:</span> static</span><br><span class="line">  <span class="comment">//外链前缀</span></span><br><span class="line"><span class="symbol">  urlPrefix:</span> http:<span class="comment">//p2zukkwm9.bkt.clouddn.com/static</span></span><br><span class="line">  <span class="comment">//使用默认配置即可</span></span><br><span class="line"><span class="symbol">  up_host:</span> http:<span class="comment">//upload.qiniu.com</span></span><br><span class="line">  <span class="comment">//本地目录</span></span><br><span class="line"><span class="symbol">  local_dir:</span> static</span><br><span class="line">  <span class="comment">// 是否更新已经上传过的文件(仅文件大小不同或在上次上传后进行更新的才会重新上传)</span></span><br><span class="line"><span class="symbol">  update_exist:</span> true</span><br><span class="line"><span class="symbol">  image:</span> </span><br><span class="line"><span class="symbol">    folder:</span> images</span><br><span class="line"><span class="symbol">    extend:</span> </span><br><span class="line"><span class="symbol">  js:</span></span><br><span class="line"><span class="symbol">    folder:</span> js</span><br><span class="line"><span class="symbol">  css:</span></span><br><span class="line"><span class="symbol">    folder:</span> css</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>生成七牛配置路径，执行下面命令任意一个</p>
 <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">//终端输出</span><br><span class="line"><span class="built_in">INFO</span>  -----------------------------------------------------------</span><br><span class="line"><span class="built_in">INFO</span>  qiniu sta<span class="symbol">te:</span> online</span><br><span class="line"><span class="built_in">INFO</span>  qiniu sy<span class="symbol">nc:</span>  <span class="built_in">true</span></span><br><span class="line"><span class="built_in">INFO</span>  qiniu local d<span class="symbol">ir:</span>  static</span><br><span class="line"><span class="built_in">INFO</span>  qiniu u<span class="symbol">rl:</span>   ht<span class="symbol">tp:</span>//blogwenbo.com/static</span><br><span class="line"><span class="built_in">INFO</span>  -----------------------------------------------------------</span><br><span class="line"><span class="built_in">INFO</span>  Start processing</span><br><span class="line"><span class="built_in">INFO</span>  <span class="built_in">Now</span> start qiniu sync.</span><br><span class="line"><span class="built_in">INFO</span>  Need upload file <span class="built_in">n</span><span class="symbol">um:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <p>就会在<strong>static</strong>目录下生成<strong>images</strong>、<strong>css</strong>、<strong>js</strong>三个文件夹。这时我们把测试图片<strong>七牛云.png</strong>放在<strong>images</strong>文件夹下，然后按照如下标签语法书写：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% qnimg 七牛云.png <span class="string">title:</span>七牛云 <span class="string">alt:</span>七牛云 <span class="string">'class:'</span> <span class="string">extend:</span>?imageView2/2/w/450 %&#125;</span><br></pre></td></tr></table></figure>
 <img title="七牛云" alt="七牛云" src="http://p2zukkwm9.bkt.clouddn.com/static/images/七牛云.png?imageView2/2/w/550">
-<ul>
-<li><p>同步静态资源到七牛云空间，主要有两种方式，一种是使用hexo命令，还有一种是使用七牛插件命令，可以参考GitHub文档：<a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="noopener">hexo-qiniu-sync</a></p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、启用本地服务器.即使用 hexo server 命令（简写为 hexo s）</span></span><br><span class="line"><span class="comment">//当以本地服务器模式启动后，会自动监测 local_dir 目录下的文件变化， 会自动将新文件进行上传。</span></span><br><span class="line">如果文件进行了修改，但设置中没有启用 update_exist 配置，则不会更新到七牛空间。</span><br><span class="line">hexo <span class="built_in">s</span></span><br><span class="line">hexo server</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、使用命令行命令(sync | s | sync2 | s2)</span></span><br><span class="line"><span class="comment">//命令行命令会扫描 local_dir 目录下的文件，同步至七牛空间。</span></span><br><span class="line">hexo qiniu sync</span><br><span class="line">hexo qiniu <span class="built_in">s</span></span><br><span class="line">hexo qiniu sync2</span><br><span class="line">hexo qiniu s2</span><br></pre></td></tr></table></figure>
 <p>​</p>
+<ul>
+<li>同步静态资源到七牛云空间，主要有两种方式，一种是使用hexo命令，还有一种是使用七牛插件命令，可以参考GitHub文档：<a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="noopener">hexo-qiniu-sync</a></li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、启用本地服务器.即使用 hexo server 命令（简写为 hexo s）</span></span><br><span class="line"><span class="comment">//当以本地服务器模式启动后，会自动监测 local_dir 目录下的文件变化， 会自动将新文件进行上传。</span></span><br><span class="line">如果文件进行了修改，但设置中没有启用 update_exist 配置，则不会更新到七牛空间。</span><br><span class="line">hexo <span class="built_in">s</span></span><br><span class="line">hexo server</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、使用命令行命令(sync | s | sync2 | s2)</span></span><br><span class="line"><span class="comment">//命令行命令会扫描 local_dir 目录下的文件，同步至七牛空间。</span></span><br><span class="line">hexo qiniu sync</span><br><span class="line">hexo qiniu <span class="built_in">s</span></span><br><span class="line">hexo qiniu sync2</span><br><span class="line">hexo qiniu s2</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>图片处理可参考官方文档</p>
+<p><a href="https://developer.qiniu.com/dora/manual/1279/basic-processing-images-imageview2" target="_blank" rel="noopener">图片基本处理</a></p>
 </li>
 </ul>
 </li>
@@ -484,9 +500,16 @@
 <h4 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h4><ul>
 <li><p>没有注释<strong>secret_file: sec/qn.json or C:</strong>报错，如下图所示：</p>
 <img title="Hexo报错" alt="Hexo报错" src="http://p2zukkwm9.bkt.clouddn.com/static/images/HexoError.png?imageView2/2/w/550">
+<p>解决办法是将这段代码注释掉：</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># secret_fi<span class="symbol">le:</span> <span class="built_in">sec</span>/qn.json <span class="built_in">or</span> <span class="symbol">C:</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://github.com/gyk001/hexo-qiniu-sync/issues/41#issuecomment-279229378" target="_blank" rel="noopener">hexo-qiniu-sync安装好后，hexo s命令不见了，hexo d也提示问题 #41</a></p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将其注释就好了</span></span><br><span class="line"><span class="meta">#plugins:</span></span><br><span class="line"><span class="meta"># - hexo-qiniu-sync</span></span><br></pre></td></tr></table></figure>
+<p>​</p>
 </li>
 </ul>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>自己也参考了一些文章，但讲解的都不是很详细完整，有些博客只讲解了重要的一些步骤，不管怎样，最后自己还是捣腾出来了，还是挺折腾人的，我也是第一次用七牛云存储图片，有些地方可能讲解的不是很完整，也请谅解，希望能给你一些帮助，也欢迎大家一起交流学习。</p>
+
       
     </div>
     
@@ -516,7 +539,7 @@
   <p><span>本文标题:</span><a href="/2018/01/23/Hexo七牛插件安装与使用/">Hexo七牛插件安装与使用</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 WenBo 的个人博客">WenBo</a></p>
   <p><span>发布时间:</span>2018年01月23日 - 21:01</p>
-  <p><span>最后更新:</span>2018年01月23日 - 23:01</p>
+  <p><span>最后更新:</span>2018年01月24日 - 00:01</p>
   <p><span>原始链接:</span><a href="/2018/01/23/Hexo七牛插件安装与使用/" title="Hexo七牛插件安装与使用">http://blogwenbo.com/2018/01/23/Hexo七牛插件安装与使用/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blogwenbo.com/2018/01/23/Hexo七牛插件安装与使用/"  aria-label="复制成功！"></i></span>
   </p>
@@ -550,6 +573,8 @@
         <div class="post-tags">
           
             <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+          
+            <a href="/tags/七牛云/" rel="tag"><i class="fa fa-tag"></i> 七牛云</a>
           
         </div>
       
@@ -704,7 +729,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -820,7 +845,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.7k</span>
+    <span title="Site words total count">7.9k</span>
   
 -->
 
@@ -862,7 +887,7 @@ var jiathis_config={
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-  <span class="post-count">博客全站共7.7k字</span>
+  <span class="post-count">博客全站共7.9k字</span>
 </div>
 
         
