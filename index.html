@@ -315,6 +315,346 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/01/24/Mac下CocoaPods安装与使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WenBo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/3072214/ccbcba49-0a5c-4b7e-b1e4-aea15ab4419f.png?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WenBo丨星空灬">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/24/Mac下CocoaPods安装与使用/" itemprop="url">Mac下CocoaPods安装与使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T21:52:17+08:00">
+                2018-01-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CocoaPods/" itemprop="url" rel="index">
+                    <span itemprop="name">CocoaPods</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CocoaPods/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/01/24/Mac下CocoaPods安装与使用/" class="leancloud_visitors" data-flag-title="Mac下CocoaPods安装与使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+		<span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,230
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><blockquote>
+<p>在开发项目的时候，难免会导入一些三方开源库，CocoaPods是OS X管理三方开源库的工具，用这个工具，我们可以轻松集中管理、更新三方开源库。下面开始介绍CocoaPods安装与使用吧。</p>
+</blockquote>
+<p><strong>介绍内容目录</strong></p>
+<ul>
+<li>一、安装RVM</li>
+<li>二、升级RubyGems</li>
+<li>三 、CocoaPods安装</li>
+<li>四 、CocoaPods使用<h4 id="一、安装RVM"><a href="#一、安装RVM" class="headerlink" title="一、安装RVM"></a>一、安装<a href="https://rvm.io/" target="_blank" rel="noopener">RVM</a></h4></li>
+<li><p>安装RVM命令如下：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L get.rvm.io <span class="string">| bash -s stable</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看rvm版本</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rvm -v</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新RVM</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm <span class="builtin-name">get</span> stable</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看可下载的ruby版本</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm <span class="built_in">list</span> known</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>输出结果为：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># <span class="selector-tag">MRI</span> <span class="selector-tag">Rubies</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.8</span><span class="selector-class">.6</span><span class="selector-attr">[-p420]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.8</span><span class="selector-class">.7</span><span class="selector-attr">[-head]</span> # <span class="selector-tag">security</span> <span class="selector-tag">released</span> <span class="selector-tag">on</span> <span class="selector-tag">head</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.9</span><span class="selector-class">.1</span><span class="selector-attr">[-p431]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.9</span><span class="selector-class">.2</span><span class="selector-attr">[-p330]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.9</span><span class="selector-class">.3</span><span class="selector-attr">[-p551]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.0</span><span class="selector-class">.0</span><span class="selector-attr">[-p648]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.1</span><span class="selector-attr">[.10]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.2</span><span class="selector-attr">[.7]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.3</span><span class="selector-attr">[.4]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.4</span><span class="selector-attr">[.1]</span></span><br><span class="line"><span class="selector-tag">ruby-head</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>选择版本安装<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//安装2.4.1</span></span><br><span class="line">rvm install <span class="number">2.4</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>安装如果遇到如下错误：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-e61be18dbb34e304.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-17 下午1.59.45.png"><br>安装Command Line Tools即可<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-<span class="keyword">select</span> <span class="comment">--install</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>查看已安装的版本<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>输出结果如下：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rvm rubies</span><br><span class="line">=* ruby-<span class="number">2.4</span>.<span class="number">1</span> [ x86_64 ]</span><br><span class="line"># =&gt; - current</span><br><span class="line"># =* - current &amp;&amp; default</span><br><span class="line">#  * - default</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>查看当前使用的版本</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rvm current</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置默认版本</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm use <span class="number">2.4</span><span class="number">.1</span> --<span class="section">default</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除安装过的版本</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">rvm</span> <span class="selector-tag">remove</span> 2<span class="selector-class">.2</span><span class="selector-class">.2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果提示权限不足，同理加上sudo<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">rvm</span> <span class="selector-tag">remove</span> 2<span class="selector-class">.2</span><span class="selector-class">.2</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="二、升级RubyGems"><a href="#二、升级RubyGems" class="headerlink" title="二、升级RubyGems"></a>二、升级<a href="https://rubygems.org/?locale=zh-CN" target="_blank" rel="noopener">RubyGems</a></h4><ul>
+<li>在终端输入：<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem <span class="keyword">update</span> --<span class="keyword">system</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>若果是最新，则输出：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Latest <span class="built_in">version</span> currently installed. Aborting.</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>若果没有权限报错，在命令前加上sudo</p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem <span class="keyword">update</span> --<span class="keyword">system</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更换源（最新使用的是：<a href="https://gems.ruby-china.org/）" target="_blank" rel="noopener">https://gems.ruby-china.org/）</a></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gem sources --remove <span class="string">https:</span><span class="comment">//rubygems.org/</span></span><br><span class="line"></span><br><span class="line">gem sources -a <span class="string">https:</span><span class="comment">//gems.ruby-china.org/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看ruby镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem <span class="built_in">source</span> -l</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>输出结果：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>//gems.ruby-china<span class="meta">.org</span>/</span><br></pre></td></tr></table></figure></p>
+<h4 id="三、CocoaPods安装"><a href="#三、CocoaPods安装" class="headerlink" title="三、CocoaPods安装"></a>三、<a href="https://guides.cocoapods.org/using/getting-started.html#getting-started" target="_blank" rel="noopener">CocoaPods</a>安装</h4><ul>
+<li><p>终端输入</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem <span class="keyword">install</span> -n /usr/<span class="keyword">local</span>/<span class="keyword">bin</span> cocoapods</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装了多个xcode进行选择</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select -<span class="keyword">switch</span> <span class="regexp">/Applications/</span>Xcode.app<span class="regexp">/Contents/</span>Developer</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装本地库</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="built_in">setup</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>执行上面的命令过后，会出现卡主不动，这个是时候是在下载，通常会等很久。这是后可以通过<code>cmmand+n</code>新创一个终端窗口，然后<code>cd ~/.cocoapods/</code>到该文件下，执行<code>du -sh *</code>查看大小：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1015</span>M	repos</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>查看版本</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>升级CocoaPods</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem <span class="keyword">install</span> -n /usr/<span class="keyword">local</span>/<span class="keyword">bin</span> cocoapods</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="四、CocoaPods使用"><a href="#四、CocoaPods使用" class="headerlink" title="四、CocoaPods使用"></a>四、CocoaPods使用</h4><h5 id="工程导入三方库"><a href="#工程导入三方库" class="headerlink" title="工程导入三方库"></a>工程导入三方库</h5><ul>
+<li><p>创建一个工程test，终端切换到工程路径：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> 工程路径</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>终端输入：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pod init</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这时工程就会生成一个podfile<br><img src="http://upload-images.jianshu.io/upload_images/3072214-1e75e5ea4812077b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-17 下午5.39.24.png"></p>
+<ul>
+<li>编辑podfile：<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">vim podfile</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>进入之后按<code>i</code>进入编辑模式，添加三方开源库如：<code>pod &#39;AFNetworking&#39;</code>(也可指定版本<code>pod &#39;AFNetworking&#39;, &#39;~&gt; 3.1.0&#39;</code>)，然后输入<code>:wq</code>回车保存。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Uncomment the next line to define a global platform for your project</span></span><br><span class="line"><span class="comment"># platform :ios, '9.0'</span></span><br><span class="line">pod <span class="string">'AFNetworking'</span></span><br><span class="line">target <span class="string">'test'</span> <span class="keyword">do</span></span><br><span class="line">  <span class="comment"># Uncomment the next line if you're using Swift or would like to use dynamic frameworks</span></span><br><span class="line">  <span class="comment"># use_frameworks!</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Pods for test</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">~                                                                               </span><br><span class="line">~                                                                               </span><br><span class="line">~                                                                                                                                                        </span><br><span class="line"><span class="symbol">:wq</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>执行安装<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="keyword">install</span></span><br><span class="line">或</span><br><span class="line">pod <span class="keyword">install</span> <span class="comment">--no-repo-update</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>好了，到此CocoaPods的安装与使用都介绍完毕。<br><img src="http://upload-images.jianshu.io/upload_images/3072214-62a28f0ddf50338a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-17 下午5.47.41.png"></p>
+<h5 id="更新三方库"><a href="#更新三方库" class="headerlink" title="更新三方库"></a>更新三方库</h5><ul>
+<li><p>更新所有三方库</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//更新所有可更新的三方库</span></span><br><span class="line">pod <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>间接更新三方库</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~<span class="string">/.cocoapods</span></span><br><span class="line"><span class="keyword">ls</span></span><br><span class="line"><span class="keyword">cd</span> repos</span><br><span class="line"><span class="keyword">ls</span></span><br><span class="line"><span class="keyword">cd</span> master</span><br><span class="line"><span class="keyword">ls</span></span><br><span class="line"><span class="keyword">ls</span> -a</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新指定库</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pod update Masonry</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>省时更新方法</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="keyword">update</span> --<span class="keyword">verbose</span> --<span class="keyword">no</span>-repo-<span class="keyword">update</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="移除导入过的三方库"><a href="#移除导入过的三方库" class="headerlink" title="移除导入过的三方库"></a>移除导入过的三方库</h5><ul>
+<li>第一步：编辑<strong>podfile</strong>，将需要删除的三方库移除掉<br><del>pod ‘AFNetworking’, ‘~&gt;3.1.0’</del></li>
+<li>第二步：执行<code>pod install</code>，重新编译，如果没有报错则移除成功<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="移除工程中CocoaPods"><a href="#移除工程中CocoaPods" class="headerlink" title="移除工程中CocoaPods"></a>移除工程中CocoaPods</h5><ul>
+<li>删除工程文件夹下的Podfile、Podfile.lock和Pods文件夹</li>
+<li>删除xcworkspace文件</li>
+<li>打开xcodeproj文件，删除项目中的libpods.a和Pods.xcconfig引用</li>
+<li>打开Build Phases选项，删除Check Pods Manifest.lock和Copy Pods Resources<br>主要就是上面四个步骤。<h4 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h4><h5 id="1、执行gem-update-system报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了-方法是忽略证书验证。"><a href="#1、执行gem-update-system报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了-方法是忽略证书验证。" class="headerlink" title="1、执行gem update --system报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了,方法是忽略证书验证。"></a>1、执行<code>gem update --system</code>报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了,方法是忽略证书验证。</h5>步骤：<br>前往<code>~/.gemrc</code>，打开文件，并添加<code>:ssl_verify_mode: 0</code><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="meta">:backtrace:</span> false</span><br><span class="line"><span class="meta">:bulk_threshold:</span> 1000</span><br><span class="line"><span class="meta">:sources:</span></span><br><span class="line"><span class="meta">-</span> https://gems.ruby-china.org/</span><br><span class="line"><span class="meta">:update_sources:</span> true</span><br><span class="line"><span class="meta">:verbose:</span> true</span><br><span class="line"><span class="meta">:ssl_verify_mode:</span> 0</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>cmmand+s</code>保存，然后在执行<code>sudo gem update --system</code>，更新成功。</p>
+<h5 id="2、Unable-to-require-openssl-install-OpenSSL-and-rebuild-ruby"><a href="#2、Unable-to-require-openssl-install-OpenSSL-and-rebuild-ruby" class="headerlink" title="2、Unable to require openssl, install OpenSSL and rebuild ruby"></a>2、<a href="https://stackoverflow.com/questions/21201493/couldnt-require-openssl-in-ruby" target="_blank" rel="noopener">Unable to require openssl, install OpenSSL and rebuild ruby</a></h5><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果没有安装openssl，则用honebrew安装</span></span><br><span class="line">brew install openssl</span><br><span class="line"></span><br><span class="line"><span class="comment">//重装rvm并关联openssl</span></span><br><span class="line">rvm reinstall <span class="number">2.4</span><span class="number">.0</span> --<span class="keyword">with</span>-openssl-dir=`brew --prefix openssl`</span><br></pre></td></tr></table></figure>
+<p>如果安装了<strong>2.4.0</strong>版本则重新安装，没有安装则安装，安装成功之后，就能<code>sudo gem update --system</code>正常更新了。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><blockquote>
+<p>CocoaPods安装与使用就介绍到这里了，如果在以后CocoaPods安装使用工程中遇到问题，如果找到了解决方案，我也会贴出来。</p>
+<h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ul>
+<li><a href="https://www.jianshu.com/p/552f21a989ba" target="_blank" rel="noopener">iOS 删除已经配置的类库和移除CocoaPods</a></li>
+<li><a href="http://blog.csdn.net/jymn_chen/article/details/19213601" target="_blank" rel="noopener">使用CocoaPods（二）删除已经配置的类库和移除CocoaPods</a></li>
+</ul>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+      <div>
+  
+      </div>
+
+      <div>
+      
+      </div>
+      
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/01/23/Hexo七牛插件安装与使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1146,7 +1486,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1157,7 +1497,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/archives/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1168,7 +1508,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1268,7 +1608,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.0k</span>
+    <span title="Site words total count">9.2k</span>
   
 -->
 
@@ -1310,7 +1650,7 @@
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-  <span class="post-count">博客全站共8.0k字</span>
+  <span class="post-count">博客全站共9.2k字</span>
 </div>
 
         
