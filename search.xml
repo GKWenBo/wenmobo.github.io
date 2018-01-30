@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MAC上Homebrew常用命令]]></title>
+    <url>%2F2018%2F01%2F30%2FMAC%E4%B8%8AHomebrew%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[一、官方网址Homebrew 二、目录 安装 查看帮助信息 查看版本 更新Homebrew自己 安装软件包 查询可更新的包 更新包 (formula) 清理旧版本 锁定不想更新的包 卸载安装包 查看包信息 查看安装列表 查询可用包 卸载Homebrew 三、常用命令 安装 1234//安装依赖工具xcode-select --install/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 查看帮助信息 1brew help 查看版本 1brew -v 更新Homebrew自己 1brew update 安装软件包 12345678910111213brew install [包名]//安装gitbrew install git//安装git-lfsbrew install git-lfs//安装wgetbrew install wget//安装opensslbrew install openssl 查询可更新的包 1brew outdated 更新包 (formula) 12345//更新所有brew upgarde//更新指定包brew upgarde [包名] 清理旧版本 12345678//清理所有包的旧版本brew cleanup //清理指定包的旧版本brew cleanup [包名]//查看可清理的旧版本包，不执行实际操作brew cleanup -n 锁定不想更新的包 1234//锁定某个包brew pin $FORMULA //取消锁定brew unpin $FORMULA 卸载安装包 1234brew uninstall [包名]//例：卸载gitbrew uninstall git 查看包信息 1brew info [包名] 查看安装列表 1brew list 查询可用包 1brew search [包名] 卸载Homebrew 1234567cd `brew --prefix`rm -rf Cellarbrew prunerm `git ls-files`rm -r Library/Homebrew Library/Aliases Library/Formula Library/Contributionsrm -rf .gitrm -rf ~/Library/Caches/Homebrew 四、参考文章 1、你应该定期更新 Homebrew 2、Homebrew简介和基本使用 3、Mac上Homebrew的使用 (Homebrew 使 OS X 更完整) 4、HomeBrew的安装和简单使用 5、Mac OS下包管理器Homebrew的安装与使用]]></content>
+      <categories>
+        <category>MAC</category>
+      </categories>
+      <tags>
+        <tag>MAC</tag>
+        <tag>HomeBrew</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac下CocoaPods安装与使用]]></title>
     <url>%2F2018%2F01%2F24%2FMac%E4%B8%8BCocoaPods%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[前言 在开发项目的时候，难免会导入一些三方开源库，CocoaPods是OS X管理三方开源库的工具，用这个工具，我们可以轻松集中管理、更新三方开源库。下面开始介绍CocoaPods安装与使用吧。 介绍内容目录 一、安装RVM 二、升级RubyGems 三 、CocoaPods安装 四 、CocoaPods使用一、安装RVM 安装RVM命令如下： 1curl -L get.rvm.io | bash -s stable 查看rvm版本 1rvm -v 更新RVM 1rvm get stable 查看可下载的ruby版本 1rvm list known 输出结果为：123456789101112# MRI Rubies[ruby-]1.8.6[-p420][ruby-]1.8.7[-head] # security released on head[ruby-]1.9.1[-p431][ruby-]1.9.2[-p330][ruby-]1.9.3[-p551][ruby-]2.0.0[-p648][ruby-]2.1[.10][ruby-]2.2[.7][ruby-]2.3[.4][ruby-]2.4[.1]ruby-head 选择版本安装12//安装2.4.1rvm install 2.4.1 安装如果遇到如下错误：安装Command Line Tools即可1xcode-select --install 查看已安装的版本1rvm list 输出结果如下：12345rvm rubies=* ruby-2.4.1 [ x86_64 ]# =&gt; - current# =* - current &amp;&amp; default# * - default 查看当前使用的版本 1rvm current 设置默认版本 1rvm use 2.4.1 --default 删除安装过的版本 1rvm remove 2.2.2 如果提示权限不足，同理加上sudo1sudo rvm remove 2.2.2 二、升级RubyGems 在终端输入：1gem update --system 若果是最新，则输出：1Latest version currently installed. Aborting. 若果没有权限报错，在命令前加上sudo 1sudo gem update --system 更换源（最新使用的是：https://gems.ruby-china.org/） 123gem sources --remove https://rubygems.org/gem sources -a https://gems.ruby-china.org/ 查看ruby镜像 1gem source -l 输出结果：1https://gems.ruby-china.org/ 三、CocoaPods安装 终端输入 1sudo gem install -n /usr/local/bin cocoapods 安装了多个xcode进行选择 1sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer 安装本地库 1pod setup 执行上面的命令过后，会出现卡主不动，这个是时候是在下载，通常会等很久。这是后可以通过cmmand+n新创一个终端窗口，然后cd ~/.cocoapods/到该文件下，执行du -sh *查看大小：11015M repos 查看版本 1pod --version 升级CocoaPods 1sudo gem install -n /usr/local/bin cocoapods 四、CocoaPods使用工程导入三方库 创建一个工程test，终端切换到工程路径： 1cd 工程路径 终端输入： 1pod init 这时工程就会生成一个podfile 编辑podfile：1vim podfile 进入之后按i进入编辑模式，添加三方开源库如：pod &#39;AFNetworking&#39;(也可指定版本pod &#39;AFNetworking&#39;, &#39;~&gt; 3.1.0&#39;)，然后输入:wq回车保存。1234567891011121314# Uncomment the next line to define a global platform for your project# platform :ios, '9.0'pod 'AFNetworking'target 'test' do # Uncomment the next line if you're using Swift or would like to use dynamic frameworks # use_frameworks! # Pods for testend~ ~ ~ :wq 执行安装123pod install或pod install --no-repo-update 好了，到此CocoaPods的安装与使用都介绍完毕。 更新三方库 更新所有三方库 12//更新所有可更新的三方库pod update 间接更新三方库 12345678cd ~/.cocoapodslscd reposlscd masterlsls -agit pull 更新指定库 1pod update Masonry 省时更新方法 1pod update --verbose --no-repo-update 移除导入过的三方库 第一步：编辑podfile，将需要删除的三方库移除掉pod ‘AFNetworking’, ‘~&gt;3.1.0’ 第二步：执行pod install，重新编译，如果没有报错则移除成功1pod install 移除工程中CocoaPods 删除工程文件夹下的Podfile、Podfile.lock和Pods文件夹 删除xcworkspace文件 打开xcodeproj文件，删除项目中的libpods.a和Pods.xcconfig引用 打开Build Phases选项，删除Check Pods Manifest.lock和Copy Pods Resources主要就是上面四个步骤。问题解决1、执行gem update --system报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了,方法是忽略证书验证。步骤：前往~/.gemrc，打开文件，并添加:ssl_verify_mode: 012345678---:backtrace: false:bulk_threshold: 1000:sources:- https://gems.ruby-china.org/:update_sources: true:verbose: true:ssl_verify_mode: 0 cmmand+s保存，然后在执行sudo gem update --system，更新成功。 2、Unable to require openssl, install OpenSSL and rebuild ruby12345//如果没有安装openssl，则用honebrew安装brew install openssl//重装rvm并关联opensslrvm reinstall 2.4.0 --with-openssl-dir=`brew --prefix openssl` 如果安装了2.4.0版本则重新安装，没有安装则安装，安装成功之后，就能sudo gem update --system正常更新了。 总结 CocoaPods安装与使用就介绍到这里了，如果在以后CocoaPods安装使用工程中遇到问题，如果找到了解决方案，我也会贴出来。 参考文章 iOS 删除已经配置的类库和移除CocoaPods 使用CocoaPods（二）删除已经配置的类库和移除CocoaPods]]></content>
@@ -9,9 +21,9 @@
         <category>CocoaPods</category>
       </categories>
       <tags>
+        <tag>MAC</tag>
         <tag>CocoaPods</tag>
         <tag>iOS</tag>
-        <tag>MAC</tag>
       </tags>
   </entry>
   <entry>

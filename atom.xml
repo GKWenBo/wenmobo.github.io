@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blogwenbo.com/"/>
-  <updated>2018-01-24T14:21:27.958Z</updated>
+  <updated>2018-01-30T14:54:01.518Z</updated>
   <id>http://blogwenbo.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MAC上Homebrew常用命令</title>
+    <link href="http://blogwenbo.com/2018/01/30/MAC%E4%B8%8AHomebrew%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://blogwenbo.com/2018/01/30/MAC上Homebrew常用命令/</id>
+    <published>2018-01-30T14:51:11.000Z</published>
+    <updated>2018-01-30T14:54:01.518Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、官方网址"><a href="#一、官方网址" class="headerlink" title="一、官方网址"></a>一、官方网址</h3><p><a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a></p><a id="more"></a><h3 id="二、目录"><a href="#二、目录" class="headerlink" title="二、目录"></a>二、目录</h3><ul><li>安装</li><li>查看帮助信息</li><li>查看版本</li><li>更新Homebrew自己</li><li>安装软件包</li><li>查询可更新的包</li><li>更新包 (formula)</li><li>清理旧版本</li><li>锁定不想更新的包</li><li>卸载安装包</li><li>查看包信息</li><li>查看安装列表</li><li>查询可用包</li><li>卸载Homebrew</li></ul><h3 id="三、常用命令"><a href="#三、常用命令" class="headerlink" title="三、常用命令"></a>三、常用命令</h3><ul><li>安装</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>安装依赖工具</span><br><span class="line">xcode-select --install</span><br><span class="line"></span><br><span class="line"><span class="regexp">/usr/</span>bin<span class="regexp">/ruby -e "$(curl -fsSL https:/</span><span class="regexp">/raw.githubusercontent.com/</span>Homebrew<span class="regexp">/install/m</span>aster<span class="regexp">/install)"</span></span><br></pre></td></tr></table></figure><ul><li>查看帮助信息</li></ul><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>help</span><br></pre></td></tr></table></figure><ul><li>查看版本</li></ul><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>-v</span><br></pre></td></tr></table></figure><ul><li>更新Homebrew自己</li></ul><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>update</span><br></pre></td></tr></table></figure><ul><li>安装软件包</li></ul><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>install [包名]</span><br><span class="line"></span><br><span class="line">//安装git</span><br><span class="line"><span class="keyword">brew </span>install git</span><br><span class="line"></span><br><span class="line">//安装git-lfs</span><br><span class="line"><span class="keyword">brew </span>install git-lfs</span><br><span class="line"></span><br><span class="line">//安装wget</span><br><span class="line"><span class="keyword">brew </span>install wget</span><br><span class="line"></span><br><span class="line">//安装openssl</span><br><span class="line"><span class="keyword">brew </span>install openssl</span><br></pre></td></tr></table></figure><ul><li>查询可更新的包</li></ul><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>outdated</span><br></pre></td></tr></table></figure><ul><li>更新包 (formula)</li></ul><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//更新所有</span></span><br><span class="line"><span class="selector-tag">brew</span> <span class="selector-tag">upgarde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//更新指定包</span></span><br><span class="line"><span class="selector-tag">brew</span> <span class="selector-tag">upgarde</span> <span class="selector-attr">[包名]</span></span><br></pre></td></tr></table></figure><ul><li>清理旧版本</li></ul><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//清理所有包的旧版本</span></span><br><span class="line"><span class="selector-tag">brew</span> <span class="selector-tag">cleanup</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">//清理指定包的旧版本</span></span><br><span class="line"><span class="selector-tag">brew</span> <span class="selector-tag">cleanup</span> <span class="selector-attr">[包名]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//查看可清理的旧版本包，不执行实际操作</span></span><br><span class="line"><span class="selector-tag">brew</span> <span class="selector-tag">cleanup</span> <span class="selector-tag">-n</span></span><br></pre></td></tr></table></figure><ul><li>锁定不想更新的包</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>锁定某个包</span><br><span class="line">brew pin <span class="variable">$FORMULA</span>  </span><br><span class="line"><span class="regexp">//</span>取消锁定</span><br><span class="line">brew unpin <span class="variable">$FORMULA</span></span><br></pre></td></tr></table></figure><ul><li>卸载安装包</li></ul><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>uninstall [包名]</span><br><span class="line"></span><br><span class="line">//例：卸载git</span><br><span class="line"><span class="keyword">brew </span>uninstall git</span><br></pre></td></tr></table></figure><ul><li>查看包信息</li></ul><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="meta">info</span> [包名]</span><br></pre></td></tr></table></figure><ul><li>查看安装列表</li></ul><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew <span class="built_in">list</span></span><br></pre></td></tr></table></figure><ul><li>查询可用包</li></ul><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search <span class="string">[包名]</span></span><br></pre></td></tr></table></figure><ul><li>卸载Homebrew</li></ul><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> `brew --prefix`</span><br><span class="line"><span class="keyword">rm</span> -rf Cellar</span><br><span class="line">brew prune</span><br><span class="line"><span class="keyword">rm</span> `git <span class="keyword">ls</span>-files`</span><br><span class="line"><span class="keyword">rm</span> -r Library/Homebrew Library/Aliases Library/Formula Library/Contributions</span><br><span class="line"><span class="keyword">rm</span> -rf .git</span><br><span class="line"><span class="keyword">rm</span> -rf ~/Library/Caches/Homebrew</span><br></pre></td></tr></table></figure><h3 id="四、参考文章"><a href="#四、参考文章" class="headerlink" title="四、参考文章"></a>四、参考文章</h3><ul><li>1、<a href="https://segmentfault.com/a/1190000004353419" target="_blank" rel="noopener">你应该定期更新 Homebrew</a></li><li>2、<a href="http://blog.csdn.net/andanlan/article/details/51589800" target="_blank" rel="noopener">Homebrew简介和基本使用</a></li><li>3、<a href="http://blog.csdn.net/delphiwcdj/article/details/19679891" target="_blank" rel="noopener">Mac上Homebrew的使用 (Homebrew 使 OS X 更完整)</a></li><li>4、<a href="http://blog.csdn.net/azhou_hui/article/details/49718511" target="_blank" rel="noopener">HomeBrew的安装和简单使用</a></li><li>5、<a href="https://www.jianshu.com/p/d229ac7fe77d" target="_blank" rel="noopener">Mac OS下包管理器Homebrew的安装与使用</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、官方网址&quot;&gt;&lt;a href=&quot;#一、官方网址&quot; class=&quot;headerlink&quot; title=&quot;一、官方网址&quot;&gt;&lt;/a&gt;一、官方网址&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://brew.sh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Homebrew&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="MAC" scheme="http://blogwenbo.com/categories/MAC/"/>
+    
+    
+      <category term="MAC" scheme="http://blogwenbo.com/tags/MAC/"/>
+    
+      <category term="HomeBrew" scheme="http://blogwenbo.com/tags/HomeBrew/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac下CocoaPods安装与使用</title>
@@ -38,11 +62,11 @@
       <category term="CocoaPods" scheme="http://blogwenbo.com/categories/iOS/CocoaPods/"/>
     
     
+      <category term="MAC" scheme="http://blogwenbo.com/tags/MAC/"/>
+    
       <category term="CocoaPods" scheme="http://blogwenbo.com/tags/CocoaPods/"/>
     
       <category term="iOS" scheme="http://blogwenbo.com/tags/iOS/"/>
-    
-      <category term="MAC" scheme="http://blogwenbo.com/tags/MAC/"/>
     
   </entry>
   
