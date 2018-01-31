@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blogwenbo.com/"/>
-  <updated>2018-01-31T15:14:02.497Z</updated>
+  <updated>2018-01-31T15:22:40.875Z</updated>
   <id>http://blogwenbo.com/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让你的工程支持WebP格式图片</title>
+    <link href="http://blogwenbo.com/2018/01/31/%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%B7%A5%E7%A8%8B%E6%94%AF%E6%8C%81WebP%E6%A0%BC%E5%BC%8F%E5%9B%BE%E7%89%87/"/>
+    <id>http://blogwenbo.com/2018/01/31/让你的工程支持WebP格式图片/</id>
+    <published>2018-01-31T15:19:11.000Z</published>
+    <updated>2018-01-31T15:22:40.875Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote><p>最近在公司做类似与朋友圈动态展示图片的时候，无意间接触到了<a href="https://baike.baidu.com/item/webp%E6%A0%BC%E5%BC%8F/4077671" target="_blank" rel="noopener">WebP</a>格式图片。WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。下面开始介绍几种让工程支持WebP方法吧😀。</p></blockquote><a id="more"></a><h3 id="一、通过SDWebImage三方图片加载库实现"><a href="#一、通过SDWebImage三方图片加载库实现" class="headerlink" title="一、通过SDWebImage三方图片加载库实现"></a>一、通过<a href="https://github.com/rs/SDWebImage" target="_blank" rel="noopener">SDWebImage</a>三方图片加载库实现</h3><h4 id="1、通过CocoaPods方式"><a href="#1、通过CocoaPods方式" class="headerlink" title="1、通过CocoaPods方式"></a>1、通过CocoaPods方式</h4><p>在工程的podfile中添加<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pod</span> <span class="string">'SDWebImage'</span></span><br><span class="line">pod <span class="string">'SDWebImage/WebP'</span></span><br></pre></td></tr></table></figure></p><p><strong>注意</strong>：<br>因为libwebp(0.5.1)是谷歌的库，下载需要翻墙。通常会报以下错误，如果确实下不下来，只能通过手动方式导入相关库了：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-c2274e5515586eae?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午9.28.51.png"></p><h4 id="2、手动导入方式"><a href="#2、手动导入方式" class="headerlink" title="2、手动导入方式"></a>2、手动导入方式</h4><p>1、将SDWebImage(4.1.0)拖入到工程，如下图：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-5b5c97adf2b92cb1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午9.28.05.png"><br>2、下载<a href="http://downloads.webmproject.org/releases/webp/index.html" target="_blank" rel="noopener">libwebp</a>库（需要翻墙）<br>我下的版本是0.5.1没有打包成framework，所以我把自己也尝试将库文件打包成静态framework，打包出来目录如下：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-b145ef6f1709f551?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午9.59.18.png"><br>3、 设置target－&gt;build setting－&gt;搜索preprocessor 添加SD_WEBP=1,如下图：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-e36974fd1a3851a6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午10.03.00.png"><br>好了，配置已经完成，现在工程已经支持WebP显示了，我的项目里都是加载的网络WebP格式图片，我写了一个<a href="https://github.com/wenmobo/WebP/tree/master/WebPDemo_Method1" target="_blank" rel="noopener">WebPDemo_Method1</a>能够显示本地WebP图片。在我的电脑能翻墙的时候也把其他版本的libwebp库(<a href="https://github.com/wenmobo/WebP/blob/master/libwebp/libwebp_V0.5.1.zip" target="_blank" rel="noopener">libwebp_V0.5.1</a>、<a href="https://github.com/wenmobo/WebP/blob/master/libwebp/libwebp_V0.5.2.zip" target="_blank" rel="noopener">ibwebp_V0.5.2</a>、<a href="https://github.com/wenmobo/WebP/blob/master/libwebp/libwebp_V0.6.0.zip" target="_blank" rel="noopener">libwebp_V0.6.0</a>)下了下来,0.5.1是我自己打的包，另外两个版本是官方打好的包，有需要的可以自行下载相应的版本。</p><p><strong>注意</strong><br>1、导入工程的libwebp库，不一定非要framework,也可以就把相应的库文件导入到工程，只需要注意头文件导入名称就可以了。<br>2、demo中，我并没有用SDWebImage(4.1.0)的原UIImage+WebP.h和UIImage+WebP.m文件，而是对头文件做了一定修改，如果工程用最新的SDWebImage报错，可以用我demo中UIImage+WebP文件下的两个文件。</p><h3 id="报错解决"><a href="#报错解决" class="headerlink" title="报错解决"></a>报错解决</h3><p>1、我自己打的静态库framework在工程运行时报错，因为framework用到了系统的库。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">－－<span class="keyword">include</span> <span class="keyword">of</span> non-modular header inside XXXX</span><br></pre></td></tr></table></figure></p><p>解决办法是：Allow Non-modular includes in Framework Modules 设置为YES，如下图：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-3d90afed1c090562?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午10.27.58.png"><br>重新运行工程，没有报错，可以正常显示WebP格式图片了。</p><h3 id="二、通过YYWebImage-2017-12-28更新"><a href="#二、通过YYWebImage-2017-12-28更新" class="headerlink" title="二、通过YYWebImage(2017-12-28更新)"></a>二、通过<a href="https://github.com/ibireme/YYWebImage" target="_blank" rel="noopener">YYWebImage</a>(2017-12-28更新)</h3><p>最近在看YYKit组件的时候，发现YYWebImage也支持webp格式片，集成使用也相当方便。  </p><h4 id="1、CocoaPods导入"><a href="#1、CocoaPods导入" class="headerlink" title="1、CocoaPods导入"></a>1、CocoaPods导入</h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="symbol">'YYWebImage</span>'</span><br><span class="line">pod <span class="symbol">'YYImage</span>/WebP`</span><br></pre></td></tr></table></figure><h4 id="2、手动导入"><a href="#2、手动导入" class="headerlink" title="2、手动导入"></a>2、手动导入</h4><p>将YYWebImage和vendor文件夹拖入到工程。目录结构如下：</p><p>[图片上传失败…(image-20a4e3-1515331945147)]</p><h4 id="具体使用"><a href="#具体使用" class="headerlink" title="具体使用"></a>具体使用</h4><ul><li><p>导入头文件</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">import</span> <span class="string">"YYWebImage.h"</span></span><br><span class="line">或</span><br><span class="line">#<span class="keyword">import</span> &lt;YYWebImage.h&gt;</span><br></pre></td></tr></table></figure></li><li><p>设置图片地址</p><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">/** &lt;&lt; 1、本地加载 &gt; */</span></span><br><span class="line">//    <span class="symbol">NSString</span> *path = [[<span class="symbol">NSBundle</span> mainBundle] pathForAuxiliaryExecutable:@<span class="string">"test.webp"</span>];</span><br><span class="line">//    <span class="symbol">_imageView</span>.yy_imageURL = [<span class="symbol">NSURL</span> fileURLWithPath:path];</span><br><span class="line">    <span class="comment">/** &lt;&lt; 2、网络加载 &gt; */</span></span><br><span class="line">    <span class="symbol">_imageView</span>.yy_imageURL = [<span class="symbol">NSURL</span> <span class="symbol">URLWithString</span>:@<span class="string">"https://user-gold-cdn.xitu.io/2017/12/28/1609d17b5af17a56?w=534&amp;h=300&amp;f=webp&amp;s=39334"</span>];</span><br></pre></td></tr></table></figure></li></ul><p>好了，通过YYWebImage也实现了webp格式图片的显示，要查看更多YYWebImage的用法，可以到GitHub上查看使用文档。顺便也贴出测试<a href="https://github.com/wenmobo/WebP/tree/master/WebPDemo_Method2" target="_blank" rel="noopener">WebPDemo_Method2</a>。</p><p><strong>测试图片(webp格式)</strong></p><p>[图片上传失败…(image-cc9028-1515331945147)]</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote><p>当然，支持WebP显示的方法也不止通过三方库的方式，也可以通过webView方式，还可以通过NSURLProtocol方式，如果需要用到以上两种方式，可以自行研究一下。如果大家有更好的方法或者建议，欢迎大家一起讨论。</p><h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p>1、<a href="https://www.jianshu.com/p/ed7562a34af1" target="_blank" rel="noopener">webP 格式图片在 iOS 中的应用</a>   </p></blockquote><p>2、<a href="http://blog.csdn.net/shenjx1225/article/details/47259701" target="_blank" rel="noopener">SDWebImage支持webp格式的图片</a>   </p><p>3、<a href="http://blog.csdn.net/zzzzzdddddxxxxx/article/details/51149243" target="_blank" rel="noopener">ios开发中报错处理－－include of non-modular header inside XXXX</a>  </p><p>4、<a href="https://github.com/rs/SDWebImage/issues/1122" target="_blank" rel="noopener">How to support webp? </a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;最近在公司做类似与朋友圈动态展示图片的时候，无意间接触到了&lt;a href=&quot;https://baike.baidu.com/item/webp%E6%A0%BC%E5%BC%8F/4077671&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WebP&lt;/a&gt;格式图片。WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。下面开始介绍几种让工程支持WebP方法吧😀。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://blogwenbo.com/categories/iOS/"/>
+    
+    
+      <category term="iOS" scheme="http://blogwenbo.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&gt; #前言</title>
+    <link href="http://blogwenbo.com/2018/01/31/%E5%89%8D%E8%A8%80/"/>
+    <id>http://blogwenbo.com/2018/01/31/前言/</id>
+    <published>2018-01-31T15:17:57.000Z</published>
+    <updated>2018-01-31T15:17:57.418Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>iOS定时器-NSTimer、CADisplayLink、GCD</title>
@@ -87,9 +125,9 @@
     
       <category term="MAC" scheme="http://blogwenbo.com/tags/MAC/"/>
     
-      <category term="iOS" scheme="http://blogwenbo.com/tags/iOS/"/>
-    
       <category term="CocoaPods" scheme="http://blogwenbo.com/tags/CocoaPods/"/>
+    
+      <category term="iOS" scheme="http://blogwenbo.com/tags/iOS/"/>
     
   </entry>
   

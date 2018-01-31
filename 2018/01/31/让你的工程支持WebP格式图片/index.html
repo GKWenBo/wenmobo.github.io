@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -98,16 +98,24 @@
 
 
 
-<meta name="description" content="To strive, to seek, to find, and not to yield.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WenBo丨星空灬">
-<meta property="og:url" content="http://blogwenbo.com/tags/NexT/index.html">
+<meta name="description" content="前言 最近在公司做类似与朋友圈动态展示图片的时候，无意间接触到了WebP格式图片。WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。下面开始介绍几种让工程支持WebP方法吧😀。">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="让你的工程支持WebP格式图片">
+<meta property="og:url" content="http://blogwenbo.com/2018/01/31/让你的工程支持WebP格式图片/index.html">
 <meta property="og:site_name" content="WenBo丨星空灬">
-<meta property="og:description" content="To strive, to seek, to find, and not to yield.">
+<meta property="og:description" content="前言 最近在公司做类似与朋友圈动态展示图片的时候，无意间接触到了WebP格式图片。WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。下面开始介绍几种让工程支持WebP方法吧😀。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-c2274e5515586eae?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-5b5c97adf2b92cb1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-b145ef6f1709f551?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-e36974fd1a3851a6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-3d90afed1c090562?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-01-31T15:22:40.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WenBo丨星空灬">
-<meta name="twitter:description" content="To strive, to seek, to find, and not to yield.">
+<meta name="twitter:title" content="让你的工程支持WebP格式图片">
+<meta name="twitter:description" content="前言 最近在公司做类似与朋友圈动态展示图片的时候，无意间接触到了WebP格式图片。WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。下面开始介绍几种让工程支持WebP方法吧😀。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3072214-c2274e5515586eae?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -137,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://blogwenbo.com/tags/NexT/"/>
+  <link rel="canonical" href="http://blogwenbo.com/2018/01/31/让你的工程支持WebP格式图片/"/>
 
 
 
 
 
-  <title>标签: NexT | WenBo丨星空灬</title>
+  <title>让你的工程支持WebP格式图片 | WenBo丨星空灬</title>
   
 
 
@@ -162,7 +170,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/wenmobo" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -300,54 +308,315 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>NexT<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/01/31/让你的工程支持WebP格式图片/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WenBo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/3072214/ccbcba49-0a5c-4b7e-b1e4-aea15ab4419f.png?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WenBo丨星空灬">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/01/20/Hexo-NexT主题配置/" itemprop="url">
-              
-                <span itemprop="name">Hexo-NexT配置超炫网页效果</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">让你的工程支持WebP格式图片</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-20T20:41:08+08:00"
-              content="2018-01-20" >
-          01-20
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T23:19:11+08:00">
+                2018-01-31
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/01/31/让你的工程支持WebP格式图片/" class="leancloud_visitors" data-flag-title="让你的工程支持WebP格式图片">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+		<span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  965
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>最近在公司做类似与朋友圈动态展示图片的时候，无意间接触到了<a href="https://baike.baidu.com/item/webp%E6%A0%BC%E5%BC%8F/4077671" target="_blank" rel="noopener">WebP</a>格式图片。WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。下面开始介绍几种让工程支持WebP方法吧😀。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="一、通过SDWebImage三方图片加载库实现"><a href="#一、通过SDWebImage三方图片加载库实现" class="headerlink" title="一、通过SDWebImage三方图片加载库实现"></a>一、通过<a href="https://github.com/rs/SDWebImage" target="_blank" rel="noopener">SDWebImage</a>三方图片加载库实现</h3><h4 id="1、通过CocoaPods方式"><a href="#1、通过CocoaPods方式" class="headerlink" title="1、通过CocoaPods方式"></a>1、通过CocoaPods方式</h4><p>在工程的podfile中添加<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pod</span> <span class="string">'SDWebImage'</span></span><br><span class="line">pod <span class="string">'SDWebImage/WebP'</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：<br>因为libwebp(0.5.1)是谷歌的库，下载需要翻墙。通常会报以下错误，如果确实下不下来，只能通过手动方式导入相关库了：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-c2274e5515586eae?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午9.28.51.png"></p>
+<h4 id="2、手动导入方式"><a href="#2、手动导入方式" class="headerlink" title="2、手动导入方式"></a>2、手动导入方式</h4><p>1、将SDWebImage(4.1.0)拖入到工程，如下图：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-5b5c97adf2b92cb1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午9.28.05.png"><br>2、下载<a href="http://downloads.webmproject.org/releases/webp/index.html" target="_blank" rel="noopener">libwebp</a>库（需要翻墙）<br>我下的版本是0.5.1没有打包成framework，所以我把自己也尝试将库文件打包成静态framework，打包出来目录如下：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-b145ef6f1709f551?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午9.59.18.png"><br>3、 设置target－&gt;build setting－&gt;搜索preprocessor 添加SD_WEBP=1,如下图：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-e36974fd1a3851a6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午10.03.00.png"><br>好了，配置已经完成，现在工程已经支持WebP显示了，我的项目里都是加载的网络WebP格式图片，我写了一个<a href="https://github.com/wenmobo/WebP/tree/master/WebPDemo_Method1" target="_blank" rel="noopener">WebPDemo_Method1</a>能够显示本地WebP图片。在我的电脑能翻墙的时候也把其他版本的libwebp库(<a href="https://github.com/wenmobo/WebP/blob/master/libwebp/libwebp_V0.5.1.zip" target="_blank" rel="noopener">libwebp_V0.5.1</a>、<a href="https://github.com/wenmobo/WebP/blob/master/libwebp/libwebp_V0.5.2.zip" target="_blank" rel="noopener">ibwebp_V0.5.2</a>、<a href="https://github.com/wenmobo/WebP/blob/master/libwebp/libwebp_V0.6.0.zip" target="_blank" rel="noopener">libwebp_V0.6.0</a>)下了下来,0.5.1是我自己打的包，另外两个版本是官方打好的包，有需要的可以自行下载相应的版本。</p>
+<p><strong>注意</strong><br>1、导入工程的libwebp库，不一定非要framework,也可以就把相应的库文件导入到工程，只需要注意头文件导入名称就可以了。<br>2、demo中，我并没有用SDWebImage(4.1.0)的原UIImage+WebP.h和UIImage+WebP.m文件，而是对头文件做了一定修改，如果工程用最新的SDWebImage报错，可以用我demo中UIImage+WebP文件下的两个文件。</p>
+<h3 id="报错解决"><a href="#报错解决" class="headerlink" title="报错解决"></a>报错解决</h3><p>1、我自己打的静态库framework在工程运行时报错，因为framework用到了系统的库。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">－－<span class="keyword">include</span> <span class="keyword">of</span> non-modular header inside XXXX</span><br></pre></td></tr></table></figure></p>
+<p>解决办法是：Allow Non-modular includes in Framework Modules 设置为YES，如下图：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-3d90afed1c090562?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-25 下午10.27.58.png"><br>重新运行工程，没有报错，可以正常显示WebP格式图片了。</p>
+<h3 id="二、通过YYWebImage-2017-12-28更新"><a href="#二、通过YYWebImage-2017-12-28更新" class="headerlink" title="二、通过YYWebImage(2017-12-28更新)"></a>二、通过<a href="https://github.com/ibireme/YYWebImage" target="_blank" rel="noopener">YYWebImage</a>(2017-12-28更新)</h3><p>最近在看YYKit组件的时候，发现YYWebImage也支持webp格式片，集成使用也相当方便。  </p>
+<h4 id="1、CocoaPods导入"><a href="#1、CocoaPods导入" class="headerlink" title="1、CocoaPods导入"></a>1、CocoaPods导入</h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="symbol">'YYWebImage</span>'</span><br><span class="line">pod <span class="symbol">'YYImage</span>/WebP`</span><br></pre></td></tr></table></figure>
+<h4 id="2、手动导入"><a href="#2、手动导入" class="headerlink" title="2、手动导入"></a>2、手动导入</h4><p>将YYWebImage和vendor文件夹拖入到工程。目录结构如下：</p>
+<p>[图片上传失败…(image-20a4e3-1515331945147)]</p>
+<h4 id="具体使用"><a href="#具体使用" class="headerlink" title="具体使用"></a>具体使用</h4><ul>
+<li><p>导入头文件</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">import</span> <span class="string">"YYWebImage.h"</span></span><br><span class="line">或</span><br><span class="line">#<span class="keyword">import</span> &lt;YYWebImage.h&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置图片地址</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">/** &lt;&lt; 1、本地加载 &gt; */</span></span><br><span class="line">//    <span class="symbol">NSString</span> *path = [[<span class="symbol">NSBundle</span> mainBundle] pathForAuxiliaryExecutable:@<span class="string">"test.webp"</span>];</span><br><span class="line">//    <span class="symbol">_imageView</span>.yy_imageURL = [<span class="symbol">NSURL</span> fileURLWithPath:path];</span><br><span class="line">    <span class="comment">/** &lt;&lt; 2、网络加载 &gt; */</span></span><br><span class="line">    <span class="symbol">_imageView</span>.yy_imageURL = [<span class="symbol">NSURL</span> <span class="symbol">URLWithString</span>:@<span class="string">"https://user-gold-cdn.xitu.io/2017/12/28/1609d17b5af17a56?w=534&amp;h=300&amp;f=webp&amp;s=39334"</span>];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>好了，通过YYWebImage也实现了webp格式图片的显示，要查看更多YYWebImage的用法，可以到GitHub上查看使用文档。顺便也贴出测试<a href="https://github.com/wenmobo/WebP/tree/master/WebPDemo_Method2" target="_blank" rel="noopener">WebPDemo_Method2</a>。</p>
+<p><strong>测试图片(webp格式)</strong></p>
+<p>[图片上传失败…(image-cc9028-1515331945147)]</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<p>当然，支持WebP显示的方法也不止通过三方库的方式，也可以通过webView方式，还可以通过NSURLProtocol方式，如果需要用到以上两种方式，可以自行研究一下。如果大家有更好的方法或者建议，欢迎大家一起讨论。</p>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p>1、<a href="https://www.jianshu.com/p/ed7562a34af1" target="_blank" rel="noopener">webP 格式图片在 iOS 中的应用</a>   </p>
+</blockquote>
+<p>2、<a href="http://blog.csdn.net/shenjx1225/article/details/47259701" target="_blank" rel="noopener">SDWebImage支持webp格式的图片</a>   </p>
+<p>3、<a href="http://blog.csdn.net/zzzzzdddddxxxxx/article/details/51149243" target="_blank" rel="noopener">ios开发中报错处理－－include of non-modular header inside XXXX</a>  </p>
+<p>4、<a href="https://github.com/rs/SDWebImage/issues/1122" target="_blank" rel="noopener">How to support webp? </a></p>
 
       
     </div>
+    
+    
+    
 
+      <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+      </div>
+
+      <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/01/31/让你的工程支持WebP格式图片/">让你的工程支持WebP格式图片</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 WenBo 的个人博客">WenBo</a></p>
+  <p><span>发布时间:</span>2018年01月31日 - 23:01</p>
+  <p><span>最后更新:</span>2018年01月31日 - 23:01</p>
+  <p><span>原始链接:</span><a href="/2018/01/31/让你的工程支持WebP格式图片/" title="让你的工程支持WebP格式图片">http://blogwenbo.com/2018/01/31/让你的工程支持WebP格式图片/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blogwenbo.com/2018/01/31/让你的工程支持WebP格式图片/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+      </div>
+      
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i> iOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/31/前言/" rel="next" title="> #前言">
+                <i class="fa fa-chevron-left"></i> > #前言
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -355,6 +624,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyMy85OTc5"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -375,8 +653,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -487,6 +774,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、通过SDWebImage三方图片加载库实现"><span class="nav-number">2.</span> <span class="nav-text">一、通过SDWebImage三方图片加载库实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、通过CocoaPods方式"><span class="nav-number">2.1.</span> <span class="nav-text">1、通过CocoaPods方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、手动导入方式"><span class="nav-number">2.2.</span> <span class="nav-text">2、手动导入方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#报错解决"><span class="nav-number">3.</span> <span class="nav-text">报错解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、通过YYWebImage-2017-12-28更新"><span class="nav-number">4.</span> <span class="nav-text">二、通过YYWebImage(2017-12-28更新)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、CocoaPods导入"><span class="nav-number">4.1.</span> <span class="nav-text">1、CocoaPods导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、手动导入"><span class="nav-number">4.2.</span> <span class="nav-text">2、手动导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体使用"><span class="nav-number">4.3.</span> <span class="nav-text">具体使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">6.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -658,6 +961,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -686,6 +993,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
