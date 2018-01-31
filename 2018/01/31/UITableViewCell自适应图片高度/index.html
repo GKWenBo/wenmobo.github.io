@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="#前言在最近的项目开发过程中，遇到了需要运用定时器的需求，在以前的项目中，也没用过定时器。最近做的一个项目很有几个地方用到了定时器，短信验证码倒计时、倒计时取消订单，定时网络请求。在查阅相关资料过后，也解决了项目中的需求。下面介绍下几种定时器的用法吧！">
+<meta name="description" content="一、问题描述 最近在做公司项目的时候，遇到了前端上传多张图片到七牛服务器后，前端在列表展示图片适配的问题。一开始我设置的固定高度，因为图片尺寸不是固定的，会出现不同程度的拉伸情况，用户体验也很不好。通过设置图片视图contentMode这个属性，虽然能保证图片不被拉伸，但图片会出现显示不全的问题。">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS定时器-NSTimer、CADisplayLink、GCD">
-<meta property="og:url" content="http://blogwenbo.com/2018/01/31/iOS定时器-NSTimer、CADisplayLink、GCD/index.html">
+<meta property="og:title" content="UITableViewCell自适应图片高度">
+<meta property="og:url" content="http://blogwenbo.com/2018/01/31/UITableViewCell自适应图片高度/index.html">
 <meta property="og:site_name" content="WenBo丨星空灬">
-<meta property="og:description" content="#前言在最近的项目开发过程中，遇到了需要运用定时器的需求，在以前的项目中，也没用过定时器。最近做的一个项目很有几个地方用到了定时器，短信验证码倒计时、倒计时取消订单，定时网络请求。在查阅相关资料过后，也解决了项目中的需求。下面介绍下几种定时器的用法吧！">
+<meta property="og:description" content="一、问题描述 最近在做公司项目的时候，遇到了前端上传多张图片到七牛服务器后，前端在列表展示图片适配的问题。一开始我设置的固定高度，因为图片尺寸不是固定的，会出现不同程度的拉伸情况，用户体验也很不好。通过设置图片视图contentMode这个属性，虽然能保证图片不被拉伸，但图片会出现显示不全的问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-31T15:14:02.497Z">
+<meta property="og:updated_time" content="2018-01-31T15:36:24.628Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS定时器-NSTimer、CADisplayLink、GCD">
-<meta name="twitter:description" content="#前言在最近的项目开发过程中，遇到了需要运用定时器的需求，在以前的项目中，也没用过定时器。最近做的一个项目很有几个地方用到了定时器，短信验证码倒计时、倒计时取消订单，定时网络请求。在查阅相关资料过后，也解决了项目中的需求。下面介绍下几种定时器的用法吧！">
+<meta name="twitter:title" content="UITableViewCell自适应图片高度">
+<meta name="twitter:description" content="一、问题描述 最近在做公司项目的时候，遇到了前端上传多张图片到七牛服务器后，前端在列表展示图片适配的问题。一开始我设置的固定高度，因为图片尺寸不是固定的，会出现不同程度的拉伸情况，用户体验也很不好。通过设置图片视图contentMode这个属性，虽然能保证图片不被拉伸，但图片会出现显示不全的问题。">
 
 
 
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://blogwenbo.com/2018/01/31/iOS定时器-NSTimer、CADisplayLink、GCD/"/>
+  <link rel="canonical" href="http://blogwenbo.com/2018/01/31/UITableViewCell自适应图片高度/"/>
 
 
 
 
 
-  <title>iOS定时器-NSTimer、CADisplayLink、GCD | WenBo丨星空灬</title>
+  <title>UITableViewCell自适应图片高度 | WenBo丨星空灬</title>
   
 
 
@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/01/31/iOS定时器-NSTimer、CADisplayLink、GCD/">
+    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/01/31/UITableViewCell自适应图片高度/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WenBo">
@@ -333,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">iOS定时器-NSTimer、CADisplayLink、GCD</h1>
+          <h1 class="post-title" itemprop="name headline">UITableViewCell自适应图片高度</h1>
         
 
         <div class="post-meta">
@@ -345,7 +345,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T22:59:04+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T23:34:42+08:00">
                 2018-01-31
               </time>
             
@@ -385,7 +385,7 @@
 
           
           
-             <span id="/2018/01/31/iOS定时器-NSTimer、CADisplayLink、GCD/" class="leancloud_visitors" data-flag-title="iOS定时器-NSTimer、CADisplayLink、GCD">
+             <span id="/2018/01/31/UITableViewCell自适应图片高度/" class="leancloud_visitors" data-flag-title="UITableViewCell自适应图片高度">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -411,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,451
+                  861
                 </span>
               
 
@@ -427,7 +427,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  3
                 </span>
               
             </div>
@@ -448,70 +448,21 @@
       
 
       
-        <blockquote>
-<p>#前言<br>在最近的项目开发过程中，遇到了需要运用定时器的需求，在以前的项目中，也没用过定时器。最近做的一个项目很有几个地方用到了定时器，短信验证码倒计时、倒计时取消订单，定时网络请求。在查阅相关资料过后，也解决了项目中的需求。下面介绍下几种定时器的用法吧！<br><a id="more"></a></p>
+        <h3 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h3><blockquote>
+<p>最近在做公司项目的时候，遇到了前端上传多张图片到七牛服务器后，前端在列表展示图片适配的问题。一开始我设置的固定高度，因为图片尺寸不是固定的，会出现不同程度的拉伸情况，用户体验也很不好。通过设置图片视图<strong>contentMode</strong>这个属性，虽然能保证图片不被拉伸，但图片会出现显示不全的问题。</p>
 </blockquote>
-<p>#<a href="https://developer.apple.com/documentation/quartzcore/cadisplaylink?language=objc" target="_blank" rel="noopener">CADisplayLink</a><br><strong>CADisplayLink</strong>是一个能让我们以和屏幕刷新率相同的频率将内容画到屏幕上的定时器。我们在应用中创建一个新的 CADisplayLink 对象，把它添加到一个runloop中，并给它提供一个 target 和selector 在屏幕刷新的时候调用。</p>
+<a id="more"></a>
+<h3 id="二、解决思路"><a href="#二、解决思路" class="headerlink" title="二、解决思路"></a>二、解决思路</h3><h4 id="1、后台返回每张图片的宽高，根据比例去计算图片的高度"><a href="#1、后台返回每张图片的宽高，根据比例去计算图片的高度" class="headerlink" title="1、后台返回每张图片的宽高，根据比例去计算图片的高度"></a>1、后台返回每张图片的宽高，根据比例去计算图片的高度</h4><h4 id="2、获取到image，image有size这个属性，可以拿到宽高，根据比例去计算图片的高度"><a href="#2、获取到image，image有size这个属性，可以拿到宽高，根据比例去计算图片的高度" class="headerlink" title="2、获取到image，image有size这个属性，可以拿到宽高，根据比例去计算图片的高度"></a>2、获取到image，image有size这个属性，可以拿到宽高，根据比例去计算图片的高度</h4><h3 id="三、最终采用方案"><a href="#三、最终采用方案" class="headerlink" title="三、最终采用方案"></a>三、最终采用方案</h3><p>第一种方案是可以实现图片的适配问题，我采用了第二种。图片都是网络加载的，要想拿到image，就必须要将图片下载下来，这样就可以获取到图片的尺寸。下面贴出我实现的关键步骤吧。</p>
+<h4 id="1、工程导入SDWebImage和Masonry-导入相关头文件。"><a href="#1、工程导入SDWebImage和Masonry-导入相关头文件。" class="headerlink" title="1、工程导入SDWebImage和Masonry,导入相关头文件。"></a>1、工程导入<a href="https://github.com/rs/SDWebImage" target="_blank" rel="noopener">SDWebImage</a>和<a href="https://github.com/SnapKit/Masonry" target="_blank" rel="noopener">Masonry</a>,导入相关头文件。</h4><h4 id="2、SDWebImage下载图片，并计算出图片高度，将高度缓存到字典。自定义cell用Masonry设置好上下左右约束，也可以是xib。"><a href="#2、SDWebImage下载图片，并计算出图片高度，将高度缓存到字典。自定义cell用Masonry设置好上下左右约束，也可以是xib。" class="headerlink" title="2、SDWebImage下载图片，并计算出图片高度，将高度缓存到字典。自定义cell用Masonry设置好上下左右约束，也可以是xib。"></a>2、SDWebImage下载图片，并计算出图片高度，将高度缓存到字典。自定义cell用Masonry设置好上下左右约束，也可以是xib。</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</span><br><span class="line">    ImageViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kIdentifier forIndexPath:indexPath];</span><br><span class="line">    cell.selectionStyle = <span class="built_in">UITableViewCellSelectionStyleNone</span>;</span><br><span class="line">    <span class="built_in">NSString</span> *url = <span class="keyword">self</span>.imageUrlArray[indexPath.row];</span><br><span class="line">    [cell.autoImageView sd_setImageWithURL:[<span class="built_in">NSURL</span> URLWithString:url] placeholderImage:<span class="literal">nil</span> options:SDWebImageRetryFailed completed:^(<span class="built_in">UIImage</span> *image, <span class="built_in">NSError</span> *error, SDImageCacheType cacheType, <span class="built_in">NSURL</span> *imageURL) &#123;</span><br><span class="line">        <span class="keyword">if</span> (image.size.height) &#123;</span><br><span class="line">            <span class="comment">/**  &lt; 图片宽度 &gt;  */</span></span><br><span class="line">            <span class="built_in">CGFloat</span> imageW = [<span class="built_in">UIScreen</span> mainScreen].bounds.size.width - <span class="number">2</span> * <span class="number">15</span>;</span><br><span class="line">            <span class="comment">/**  &lt;根据比例 计算图片高度 &gt;  */</span></span><br><span class="line">            <span class="built_in">CGFloat</span> ratio = image.size.height / image.size.width;</span><br><span class="line">             <span class="comment">/**  &lt; 图片高度 + 间距 &gt;  */</span></span><br><span class="line">            <span class="built_in">CGFloat</span> imageH = ratio * imageW + <span class="number">15</span>;</span><br><span class="line">            <span class="comment">/**  &lt; 缓存图片高度 没有缓存则缓存 刷新indexPath &gt;  */</span></span><br><span class="line">            <span class="keyword">if</span> (![[<span class="keyword">self</span>.heightDict allKeys] containsObject:@(indexPath.row)]) &#123;</span><br><span class="line">                [<span class="keyword">self</span>.heightDict setObject:@(imageH) forKey:@(indexPath.row)];</span><br><span class="line">                [<span class="keyword">self</span>.tableView beginUpdates];</span><br><span class="line">                [<span class="keyword">self</span>.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:<span class="built_in">UITableViewRowAnimationNone</span>];</span><br><span class="line">                [<span class="keyword">self</span>.tableView endUpdates];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;];</span><br><span class="line">    <span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>    </p>
 <ul>
-<li><p>创建</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**  &lt; 创建CADisplayLink &gt;  */</span><br><span class="line">self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(printSeconds)];</span><br><span class="line">/**  &lt; 设置每秒刷新一次 The default value is 60 &gt;  */</span><br><span class="line">self.displayLink.preferredFramesPerSecond = 1;</span><br><span class="line">/**  &lt; 注册到RunLoop中 NSDefaultRunLoopMode &gt;  */</span><br><span class="line">[self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];</span><br><span class="line">/**  &lt; 暂停定时器 Initial state is</span><br><span class="line">  false &gt;  */</span><br><span class="line">self.displayLink.paused = YES;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>暂停</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 开始</span><br><span class="line">  ``` self.displayLink.paused = NO;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>销毁</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> /**  &lt; 销毁定时器 &gt;  */</span><br><span class="line">[self.displayLink invalidate];</span><br><span class="line">self.displayLink = nil;</span><br></pre></td></tr></table></figure>
+<li>字典key也可以是图片地址url</li>
+<li>因为图片下载是异步的，要在下载完成图片之后，如果字典没有缓存当前indexPath高度，需要手动去刷新一次indexPath(最开始的时候，我没有根据key去判断是否需要刷新，当cell滑动的时候，会不停的调用<strong>cellForRowAtIndexPath</strong>这个方法，会不停的刷新，这样也非常耗费性能)。<h4 id="3、cell高度代理方法返回缓存的图片高度"><a href="#3、cell高度代理方法返回缓存的图片高度" class="headerlink" title="3、cell高度代理方法返回缓存的图片高度"></a>3、cell高度代理方法返回缓存的图片高度</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</span><br><span class="line">    <span class="keyword">return</span> [[<span class="keyword">self</span>.heightDict objectForKey:@(indexPath.row)] floatValue];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><strong>最后</strong><br>CADisplayLink相比NSTimer来说，精度要高的多，如果有想更深入的了解可以查看官方文档或相关博客（<a href="http://www.jianshu.com/p/c35a81c3b9eb" target="_blank" rel="noopener">CADisplayLink</a>）介绍的很详细。</p>
-<h1 id="NSTimer"><a href="#NSTimer" class="headerlink" title="NSTimer"></a><a href="https://developer.apple.com/documentation/foundation/nstimer" target="_blank" rel="noopener">NSTimer</a></h1><p>在最近开发的项目中，用NSTimer实现了定时请求接口，后台服务器要对前端App状态进行检测，要求App在用户登录的状态下，每30s请求一次接口，以便后台更好的处理先关业务逻辑。在App中只处理了在前台的情况，App处于后台，NSTimer会处于挂起状态，不执行，除非申请后台执行代码的权限。下面介绍NSTimer的基本使用方法。</p>
-<ul>
-<li>NSTimer创建<br>常用的有两种创建方法,区别是前者需手动加入RunLoop，后者自动将<br>timer加入到当前线程的RunLoop中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">+ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo;</span><br><span class="line">//</span><br><span class="line">+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Block方法，iOS 10新出的API，使用这个两个方法，要考虑到兼容性问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats block:(void (^)(NSTimer *timer))block API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));</span><br><span class="line">+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats block:(void (^)(NSTimer *timer))block API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));</span><br></pre></td></tr></table></figure></p>
-<p>其它创建方法请参考头文件方法声明</p>
-<p><strong>timerWithTimeInterval</strong></p>
-<ol>
-<li>创建<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.timer = [NSTimer timerWithTimeInterval:1.f target:self selector:@selector(printSeconds) userInfo:nil repeats:YES];</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<ul>
-<li>TimeInterval：执行之前等待的时间。比如设置成1.0，就代表1秒后执行方法</li>
-<li>target：需要执行方法的对象</li>
-<li>selector：需要执行的方法</li>
-<li>repeats：是否需要循环</li>
-</ul>
-<ol>
-<li>添加到Runloop（注意：上面这种方法创建的定时器必须添加到Runloop，否则定时器不会执行）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">     /**</span><br><span class="line">     &lt; Default mode（NSDefaultRunLoopMode）</span><br><span class="line">     默认模式中几乎包含了所有输入源(NSConnection除外),一般情况下应使用此模式。</span><br><span class="line">     </span><br><span class="line">     Connection mode（NSConnectionReplyMode）</span><br><span class="line">     处理NSConnection对象相关事件，系统内部使用，用户基本不会使用。</span><br><span class="line">     Modal mode（NSModalPanelRunLoopMode）</span><br><span class="line">     处理modal panels事件。</span><br><span class="line">     </span><br><span class="line">     Event tracking mode（UITrackingRunLoopMode）</span><br><span class="line">     在拖动loop或其他user interface tracking loops时处于此种模式下，在此模式下会限制输入事件的处理。例如，当手指按住UITableView拖动时就会处于此模式。</span><br><span class="line">     </span><br><span class="line">     Common mode（NSRunLoopCommonModes）</span><br><span class="line">     这是一个伪模式，其为一组run loop mode的集合，将输入源加入此模式意味着在Common Modes中包含的所有模式下都可以处理。在Cocoa应用程序中，默认情况下Common Modes包含default modes,modal modes,event Tracking modes.可使用CFRunLoopAddCommonMode方法想Common Modes中添加自定义modes。</span><br><span class="line">     &gt;  */</span><br><span class="line">[[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>scheduledTimerWithTimeInterval</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/**  &lt; 第二种创建方法 自动加入当前线程的RunLoop中，如果想让定时器不受滚动视图影响 应设置Mode为：NSRunLoopCommonModes  &gt;  */</span><br><span class="line">    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.f target:self selector:@selector(printSeconds) userInfo:nil repeats:YES];</span><br><span class="line">//    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>暂停、开始定时器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**  &lt; 开始定时器 &gt;  */</span><br><span class="line">if (self.timer.isValid) &#123;</span><br><span class="line">    self.timer.fireDate = [NSDate date];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**  &lt; 暂停定时器 &gt;  */</span><br><span class="line">if (self.timer.isValid) &#123;</span><br><span class="line">    self.timer.fireDate = [NSDate distantFuture];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>销毁定时器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[self.timer invalidate];</span><br><span class="line">self.timer = nil;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="GCD定时器"><a href="#GCD定时器" class="headerlink" title="GCD定时器"></a>GCD定时器</h1><p>在项目中，短信验证码倒计时，和订单定时取消，都用到了GCD定时器，GCD定时器相对来说更为精准，但创建起来稍微麻烦点，下面就介绍基本用法吧！</p>
-<ul>
-<li><p>创建</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//获取队列，这里获取全局队列（tips：可以单独创建一个队列跑定时器）</span><br><span class="line">dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);</span><br><span class="line">//创建定时器（dispatch_source_t本质还是个OC对象）</span><br><span class="line">self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);</span><br><span class="line"></span><br><span class="line">//start参数控制计时器第一次触发的时刻，延迟0s</span><br><span class="line">dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, 0 * NSEC_PER_SEC);</span><br><span class="line">//    dispatch_time_t start = dispatch_walltime(NULL, 0);</span><br><span class="line"></span><br><span class="line">//每隔1s执行一次</span><br><span class="line">uint64_t interval = (uint64_t)(1.0 * NSEC_PER_SEC);</span><br><span class="line">dispatch_source_set_timer(self.timer, start, interval, 0);</span><br><span class="line">dispatch_source_set_event_handler(self.timer, ^&#123;</span><br><span class="line">    //要执行的任务</span><br><span class="line">&#125;);</span><br><span class="line">//开始执行定时器</span><br><span class="line">dispatch_resume(self.timer);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>开始定时器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dispatch_resume(self.timer);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>暂停定时器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dispatch_suspend(self.timer);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>取消定时器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dispatch_cancel(self.timer);</span><br><span class="line">self.timer = nil;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><blockquote>
-<p>公司的项目刚刚上线，稍微可以松动一下，自己花时间整理了一下定时器的实现方式，除了CADisplayLink，后两种定时器在项目中都用到了。使用的时候要注意定时器和Runloop之间的联系、以及定时器的销毁问题。我也是查阅了相关资料和结合项目中的实际应用整理出来的，如果有写的不对的地方，欢迎大家批评指正。希望文章能给需要的人有所帮助。</p>
+<p>到这里，就已经实现了图片自适应高度的需求了，具体详情，请看测试<a href="https://github.com/wenmobo/UITableViewCellAutoImageHeight" target="_blank" rel="noopener">UITableViewCellAutoImageHeight</a>。实现这个需求，自己也折腾了一段时间，上面的方法现在也能满足项目的需求，但是在UI效果上感觉还是有一些不完美之处。如果大神有更好的实现方案和优化方法，希望能多多交流学习。如果以后有更好的实现方案，我也会在这篇文章中记录下来。</p>
+<h3 id="四、结语"><a href="#四、结语" class="headerlink" title="四、结语"></a>四、结语</h3><blockquote>
+<p>2017年还剩两天，这篇文章也是今年写的最后一篇文章吧，写文章的初衷也是为了记录自己学习成长的点滴，同时也希望能够帮助到需要的人。2017就要结束了，自己的期望也未达到，希望在即将到来的2018年，自己更加努力，能够实现自己的期望与目标。奋斗吧，少年！</p>
 </blockquote>
 
       
@@ -540,12 +491,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/01/31/iOS定时器-NSTimer、CADisplayLink、GCD/">iOS定时器-NSTimer、CADisplayLink、GCD</a></p>
+  <p><span>本文标题:</span><a href="/2018/01/31/UITableViewCell自适应图片高度/">UITableViewCell自适应图片高度</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 WenBo 的个人博客">WenBo</a></p>
-  <p><span>发布时间:</span>2018年01月31日 - 22:01</p>
+  <p><span>发布时间:</span>2018年01月31日 - 23:01</p>
   <p><span>最后更新:</span>2018年01月31日 - 23:01</p>
-  <p><span>原始链接:</span><a href="/2018/01/31/iOS定时器-NSTimer、CADisplayLink、GCD/" title="iOS定时器-NSTimer、CADisplayLink、GCD">http://blogwenbo.com/2018/01/31/iOS定时器-NSTimer、CADisplayLink、GCD/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blogwenbo.com/2018/01/31/iOS定时器-NSTimer、CADisplayLink、GCD/"  aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/2018/01/31/UITableViewCell自适应图片高度/" title="UITableViewCell自适应图片高度">http://blogwenbo.com/2018/01/31/UITableViewCell自适应图片高度/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blogwenbo.com/2018/01/31/UITableViewCell自适应图片高度/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -589,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/30/MAC上Homebrew常用命令/" rel="next" title="MAC上Homebrew常用命令">
-                <i class="fa fa-chevron-left"></i> MAC上Homebrew常用命令
+              <a href="/2018/01/31/让你的工程支持WebP格式图片/" rel="next" title="让你的工程支持WebP格式图片">
+                <i class="fa fa-chevron-left"></i> 让你的工程支持WebP格式图片
               </a>
             
           </div>
@@ -598,10 +549,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/31/让你的工程支持WebP格式图片/" rel="prev" title="让你的工程支持WebP格式图片">
-                让你的工程支持WebP格式图片 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -815,7 +762,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NSTimer"><span class="nav-number">1.</span> <span class="nav-text">NSTimer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GCD定时器"><span class="nav-number">2.</span> <span class="nav-text">GCD定时器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、问题描述"><span class="nav-number">1.</span> <span class="nav-text">一、问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、解决思路"><span class="nav-number">2.</span> <span class="nav-text">二、解决思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、后台返回每张图片的宽高，根据比例去计算图片的高度"><span class="nav-number">2.1.</span> <span class="nav-text">1、后台返回每张图片的宽高，根据比例去计算图片的高度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、获取到image，image有size这个属性，可以拿到宽高，根据比例去计算图片的高度"><span class="nav-number">2.2.</span> <span class="nav-text">2、获取到image，image有size这个属性，可以拿到宽高，根据比例去计算图片的高度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、最终采用方案"><span class="nav-number">3.</span> <span class="nav-text">三、最终采用方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、工程导入SDWebImage和Masonry-导入相关头文件。"><span class="nav-number">3.1.</span> <span class="nav-text">1、工程导入SDWebImage和Masonry,导入相关头文件。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、SDWebImage下载图片，并计算出图片高度，将高度缓存到字典。自定义cell用Masonry设置好上下左右约束，也可以是xib。"><span class="nav-number">3.2.</span> <span class="nav-text">2、SDWebImage下载图片，并计算出图片高度，将高度缓存到字典。自定义cell用Masonry设置好上下左右约束，也可以是xib。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、cell高度代理方法返回缓存的图片高度"><span class="nav-number">3.3.</span> <span class="nav-text">3、cell高度代理方法返回缓存的图片高度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、结语"><span class="nav-number">4.</span> <span class="nav-text">四、结语</span></a></li></ol></div>
             
 
           </div>
