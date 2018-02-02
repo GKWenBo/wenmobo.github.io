@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -98,16 +98,20 @@
 
 
 
-<meta name="description" content="To strive, to seek, to find, and not to yield.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WenBo丨星空灬">
-<meta property="og:url" content="http://blogwenbo.com/categories/iOS/index.html">
+<meta name="description" content="前言 在我们平时做项目的时候，为了提高交互体验，难免会用到一些提示语。除了UI上有特殊的要求需要自定义提示UI，一般会选择GitHub上一些知名的提示框架库，如：  MBProgressHUD SVProgressHUD JGProgressHUD Toast">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最新MBProgressHUD封装">
+<meta property="og:url" content="http://blogwenbo.com/2018/02/02/最新MBProgressHUD封装/index.html">
 <meta property="og:site_name" content="WenBo丨星空灬">
-<meta property="og:description" content="To strive, to seek, to find, and not to yield.">
+<meta property="og:description" content="前言 在我们平时做项目的时候，为了提高交互体验，难免会用到一些提示语。除了UI上有特殊的要求需要自定义提示UI，一般会选择GitHub上一些知名的提示框架库，如：  MBProgressHUD SVProgressHUD JGProgressHUD Toast">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-ea49d566d0ff9763.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-02-02T14:27:11.576Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WenBo丨星空灬">
-<meta name="twitter:description" content="To strive, to seek, to find, and not to yield.">
+<meta name="twitter:title" content="最新MBProgressHUD封装">
+<meta name="twitter:description" content="前言 在我们平时做项目的时候，为了提高交互体验，难免会用到一些提示语。除了UI上有特殊的要求需要自定义提示UI，一般会选择GitHub上一些知名的提示框架库，如：  MBProgressHUD SVProgressHUD JGProgressHUD Toast">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3072214-ea49d566d0ff9763.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -137,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://blogwenbo.com/categories/iOS/"/>
+  <link rel="canonical" href="http://blogwenbo.com/2018/02/02/最新MBProgressHUD封装/"/>
 
 
 
 
 
-  <title>分类: iOS | WenBo丨星空灬</title>
+  <title>最新MBProgressHUD封装 | WenBo丨星空灬</title>
   
 
 
@@ -162,7 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/wenmobo" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -300,167 +304,300 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>iOS<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/02/02/最新MBProgressHUD封装/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WenBo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/3072214/ccbcba49-0a5c-4b7e-b1e4-aea15ab4419f.png?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WenBo丨星空灬">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/02/最新MBProgressHUD封装/" itemprop="url">
-              
-                <span itemprop="name">最新MBProgressHUD封装</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">最新MBProgressHUD封装</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-02T22:25:31+08:00"
-              content="2018-02-02" >
-          02-02
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T22:25:31+08:00">
+                2018-02-02
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/02/02/最新MBProgressHUD封装/" class="leancloud_visitors" data-flag-title="最新MBProgressHUD封装">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+		<span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,025
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/31/UITableViewCell自适应图片高度/" itemprop="url">
-              
-                <span itemprop="name">UITableViewCell自适应图片高度</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-31T23:34:42+08:00"
-              content="2018-01-31" >
-          01-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/31/让你的工程支持WebP格式图片/" itemprop="url">
-              
-                <span itemprop="name">让你的工程支持WebP格式图片</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-31T23:19:11+08:00"
-              content="2018-01-31" >
-          01-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/31/iOS定时器-NSTimer、CADisplayLink、GCD/" itemprop="url">
-              
-                <span itemprop="name">iOS定时器-NSTimer、CADisplayLink、GCD</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-31T22:59:04+08:00"
-              content="2018-01-31" >
-          01-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/24/Mac下CocoaPods安装与使用/" itemprop="url">
-              
-                <span itemprop="name">Mac下CocoaPods安装与使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-24T21:52:17+08:00"
-              content="2018-01-24" >
-          01-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>在我们平时做项目的时候，为了提高交互体验，难免会用到一些提示语。除了UI上有特殊的要求需要自定义提示UI，一般会选择<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>上一些知名的提示框架库，如：</p>
+<ul>
+<li><a href="https://github.com/jdg/MBProgressHUD" target="_blank" rel="noopener">MBProgressHUD</a></li>
+<li><a href="https://github.com/SVProgressHUD/SVProgressHUD" target="_blank" rel="noopener">SVProgressHUD</a></li>
+<li><a href="https://github.com/JonasGessner/JGProgressHUD" target="_blank" rel="noopener">JGProgressHUD</a></li>
+<li><a href="https://github.com/scalessec/Toast" target="_blank" rel="noopener">Toast</a></li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p>之前做项目都是用的<strong>SVProgressHUD</strong>，这个三方提示库使用非常接单，基于这个库，也很好做自定义提示封装。后来做项目改成了MBProgressHUD，相对于SVProgressHUD，MBProgressHUD使用相对来说要麻烦一点，因此，我对MBProgressHUD一些常用提示进行了封装，最开始封装的工具类存在着一些缺点，比如说在网络请求的时候，如果网络不好，拿不到回调，MBProgressHUD就会一直显示，用户无法交互，因此对这个工具类进行了改进。</p>
+<h3 id="MBProgressHUD-v1-1-0"><a href="#MBProgressHUD-v1-1-0" class="headerlink" title="MBProgressHUD(v1.1.0)"></a>MBProgressHUD(v1.1.0)</h3><p>我主要写了一个分类，有菊花、文字、文字+图片提示，并提供了显示完成对调，方便显示完成后进行相应的操作或界面跳转，提供的调用方法如下：<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark ------ <span class="meta-string">&lt; Mask Layer &gt;</span> ------</span></span><br><span class="line"><span class="meta">#pragma mark</span></span><br><span class="line"><span class="comment">/** &lt;&lt; 设置是否显示蒙层 &gt; */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_maskLayerEnabled:(<span class="built_in">BOOL</span>)enabled;</span><br><span class="line"></span><br><span class="line"><span class="meta">#pragma mark --------  Basic Method  --------</span></span><br><span class="line"><span class="meta">#pragma mark</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  快速创建提示框 有菊花</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  @param message 提示信息</span></span><br><span class="line"><span class="comment"> *  @param view 显示视图</span></span><br><span class="line"><span class="comment"> *  @return hud</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (MBProgressHUD *)wb_showActivityMessage:(<span class="built_in">NSString</span> *)message</span><br><span class="line">                                   toView:(<span class="built_in">UIView</span> *)view;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  显示提示文字</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  @param message 提示信息</span></span><br><span class="line"><span class="comment"> *  @param view 显示的视图</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showMessage:(<span class="built_in">NSString</span> *)message</span><br><span class="line">                toView:(<span class="built_in">UIView</span> *)view completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  自定义成功提示</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  @param success 提示文字</span></span><br><span class="line"><span class="comment"> *  @param view 显示视图</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showSuccess:(<span class="built_in">NSString</span> *)success</span><br><span class="line">                toView:(<span class="built_in">UIView</span> *)view completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  自定义失败提示</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  @param error 提示文字</span></span><br><span class="line"><span class="comment"> *  @param view 显示视图</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showError:(<span class="built_in">NSString</span> *)error</span><br><span class="line">              toView:(<span class="built_in">UIView</span> *)view completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  自定义提示信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  @param info 提示信息</span></span><br><span class="line"><span class="comment"> *  @param view 示视图</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showInfo:(<span class="built_in">NSString</span> *)info</span><br><span class="line">             toView:(<span class="built_in">UIView</span> *)view</span><br><span class="line">         completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  自定义警告提示</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  @param warning 提示信息</span></span><br><span class="line"><span class="comment"> *  @param view 示视图</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showWarning:(<span class="built_in">NSString</span> *)warning</span><br><span class="line">                toView:(<span class="built_in">UIView</span> *)view completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  自定义提示框</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  @param text 提示文字</span></span><br><span class="line"><span class="comment"> *  @param icon 图片名称</span></span><br><span class="line"><span class="comment"> *  @param view 展示视图</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_show:(<span class="built_in">NSString</span> *)text</span><br><span class="line">           icon:(<span class="built_in">NSString</span> *)icon</span><br><span class="line">           view:(<span class="built_in">UIView</span> *)view</span><br><span class="line">     completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"></span><br><span class="line"><span class="meta">#pragma mark --------  Activity &amp;&amp; Text  --------</span></span><br><span class="line"><span class="meta">#pragma mark</span></span><br><span class="line"><span class="comment">/**  &lt; 只显示菊花 &gt;  */</span></span><br><span class="line">+ (MBProgressHUD *)wb_showActivity;</span><br><span class="line"><span class="comment">/**  &lt; 菊花带有文字 &gt;  */</span></span><br><span class="line">+ (MBProgressHUD *)wb_showActivityMessage:(<span class="built_in">NSString</span> *)message;</span><br><span class="line"></span><br><span class="line"><span class="meta">#pragma mark --------  Text &amp;&amp; Image  --------</span></span><br><span class="line"><span class="meta">#pragma mark</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 文字提示</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> @param message 提示文字</span></span><br><span class="line"><span class="comment"> @param completion 完成回调</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showMessage:(<span class="built_in">NSString</span> *)message completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 成功提示</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> @param success 提示文字</span></span><br><span class="line"><span class="comment"> @param completion 完成回调</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showSuccess:(<span class="built_in">NSString</span> *)success completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 错误提示</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> @param error 提示文字</span></span><br><span class="line"><span class="comment"> @param completion 完成回调</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showError:(<span class="built_in">NSString</span> *)error completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 信息提示</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> @param info 提示文字</span></span><br><span class="line"><span class="comment"> @param completion 完成回调</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showInfo:(<span class="built_in">NSString</span> *)info completion:(MBProgressHUDCompletionBlock)completion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 警告提示</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> @param warning 提示文字</span></span><br><span class="line"><span class="comment"> @param completion 完成回调</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">+ (<span class="keyword">void</span>)wb_showWarning:(<span class="built_in">NSString</span> *)warning completion:(MBProgressHUDCompletionBlock)completion;</span><br></pre></td></tr></table></figure></p>
+<p>举一个.m显示菊花方法的例子吧，MBProgressHUD最新版本对比老版本API还是有些变化的：<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">+ (MBProgressHUD *)wb_showActivityMessage:(NSString *)message</span><br><span class="line"><span class="symbol">                                   toView:</span>(UIView *)view &#123;</span><br><span class="line">    if (!view) view = [UIApplication <span class="keyword">sharedApplication].delegate.window; </span>   <span class="comment">/**  快速显示提示信息  */</span></span><br><span class="line">    MBProgressHUD * hud = [MBProgressHUD <span class="keyword">showHUDAddedTo:view </span>animated:YES]<span class="comment">;</span></span><br><span class="line">    <span class="comment">/**  &lt; 显示动画效果 &gt;  */</span></span><br><span class="line">    hud.animationType = MBProgressHUDAnimationZoom<span class="comment">;</span></span><br><span class="line">    <span class="comment">/**  &lt; 文字内容 &gt;  */</span></span><br><span class="line">    hud.label<span class="meta">.text</span> = message<span class="comment">;</span></span><br><span class="line">    <span class="comment">/**  &lt; 影藏后移除视图 &gt;  */</span></span><br><span class="line">    hud.removeFromSuperViewOnHide = YES<span class="comment">;</span></span><br><span class="line">    <span class="comment">/**  中间方框背景色  */</span></span><br><span class="line">    hud.<span class="keyword">bezelView.color </span>= [[UIColor <span class="keyword">blackColor] </span>colorWithAlphaComponent:<span class="number">0</span>.<span class="number">85</span>f]<span class="comment">;</span></span><br><span class="line">    <span class="comment">/**  内容颜色  */</span></span><br><span class="line">    hud.contentColor = [UIColor whiteColor]<span class="comment">;</span></span><br><span class="line">    <span class="comment">/**  &lt; 最小显示时间 &gt;  */</span></span><br><span class="line">    hud.minShowTime = kActivityMinDismissTime<span class="comment">;</span></span><br><span class="line">    [self wb_configMaskLayer:hud]<span class="comment">;</span></span><br><span class="line">    return hud<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>具体详情，请戳：<a href="https://github.com/wenmobo/WBMBProgressHUDManager" target="_blank" rel="noopener">WBMBProgressHUDManager</a><br><img src="http://upload-images.jianshu.io/upload_images/3072214-ea49d566d0ff9763.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Untitled.gif"></p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><blockquote>
+<p>选择哪一款提示框架，都要看自己喜好了，因为我代码水平有限，有些地方可能考虑的不够完善，只能说是抛砖引玉吧，大神们可能有更好的封装。要想基于这些框架自定义出自己需要风格的UI，还是要对框架提供的方法属性有一定的了解。</p>
+</blockquote>
 
       
     </div>
+    
+    
+    
 
+      <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+      </div>
+
+      <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/02/02/最新MBProgressHUD封装/">最新MBProgressHUD封装</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 WenBo 的个人博客">WenBo</a></p>
+  <p><span>发布时间:</span>2018年02月02日 - 22:02</p>
+  <p><span>最后更新:</span>2018年02月02日 - 22:02</p>
+  <p><span>原始链接:</span><a href="/2018/02/02/最新MBProgressHUD封装/" title="最新MBProgressHUD封装">http://blogwenbo.com/2018/02/02/最新MBProgressHUD封装/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blogwenbo.com/2018/02/02/最新MBProgressHUD封装/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+      </div>
+      
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i> iOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/31/UITableViewCell自适应图片高度/" rel="next" title="UITableViewCell自适应图片高度">
+                <i class="fa fa-chevron-left"></i> UITableViewCell自适应图片高度
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -468,6 +605,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyMy85OTc5"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -488,8 +634,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -600,6 +755,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MBProgressHUD-v1-1-0"><span class="nav-number">2.</span> <span class="nav-text">MBProgressHUD(v1.1.0)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -771,6 +942,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -799,6 +974,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
