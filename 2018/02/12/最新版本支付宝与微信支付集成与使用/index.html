@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS,SDK," />
 
 
 
@@ -98,16 +98,35 @@
 
 
 
-<meta name="description" content="To strive, to seek, to find, and not to yield.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WenBo丨星空灬">
-<meta property="og:url" content="http://blogwenbo.com/index.html">
+<meta name="description" content="自己在两个项目中接入了移动端支付宝和微信支付，也对支付代码进行了简单的封装。在项目集成与调试的时候遇到了一些问题，自己也一直想找时间进行整理，方便以后在项目中集成与使用。支付宝SDK和微信SDK都进行了相应的更新，我项目中使用的还是老版本的SDK，下面开始介绍最新版本的SDK集成与使用。">
+<meta name="keywords" content="iOS,SDK">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最新版本支付宝与微信支付集成与使用">
+<meta property="og:url" content="http://blogwenbo.com/2018/02/12/最新版本支付宝与微信支付集成与使用/index.html">
 <meta property="og:site_name" content="WenBo丨星空灬">
-<meta property="og:description" content="To strive, to seek, to find, and not to yield.">
+<meta property="og:description" content="自己在两个项目中接入了移动端支付宝和微信支付，也对支付代码进行了简单的封装。在项目集成与调试的时候遇到了一些问题，自己也一直想找时间进行整理，方便以后在项目中集成与使用。支付宝SDK和微信SDK都进行了相应的更新，我项目中使用的还是老版本的SDK，下面开始介绍最新版本的SDK集成与使用。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-c25b6aa91059461b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-6a63b06a397a0418?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-c7051e4b5d1a5fa1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-14fff57303ee5501?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-b4f6bf95ca90ce22?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-13c992c6e4561cc5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-c0953febff94b934?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-54ef7cd030c0a014?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-8afcb320be8d12bd?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-ac2716d7b0c995b5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-ef52ea46de25fae6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-561eaf005e73e166?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-35b2667bf2ead6c1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-1f31346593917aa2?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-4708ecfd45b70b69?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-e6696311627b1eea?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-02-12T10:10:39.646Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WenBo丨星空灬">
-<meta name="twitter:description" content="To strive, to seek, to find, and not to yield.">
+<meta name="twitter:title" content="最新版本支付宝与微信支付集成与使用">
+<meta name="twitter:description" content="自己在两个项目中接入了移动端支付宝和微信支付，也对支付代码进行了简单的封装。在项目集成与调试的时候遇到了一些问题，自己也一直想找时间进行整理，方便以后在项目中集成与使用。支付宝SDK和微信SDK都进行了相应的更新，我项目中使用的还是老版本的SDK，下面开始介绍最新版本的SDK集成与使用。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3072214-c25b6aa91059461b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -137,13 +156,13 @@
 
 
 
-  <link rel="canonical" href="http://blogwenbo.com/"/>
+  <link rel="canonical" href="http://blogwenbo.com/2018/02/12/最新版本支付宝与微信支付集成与使用/"/>
 
 
 
 
 
-  <title>WenBo丨星空灬</title>
+  <title>最新版本支付宝与微信支付集成与使用 | WenBo丨星空灬</title>
   
 
 
@@ -162,8 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/wenmobo" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -300,9 +318,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -332,9 +350,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/12/最新版本支付宝与微信支付集成与使用/" itemprop="url">最新版本支付宝与微信支付集成与使用</a></h1>
+          <h1 class="post-title" itemprop="name headline">最新版本支付宝与微信支付集成与使用</h1>
         
 
         <div class="post-meta">
@@ -449,625 +465,65 @@
       
 
       
-        
-          <blockquote>
+        <blockquote>
 <p>自己在两个项目中接入了移动端支付宝和微信支付，也对支付代码进行了简单的封装。在项目集成与调试的时候遇到了一些问题，自己也一直想找时间进行整理，方便以后在项目中集成与使用。<strong>支付宝SDK</strong>和<strong>微信SDK</strong>都进行了相应的更新，我项目中使用的还是老版本的SDK，下面开始介绍最新版本的SDK集成与使用。</p>
 </blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/12/最新版本支付宝与微信支付集成与使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-      <div>
-  
-      </div>
-
-      <div>
-      
-      </div>
-      
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/02/12/WKWebView高度自适应/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WenBo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/3072214/ccbcba49-0a5c-4b7e-b1e4-aea15ab4419f.png?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WenBo丨星空灬">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/12/WKWebView高度自适应/" itemprop="url">WKWebView高度自适应</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-12T18:04:06+08:00">
-                2018-02-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/02/12/WKWebView高度自适应/" class="leancloud_visitors" data-flag-title="WKWebView高度自适应">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-		<span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  726
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>Important<br>tarting in iOS 8.0 and OS X 10.10, use WKWebView to add web content to your app. Do not use UIWebView or WebView.</p>
-</blockquote>
-<p><strong>WKWebVIew</strong>是iOS8新出的API，旨在替代原有的<strong>UIWebView</strong>，相对于<strong>UIWebView</strong>，<strong>WKWebView</strong>有着更为强大性能和丰富的API。在项目开发过程中，我也更倾向于用<strong>WKWebView</strong>,但在使用过程中也遇到许多的问题。</p>
-<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><p><strong>2018.02.11</strong></p>
+<a id="more"></a>
+<h3 id="一、支付宝"><a href="#一、支付宝" class="headerlink" title="一、支付宝"></a>一、<a href="https://open.alipay.com/platform/home.htm" target="_blank" rel="noopener">支付宝</a></h3><h4 id="1-gt-快速接入"><a href="#1-gt-快速接入" class="headerlink" title="1&gt; 快速接入"></a>1&gt; <a href="https://docs.open.alipay.com/204/105297/" target="_blank" rel="noopener">快速接入</a></h4><p>在接入前，首先要对流程要有相应的了解，主要有以下三个步骤（具体详情，请点击上面链接查看）：</p>
 <ul>
-<li>整理Demo文件</li>
-<li>解决web断层问题：<a href="https://www.jianshu.com/p/1d739e2e7ed2" target="_blank" rel="noopener">WKWebView刷新机制小探</a><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark ------ <span class="meta-string">&lt; UIScrollViewDeltegate &gt;</span> ------</span></span><br><span class="line">- (<span class="keyword">void</span>)scrollViewDidScroll:(<span class="built_in">UIScrollView</span> *)scrollView &#123;</span><br><span class="line">    <span class="comment">/**  &lt; 解决web白屏问题 &gt;  */</span></span><br><span class="line">    <span class="comment">/**  &lt; 需要调用私有API：_updateVisibleContentRects &gt;  */</span></span><br><span class="line">    [<span class="keyword">self</span>.wkWebView setNeedsLayout];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>创建应用并获取APPID</li>
+<li>配置应用<br><img src="http://upload-images.jianshu.io/upload_images/3072214-c25b6aa91059461b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></li>
+<li>集成和开发<br><img src="http://upload-images.jianshu.io/upload_images/3072214-6a63b06a397a0418?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="81fdbf664f654970835e5426b55959f6.jpg"><h4 id="2-gt-SDK下载"><a href="#2-gt-SDK下载" class="headerlink" title="2&gt; SDK下载"></a>2&gt; SDK下载</h4></li>
+<li><a href="http://p.tb.cn/rmsportal_6680_WS_APP_PAY_SDK_BASE_2.0.zip" target="_blank" rel="noopener">SDK&amp;DEMO</a></li>
+<li><a href="https://github.com/wenmobo/WBPayManager/blob/master/Lib/AliSDK/AliSDK_V15.4.1.zip" target="_blank" rel="noopener">AliSDK_V15.4.1</a>(现在项目中使用的版本)</li>
+<li><a href="https://github.com/wenmobo/WBPayManager/blob/master/Lib/AliSDK/AliSDK_V15.5.0.zip" target="_blank" rel="noopener">AliSDK_V15.5.0</a><h4 id="3-gt-集成SDK"><a href="#3-gt-集成SDK" class="headerlink" title="3&gt; 集成SDK"></a>3&gt; 集成SDK</h4>[1]、将下面两个文件拖入到工程<br><strong>AlipaySDK.bundle</strong><br><strong>AlipaySDK.framework</strong><br><img src="http://upload-images.jianshu.io/upload_images/3072214-c7051e4b5d1a5fa1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 上午11.18.23.png"><br>添加官方demo中依赖文件到工程，如下图所示：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-14fff57303ee5501?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 上午11.45.26.png"><br>[2]、 添加依赖库<blockquote>
+<p><code>libc++.tbd</code><br>ibz.tbd<code>SystemConfiguration.framework</code><br>oreTelephony.framework<code>uartzCore.framework</code><br>oreText.framework<code>oreGraphics.framework</code><br>IKit.framework<code>oundation.framework</code><br>FNetwork.framework<code>oreMotion.framework</code><br>lipaySDK.famework`    </p>
+</blockquote>
 </li>
 </ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/12/WKWebView高度自适应/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-      <div>
-  
-      </div>
-
-      <div>
-      
-      </div>
-      
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/02/12/Mac-OS-X系统常用工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WenBo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/3072214/ccbcba49-0a5c-4b7e-b1e4-aea15ab4419f.png?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WenBo丨星空灬">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/12/Mac-OS-X系统常用工具/" itemprop="url">Mac OS X系统常用工具</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-12T17:55:44+08:00">
-                2018-02-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/02/12/Mac-OS-X系统常用工具/" class="leancloud_visitors" data-flag-title="Mac OS X系统常用工具">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-		<span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,239
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自己使用Mac OS X系统也有一段时间了，也使用过许多MAC上好用的软件，下面是我对使用过和了解的软件资源一些整理。以后可能也会接触使用新的软件，我也会对文章进行更新。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/12/Mac-OS-X系统常用工具/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-      <div>
-  
-      </div>
-
-      <div>
-      
-      </div>
-      
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/02/12/iOS开发常用分类-WBCategories/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WenBo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/3072214/ccbcba49-0a5c-4b7e-b1e4-aea15ab4419f.png?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WenBo丨星空灬">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/12/iOS开发常用分类-WBCategories/" itemprop="url">iOS开发常用分类-WBCategories</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-12T17:45:51+08:00">
-                2018-02-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/02/12/iOS开发常用分类-WBCategories/" class="leancloud_visitors" data-flag-title="iOS开发常用分类-WBCategories">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-		<span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2,327
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  11
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>You use categories to define additional methods of an existing class—even one whose source code is unavailable to you—without subclassing. You typically use a category to add methods to an existing class, such as one defined in the Cocoa frameworks. The added methods are inherited by subclasses and are indistinguishable at runtime from the original methods of the class. You can also use categories of your own classes to:</p>
-<ul>
-<li>Distribute the implementation of your own classes into separate source files—for example, you could group the methods of a large class into several categories and put each category in a different file.</li>
-<li>Declare private methods.</li>
-</ul>
-<p>You add methods to a class by declaring them in an interface file under a category name and defining them in an implementation file under the same name. The category name indicates that the methods are an extension to a class declared elsewhere, not a new class.</p>
+<p><strong>注意</strong></p>
+<blockquote>
+<p>如果是Xcode 7.0之后的版本，需要添加libc++.tbd、libz.tbd；<br>果是Xcode 7.0之前的版本，需要添加libc++.dylib、libz.dylib</p>
 </blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/12/iOS开发常用分类-WBCategories/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p><img src="http://upload-images.jianshu.io/upload_images/3072214-b4f6bf95ca90ce22?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 上午11.17.28.png"><br>[3]、配置info.plist,添加支付回调URL scheme，可以自己定义一个名字，如下图：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-13c992c6e4561cc5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 下午3.19.54.png"><br>好了，到这里，SDK库文件和系统依赖库都已经导入到工程，<code>command+R</code>运行一下，你会发现报错，就是<strong>oppssl/asn1.h not found</strong>，在我最开始集成支付宝的时候，这个问题折腾了我好久，网上和官方都能找到解决方法，虽然每次都解决了，但是都尝试了好久。</p>
+<p><strong>报错解决</strong><br>1、<strong>oppssl/asn1.h not found</strong><br><img src="http://upload-images.jianshu.io/upload_images/3072214-c0953febff94b934?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 上午11.48.22.png"><br>在<strong>Build Settings</strong>下搜索<strong>Header Search Paths</strong>中添加<code>$(SRCROOT)/项目名称</code>,我写的<a href="https://github.com/wenmobo/WBPayManager" target="_blank" rel="noopener">WBPayManagerDemo</a>中的<strong>openssl</strong>文件夹在<strong>AliSDK_V15.5.0</strong>文件下，所以这里需要修改<br>方式一：手动添加路径<br><code>$(SRCROOT)/WBPayManagerDemo/AliSDK_V15.5.0</code><br><img src="http://upload-images.jianshu.io/upload_images/3072214-54ef7cd030c0a014?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 下午12.01.02.png"><br>方式二：将AliSDK_V15.5.0文件夹拖入到<strong>Header Search Paths</strong><br><img src="http://upload-images.jianshu.io/upload_images/3072214-8afcb320be8d12bd?imageMogr2/auto-orient/strip" alt="Untitled.gif"></p>
+<h3 id="二、微信"><a href="#二、微信" class="headerlink" title="二、微信"></a>二、<a href="https://open.weixin.qq.com/cgi-bin/index?t=home/index&amp;lang=zh_CN" target="_blank" rel="noopener">微信</a></h3><h4 id="1-gt-接入指南"><a href="#1-gt-接入指南" class="headerlink" title="1&gt; 接入指南"></a>1&gt; <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=1417694084&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">接入指南</a></h4><p>微信SDK集成主要有以下三个步骤：</p>
+<ul>
+<li>向微信注册你的应用程序id<br>请到 开发者应用登记页面 进行登记，登记并选择移动应用进行设置后，将获得AppID，可立即用于开发。但应用登记完成后还需要提交审核，只有审核通过的应用才能正式发布使用。</li>
+<li><p>下载微信终端SDK文件<br>SDK文件包括 libWeChatSDK.a，WXApi.h，WXApiObject.h 三个。<br>如选用手动集成，请前往“<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419319164&amp;lang=zh_CN" title="iOS资源下载" target="_blank" rel="noopener">资源下载页</a>”下载最新SDK包</p>
+</li>
+<li><p>搭建开发环境</p>
+<h4 id="2-gt-项目集成"><a href="#2-gt-项目集成" class="headerlink" title="2&gt; 项目集成"></a>2&gt; 项目集成</h4></li>
+<li>1、通过CocoaPods集成<br><code>pod &#39;WechatOpenSDK&#39;</code><br><strong>注意</strong></li>
+<li>命令行下执行pod search WechatOpenSDK,如显示的WechatOpenSDK版本不是最新的，则先执行pod repo update操作更新本地repo的内容</li>
+<li>对于之前SDK放在主工程目录下，切换成CocoaPods的形式，执行pod install 之后，出现<br>Use the $(inherited) flag, or<br> Remove the build settings from the target.<br>解决方法是 把工程target中的build Setting里面PODS_ROOT的值替换成$(inherited)Other Linker Flags中 -all_load 替换成$(inherited)<br><strong><img src="http://upload-images.jianshu.io/upload_images/3072214-ac2716d7b0c995b5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></strong><br><strong><img src="http://upload-images.jianshu.io/upload_images/3072214-ef52ea46de25fae6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></strong><br>2、手动集成<br>[1]、SDK下载</li>
+<li><a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419319164&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">官方下载地址</a></li>
+<li><a href="https://github.com/wenmobo/WBPayManager/blob/master/Lib/WeChat/WeChatSDK_V1.7.8.zip" target="_blank" rel="noopener">WeChatSDK_V1.7.8</a>(现在项目使用的版本，通过ShareSDK导入)</li>
+<li><a href="https://github.com/wenmobo/WBPayManager/blob/master/Lib/WeChat/WechatSDK1.8.2.zip" target="_blank" rel="noopener">WechatSDK1.8.2</a><br>[2]、导入工程<br>将WechatSDK1.8.2文件夹（<strong>libWeChatSDK.a</strong>、<strong>WechatAuthSDK.h</strong>、<strong>WXApi.h</strong>、<strong>WXApiObject.h</strong>）拖入到工程。<br><img src="http://upload-images.jianshu.io/upload_images/3072214-561eaf005e73e166?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 下午2.42.39.png"><br>[3]、添加依赖库<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SystemConfiguration.framework</span><br><span class="line">libz<span class="selector-class">.tbd</span> </span><br><span class="line">libsqlite3.<span class="number">0</span>.tbd</span><br><span class="line">libc++<span class="selector-class">.tbd</span> </span><br><span class="line">Security.framework</span><br><span class="line">CoreTelephony.framework</span><br><span class="line">CFNetwork.framework</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>注意</strong><br>Xcode 7.0之前<br><code>libz.tbd</code> 对应的是<code>libz.dylib</code><br><code>libsqlite3.0.tbd</code>对应的是<code>libsqlite3.0.dylib</code><br><code>libc++.tbd</code>对应的是<code>libc++.dylib</code><br>[4]、配置工程</p>
+<ul>
+<li>在你的工程文件中选择Build Setting，在”Other Linker Flags”中加入”-Objc -all_load”，在Search Paths中添加 libWeChatSDK.a ，WXApi.h，WXApiObject.h，文件所在位置（如下图所示）。<br><img src="http://upload-images.jianshu.io/upload_images/3072214-35b2667bf2ead6c1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 下午3.00.25.png"></li>
+<li>在info.plist添加key为<strong>LSApplicationQueriesSchemes</strong>，<strong>Type</strong>为数组类型，添加一个item为<strong>weixin</strong>，如下图所示：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-1f31346593917aa2?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 下午3.04.56.png"></li>
+<li>在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，在“info”标签栏的“URL type“添加“URL scheme”为你所注册的应用程序id<br><img src="http://upload-images.jianshu.io/upload_images/3072214-4708ecfd45b70b69?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 下午3.13.56.png"><h3 id="三、支付封装"><a href="#三、支付封装" class="headerlink" title="三、支付封装"></a>三、支付封装</h3>封装主要是新建了一个工具类，通过封装工具，可以将支付宝Block回调和微信的代理回调集中在一个回调里，支付只需调用一行代码就OK，我现在的项目都是用的这个支付工具类，下面介绍下核心代码和使用注意事项吧。<br>[1]注意URL Types的配置<br>在<strong>WBPayManager.h</strong>的头文件中，定义了两个URL identifier，所以配置的时候，需要保证info里的identifier和头文件定义的一致。<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//此处必须保证在Info.plist 中的 URL Types 的 Identifier 对应一致</span></span><br><span class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> * <span class="keyword">const</span> ALIPAY_URLIDENTIFIER;<span class="comment">/**  支付宝URL NAME  */</span></span><br><span class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> * <span class="keyword">const</span> WECHAT_URLIDENTIFIER;<span class="comment">/**  微信URL NAME  */</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3072214-e6696311627b1eea?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-01-04 下午3.59.03.png"><br>[2]、处理支付回调<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**  &lt; 微信需要在程序加载完成注册 &gt;  */</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line">    <span class="comment">// Override point for customization after application launch.</span></span><br><span class="line">    </span><br><span class="line">    [[WBPayManager shareManager] wb_registerApp];</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  最老的版本，最好也写上</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application handleOpenURL:(<span class="built_in">NSURL</span> *)url &#123;</span><br><span class="line">    <span class="keyword">return</span> [[WBPayManager shareManager] wb_handleUrl:url];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// <span class="doctag">NOTE:</span> 9.0以后使用新API接口</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)app openURL:(<span class="built_in">NSURL</span> *)url options:(<span class="built_in">NSDictionary</span>&lt;<span class="built_in">UIApplicationOpenURLOptionsKey</span>,<span class="keyword">id</span>&gt; *)options &#123;</span><br><span class="line">    <span class="keyword">return</span> [[WBPayManager shareManager] wb_handleUrl:url];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**  *  iOS 9.0 之前 会调用  */</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application openURL:(<span class="built_in">NSURL</span> *)url sourceApplication:(<span class="built_in">NSString</span> *)sourceApplication annotation:(<span class="keyword">id</span>)annotation &#123;</span><br><span class="line">    <span class="keyword">return</span> [[WBPayManager shareManager] wb_handleUrl:url];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>[3]、发起支付</p>
+<ul>
+<li><p>支付宝</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//直接传入后台返回的订单信息支付串</span></span><br><span class="line"><span class="selector-attr">[[WBPayManager shareManager]</span> <span class="selector-tag">wb_payWithOrderInfo</span><span class="selector-pseudo">:orderInfo</span> <span class="selector-tag">payCallBack</span>:^(WBPayStatusCode errorCode, NSString *errorStr) &#123;</span><br><span class="line">    <span class="comment">//支付结果回调</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>微信</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//构建PayReq对象，后台返回</span></span><br><span class="line">PayReq * req = [PayReq <span class="keyword">new</span>];</span><br><span class="line">req.partnerId = orderModel.wechatpay_data.partnerid;</span><br><span class="line">req.prepayId= orderModel.wechatpay_data.prepayid;</span><br><span class="line">req.<span class="keyword">package</span> = orderModel.wechatpay_data.<span class="keyword">package</span>;</span><br><span class="line">req.nonceStr= orderModel.wechatpay_data.noncestr;</span><br><span class="line">req.timeStamp= (UInt32)[orderModel.wechatpay_data.timestamp integerValue];</span><br><span class="line">req.sign= orderModel.wechatpay_data.sign;</span><br><span class="line">[[WBPayManager shareManager] <span class="string">wb_payWithOrderInfo:</span>req <span class="string">payCallBack:</span>^(WBPayStatusCode errorCode, NSString *errorStr) &#123;</span><br><span class="line">    <span class="comment">//支付结果回调</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>具体详情，请戳GitHub：<a href="https://github.com/wenmobo/WBPayManager" target="_blank" rel="noopener">WBPayManagerDemo</a></p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><blockquote>
+<p>终于整理完成了，通过这次整理，希望以后在项目集成少遇到一些坑吧，微信的支付文档感觉确实有点老了，SDK在更新，文档却没有更新，不过也没有关系。最新版本的SDK在自己的项目中也没有使用，项目中还是用的老版本的SDK，我也将老版本SDK的下载链接也放在文章中。如有不对的地方，欢迎指正，希望这篇文章能对你有所帮助。</p>
+</blockquote>
+
       
     </div>
     
@@ -1076,9 +532,47 @@
 
       <div>
   
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
       </div>
 
       <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/02/12/最新版本支付宝与微信支付集成与使用/">最新版本支付宝与微信支付集成与使用</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 WenBo 的个人博客">WenBo</a></p>
+  <p><span>发布时间:</span>2018年02月12日 - 18:02</p>
+  <p><span>最后更新:</span>2018年02月12日 - 18:02</p>
+  <p><span>原始链接:</span><a href="/2018/02/12/最新版本支付宝与微信支付集成与使用/" title="最新版本支付宝与微信支付集成与使用">http://blogwenbo.com/2018/02/12/最新版本支付宝与微信支付集成与使用/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blogwenbo.com/2018/02/12/最新版本支付宝与微信支付集成与使用/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
       
       </div>
       
@@ -1090,211 +584,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/02/12/MAC上iTerm-2安装与使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WenBo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/3072214/ccbcba49-0a5c-4b7e-b1e4-aea15ab4419f.png?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WenBo丨星空灬">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/12/MAC上iTerm-2安装与使用/" itemprop="url">MAC上iTerm 2安装与使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-12T17:40:27+08:00">
-                2018-02-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i> iOS</a>
           
-
+            <a href="/tags/SDK/" rel="tag"><i class="fa fa-tag"></i> SDK</a>
           
-            
-          
-
-          
-          
-             <span id="/2018/02/12/MAC上iTerm-2安装与使用/" class="leancloud_visitors" data-flag-title="MAC上iTerm 2安装与使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-		<span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  944
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  4
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>iTerm2是MAC下最好用的终端工具，并且还是免费的。iTerm2 是配置完毕开箱即用的 tmux，有标签变色、智能选中等特色功能。在日常开发中，我们难免会与终端命令打交道，比如使用Git，CocoaPods，Homebrew，Hexo等，下面开始介绍自定义终端样式吧！</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/12/MAC上iTerm-2安装与使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/12/WKWebView高度自适应/" rel="next" title="WKWebView高度自适应">
+                <i class="fa fa-chevron-left"></i> WKWebView高度自适应
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-      <div>
-  
-      </div>
+          <span class="post-nav-divider"></span>
 
-      <div>
-      
-      </div>
-      
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1304,14 +625,37 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
 
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1319,6 +663,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyMy85OTc5"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1339,8 +692,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1451,6 +813,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、支付宝"><span class="nav-number">1.</span> <span class="nav-text">一、支付宝</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-快速接入"><span class="nav-number">1.1.</span> <span class="nav-text">1&gt; 快速接入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-gt-SDK下载"><span class="nav-number">1.2.</span> <span class="nav-text">2&gt; SDK下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-gt-集成SDK"><span class="nav-number">1.3.</span> <span class="nav-text">3&gt; 集成SDK</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、微信"><span class="nav-number">2.</span> <span class="nav-text">二、微信</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-接入指南"><span class="nav-number">2.1.</span> <span class="nav-text">1&gt; 接入指南</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-gt-项目集成"><span class="nav-number">2.2.</span> <span class="nav-text">2&gt; 项目集成</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、支付封装"><span class="nav-number">3.</span> <span class="nav-text">三、支付封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1622,6 +1000,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1650,6 +1032,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
