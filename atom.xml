@@ -232,9 +232,9 @@
     
       <category term="MAC" scheme="http://blogwenbo.com/tags/MAC/"/>
     
-      <category term="iOS" scheme="http://blogwenbo.com/tags/iOS/"/>
-    
       <category term="CocoaPods" scheme="http://blogwenbo.com/tags/CocoaPods/"/>
+    
+      <category term="iOS" scheme="http://blogwenbo.com/tags/iOS/"/>
     
   </entry>
   
