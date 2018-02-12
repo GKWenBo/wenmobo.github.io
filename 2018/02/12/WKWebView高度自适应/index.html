@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="MAC,iOS,CocoaPods," />
+  <meta name="keywords" content="iOS,JavaScript," />
 
 
 
@@ -98,22 +98,18 @@
 
 
 
-<meta name="description" content="前言 在开发项目的时候，难免会导入一些三方开源库，CocoaPods是OS X管理三方开源库的工具，用这个工具，我们可以轻松集中管理、更新三方开源库。下面开始介绍CocoaPods安装与使用吧。">
-<meta name="keywords" content="MAC,iOS,CocoaPods">
+<meta name="description" content="前言 Importanttarting in iOS 8.0 and OS X 10.10, use WKWebView to add web content to your app. Do not use UIWebView or WebView.  WKWebVIew是iOS8新出的API，旨在替代原有的UIWebView，相对于UIWebView，WKWebView有着更为强大性能和丰富的A">
+<meta name="keywords" content="iOS,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac下CocoaPods安装与使用">
-<meta property="og:url" content="http://blogwenbo.com/2018/01/24/Mac下CocoaPods安装与使用/index.html">
+<meta property="og:title" content="WKWebView高度自适应">
+<meta property="og:url" content="http://blogwenbo.com/2018/02/12/WKWebView高度自适应/index.html">
 <meta property="og:site_name" content="WenBo丨星空灬">
-<meta property="og:description" content="前言 在开发项目的时候，难免会导入一些三方开源库，CocoaPods是OS X管理三方开源库的工具，用这个工具，我们可以轻松集中管理、更新三方开源库。下面开始介绍CocoaPods安装与使用吧。">
+<meta property="og:description" content="前言 Importanttarting in iOS 8.0 and OS X 10.10, use WKWebView to add web content to your app. Do not use UIWebView or WebView.  WKWebVIew是iOS8新出的API，旨在替代原有的UIWebView，相对于UIWebView，WKWebView有着更为强大性能和丰富的A">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-e61be18dbb34e304.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-1e75e5ea4812077b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3072214-62a28f0ddf50338a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-01-31T15:02:09.707Z">
+<meta property="og:updated_time" content="2018-02-12T10:06:12.377Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac下CocoaPods安装与使用">
-<meta name="twitter:description" content="前言 在开发项目的时候，难免会导入一些三方开源库，CocoaPods是OS X管理三方开源库的工具，用这个工具，我们可以轻松集中管理、更新三方开源库。下面开始介绍CocoaPods安装与使用吧。">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3072214-e61be18dbb34e304.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="WKWebView高度自适应">
+<meta name="twitter:description" content="前言 Importanttarting in iOS 8.0 and OS X 10.10, use WKWebView to add web content to your app. Do not use UIWebView or WebView.  WKWebVIew是iOS8新出的API，旨在替代原有的UIWebView，相对于UIWebView，WKWebView有着更为强大性能和丰富的A">
 
 
 
@@ -143,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://blogwenbo.com/2018/01/24/Mac下CocoaPods安装与使用/"/>
+  <link rel="canonical" href="http://blogwenbo.com/2018/02/12/WKWebView高度自适应/"/>
 
 
 
 
 
-  <title>Mac下CocoaPods安装与使用 | WenBo丨星空灬</title>
+  <title>WKWebView高度自适应 | WenBo丨星空灬</title>
   
 
 
@@ -320,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/01/24/Mac下CocoaPods安装与使用/">
+    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/02/12/WKWebView高度自适应/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WenBo">
@@ -337,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac下CocoaPods安装与使用</h1>
+          <h1 class="post-title" itemprop="name headline">WKWebView高度自适应</h1>
         
 
         <div class="post-meta">
@@ -349,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T21:52:17+08:00">
-                2018-01-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-12T18:04:06+08:00">
+                2018-02-12
               </time>
             
 
@@ -379,17 +375,6 @@
 
                 
                 
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/CocoaPods/" itemprop="url" rel="index">
-                    <span itemprop="name">CocoaPods</span>
-                  </a>
-                </span>
-
-                
-                
               
             </span>
           
@@ -400,7 +385,7 @@
 
           
           
-             <span id="/2018/01/24/Mac下CocoaPods安装与使用/" class="leancloud_visitors" data-flag-title="Mac下CocoaPods安装与使用">
+             <span id="/2018/02/12/WKWebView高度自适应/" class="leancloud_visitors" data-flag-title="WKWebView高度自适应">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -426,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,230
+                  726
                 </span>
               
 
@@ -442,7 +427,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  3
                 </span>
               
             </div>
@@ -463,144 +448,42 @@
       
 
       
-        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><blockquote>
-<p>在开发项目的时候，难免会导入一些三方开源库，CocoaPods是OS X管理三方开源库的工具，用这个工具，我们可以轻松集中管理、更新三方开源库。下面开始介绍CocoaPods安装与使用吧。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>Important<br>tarting in iOS 8.0 and OS X 10.10, use WKWebView to add web content to your app. Do not use UIWebView or WebView.</p>
 </blockquote>
+<p><strong>WKWebVIew</strong>是iOS8新出的API，旨在替代原有的<strong>UIWebView</strong>，相对于<strong>UIWebView</strong>，<strong>WKWebView</strong>有着更为强大性能和丰富的API。在项目开发过程中，我也更倾向于用<strong>WKWebView</strong>,但在使用过程中也遇到许多的问题。</p>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><p><strong>2018.02.11</strong></p>
+<ul>
+<li>整理Demo文件</li>
+<li>解决web断层问题：<a href="https://www.jianshu.com/p/1d739e2e7ed2" target="_blank" rel="noopener">WKWebView刷新机制小探</a><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark ------ <span class="meta-string">&lt; UIScrollViewDeltegate &gt;</span> ------</span></span><br><span class="line">- (<span class="keyword">void</span>)scrollViewDidScroll:(<span class="built_in">UIScrollView</span> *)scrollView &#123;</span><br><span class="line">    <span class="comment">/**  &lt; 解决web白屏问题 &gt;  */</span></span><br><span class="line">    <span class="comment">/**  &lt; 需要调用私有API：_updateVisibleContentRects &gt;  */</span></span><br><span class="line">    [<span class="keyword">self</span>.wkWebView setNeedsLayout];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <a id="more"></a>
-<p><strong>介绍内容目录</strong></p>
-<ul>
-<li>一、安装RVM</li>
-<li>二、升级RubyGems</li>
-<li>三 、CocoaPods安装</li>
-<li>四 、CocoaPods使用<h4 id="一、安装RVM"><a href="#一、安装RVM" class="headerlink" title="一、安装RVM"></a>一、安装<a href="https://rvm.io/" target="_blank" rel="noopener">RVM</a></h4></li>
-<li><p>安装RVM命令如下：</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L get.rvm.io <span class="string">| bash -s stable</span></span><br></pre></td></tr></table></figure>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>最近公司项目一个需求，需要在表格的cell中嵌套一个网页视图，而网页需要跟随表格视图滚动，因此需要自适应网页视图的高度，作为小白的我开始也找不到好的解决方案，于是就各种谷歌百度，最后也找到了解决办法，我搜集到了两种方法，下面直接上代码吧😝。</p>
+<h4 id="第一种：KVO"><a href="#第一种：KVO" class="headerlink" title="第一种：KVO"></a>第一种：KVO</h4><ul>
+<li><p>添加监听者</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark ------ &lt; <span class="keyword">Private</span> <span class="function"><span class="keyword">Method</span> &gt; ------</span></span><br><span class="line"><span class="function">#<span class="title">pragma</span> <span class="title">mark</span></span></span><br><span class="line"><span class="function">- <span class="params">(void)</span><span class="title">addWebViewObserver</span> <span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    [self.wkWebView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];</span></span></span><br><span class="line"><span class="function"><span class="comment">&#125;</span></span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>查看rvm版本</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rvm -v</span></span><br></pre></td></tr></table></figure>
+<li><p>监听高度变化</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark ------ <span class="meta-string">&lt; KVO &gt;</span> ------</span></span><br><span class="line">- (<span class="keyword">void</span>)observeValueForKeyPath:(<span class="built_in">NSString</span> *)keyPath ofObject:(<span class="keyword">id</span>)object change:(<span class="built_in">NSDictionary</span>&lt;<span class="built_in">NSKeyValueChangeKey</span>,<span class="keyword">id</span>&gt; *)change context:(<span class="keyword">void</span> *)context &#123;</span><br><span class="line">    <span class="comment">/**  &lt; 法2 &gt;  */</span></span><br><span class="line">    <span class="comment">/**  &lt; loading：防止滚动一直刷新，出现闪屏 &gt;  */</span></span><br><span class="line">    <span class="keyword">if</span> ([keyPath isEqualToString:<span class="string">@"contentSize"</span>] &amp;&amp; <span class="keyword">self</span>.wkWebView.loading) &#123;</span><br><span class="line">        <span class="built_in">CGRect</span> webFrame = <span class="keyword">self</span>.wkWebView.frame;</span><br><span class="line">        webFrame.size.height = <span class="keyword">self</span>.wkWebView.scrollView.contentSize.height;</span><br><span class="line">        <span class="keyword">self</span>.wkWebView.frame = webFrame;</span><br><span class="line">        [<span class="keyword">self</span>.tableView reloadRowsAtIndexPaths:[<span class="built_in">NSArray</span> arrayWithObjects:[<span class="built_in">NSIndexPath</span> indexPathForRow:<span class="number">3</span> inSection:<span class="number">0</span>], <span class="literal">nil</span>] withRowAnimation:<span class="built_in">UITableViewRowAnimationNone</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>更新RVM</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm <span class="builtin-name">get</span> stable</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看可下载的ruby版本</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm <span class="built_in">list</span> known</span><br></pre></td></tr></table></figure>
+<li><p>移除观察者</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)removeWebViewObserver &#123;</span><br><span class="line">    [self.wkWebView.scrollView <span class="string">removeObserver:</span>self <span class="string">forKeyPath:</span>@<span class="string">"contentSize"</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>输出结果为：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># <span class="selector-tag">MRI</span> <span class="selector-tag">Rubies</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.8</span><span class="selector-class">.6</span><span class="selector-attr">[-p420]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.8</span><span class="selector-class">.7</span><span class="selector-attr">[-head]</span> # <span class="selector-tag">security</span> <span class="selector-tag">released</span> <span class="selector-tag">on</span> <span class="selector-tag">head</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.9</span><span class="selector-class">.1</span><span class="selector-attr">[-p431]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.9</span><span class="selector-class">.2</span><span class="selector-attr">[-p330]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>1<span class="selector-class">.9</span><span class="selector-class">.3</span><span class="selector-attr">[-p551]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.0</span><span class="selector-class">.0</span><span class="selector-attr">[-p648]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.1</span><span class="selector-attr">[.10]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.2</span><span class="selector-attr">[.7]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.3</span><span class="selector-attr">[.4]</span></span><br><span class="line"><span class="selector-attr">[ruby-]</span>2<span class="selector-class">.4</span><span class="selector-attr">[.1]</span></span><br><span class="line"><span class="selector-tag">ruby-head</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>选择版本安装<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//安装2.4.1</span></span><br><span class="line">rvm install <span class="number">2.4</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+<h4 id="第二种：通过WKNavigationDelegate代理方法（推荐）"><a href="#第二种：通过WKNavigationDelegate代理方法（推荐）" class="headerlink" title="第二种：通过WKNavigationDelegate代理方法（推荐）"></a>第二种：通过<strong>WKNavigationDelegate</strong>代理方法（推荐）</h4><ul>
+<li>网页视图加载完成回调<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark ------ <span class="meta-string">&lt; WKUIDelegate,WKNavigationDelegate &gt;</span> ------</span></span><br><span class="line"><span class="meta">#pragma mark</span></span><br><span class="line">- (<span class="keyword">void</span>)webView:(<span class="built_in">WKWebView</span> *)webView didFinishNavigation:(<span class="built_in">WKNavigation</span> *)navigation &#123;</span><br><span class="line">    <span class="comment">/**  &lt; 法1 &gt;  */</span></span><br><span class="line">    [webView evaluateJavaScript:<span class="string">@"document.body.offsetHeight"</span> completionHandler:^(<span class="keyword">id</span> _Nullable result, <span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line">       <span class="built_in">CGFloat</span> documentHeight = [result doubleValue];</span><br><span class="line">        <span class="built_in">CGRect</span> webFrame = webView.frame;</span><br><span class="line">        webFrame.size.height = documentHeight;</span><br><span class="line">        webView.frame = webFrame;</span><br><span class="line">        [<span class="keyword">self</span>.tableView reloadRowsAtIndexPaths:[<span class="built_in">NSArray</span> arrayWithObjects:[<span class="built_in">NSIndexPath</span> indexPathForRow:<span class="number">3</span> inSection:<span class="number">0</span>], <span class="literal">nil</span>] withRowAnimation:<span class="built_in">UITableViewRowAnimationNone</span>];</span><br><span class="line">    &#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>安装如果遇到如下错误：<br><img src="http://upload-images.jianshu.io/upload_images/3072214-e61be18dbb34e304.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-17 下午1.59.45.png"><br>安装Command Line Tools即可<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-<span class="keyword">select</span> <span class="comment">--install</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>查看已安装的版本<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>输出结果如下：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rvm rubies</span><br><span class="line">=* ruby-<span class="number">2.4</span>.<span class="number">1</span> [ x86_64 ]</span><br><span class="line"># =&gt; - current</span><br><span class="line"># =* - current &amp;&amp; default</span><br><span class="line">#  * - default</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>查看当前使用的版本</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rvm current</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置默认版本</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm use <span class="number">2.4</span><span class="number">.1</span> --<span class="section">default</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除安装过的版本</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">rvm</span> <span class="selector-tag">remove</span> 2<span class="selector-class">.2</span><span class="selector-class">.2</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>如果提示权限不足，同理加上sudo<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">rvm</span> <span class="selector-tag">remove</span> 2<span class="selector-class">.2</span><span class="selector-class">.2</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="二、升级RubyGems"><a href="#二、升级RubyGems" class="headerlink" title="二、升级RubyGems"></a>二、升级<a href="https://rubygems.org/?locale=zh-CN" target="_blank" rel="noopener">RubyGems</a></h4><ul>
-<li>在终端输入：<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem <span class="keyword">update</span> --<span class="keyword">system</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>若果是最新，则输出：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Latest <span class="built_in">version</span> currently installed. Aborting.</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>若果没有权限报错，在命令前加上sudo</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem <span class="keyword">update</span> --<span class="keyword">system</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更换源（最新使用的是：<a href="https://gems.ruby-china.org/）" target="_blank" rel="noopener">https://gems.ruby-china.org/）</a></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gem sources --remove <span class="string">https:</span><span class="comment">//rubygems.org/</span></span><br><span class="line"></span><br><span class="line">gem sources -a <span class="string">https:</span><span class="comment">//gems.ruby-china.org/</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看ruby镜像</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem <span class="built_in">source</span> -l</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>输出结果：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>//gems.ruby-china<span class="meta">.org</span>/</span><br></pre></td></tr></table></figure></p>
-<h4 id="三、CocoaPods安装"><a href="#三、CocoaPods安装" class="headerlink" title="三、CocoaPods安装"></a>三、<a href="https://guides.cocoapods.org/using/getting-started.html#getting-started" target="_blank" rel="noopener">CocoaPods</a>安装</h4><ul>
-<li><p>终端输入</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem <span class="keyword">install</span> -n /usr/<span class="keyword">local</span>/<span class="keyword">bin</span> cocoapods</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装了多个xcode进行选择</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select -<span class="keyword">switch</span> <span class="regexp">/Applications/</span>Xcode.app<span class="regexp">/Contents/</span>Developer</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装本地库</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="built_in">setup</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>执行上面的命令过后，会出现卡主不动，这个是时候是在下载，通常会等很久。这是后可以通过<code>cmmand+n</code>新创一个终端窗口，然后<code>cd ~/.cocoapods/</code>到该文件下，执行<code>du -sh *</code>查看大小：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1015</span>M	repos</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>查看版本</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>升级CocoaPods</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem <span class="keyword">install</span> -n /usr/<span class="keyword">local</span>/<span class="keyword">bin</span> cocoapods</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="四、CocoaPods使用"><a href="#四、CocoaPods使用" class="headerlink" title="四、CocoaPods使用"></a>四、CocoaPods使用</h4><h5 id="工程导入三方库"><a href="#工程导入三方库" class="headerlink" title="工程导入三方库"></a>工程导入三方库</h5><ul>
-<li><p>创建一个工程test，终端切换到工程路径：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> 工程路径</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>终端输入：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pod init</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这时工程就会生成一个podfile<br><img src="http://upload-images.jianshu.io/upload_images/3072214-1e75e5ea4812077b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-17 下午5.39.24.png"></p>
-<ul>
-<li>编辑podfile：<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">vim podfile</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>进入之后按<code>i</code>进入编辑模式，添加三方开源库如：<code>pod &#39;AFNetworking&#39;</code>(也可指定版本<code>pod &#39;AFNetworking&#39;, &#39;~&gt; 3.1.0&#39;</code>)，然后输入<code>:wq</code>回车保存。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Uncomment the next line to define a global platform for your project</span></span><br><span class="line"><span class="comment"># platform :ios, '9.0'</span></span><br><span class="line">pod <span class="string">'AFNetworking'</span></span><br><span class="line">target <span class="string">'test'</span> <span class="keyword">do</span></span><br><span class="line">  <span class="comment"># Uncomment the next line if you're using Swift or would like to use dynamic frameworks</span></span><br><span class="line">  <span class="comment"># use_frameworks!</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Pods for test</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">~                                                                               </span><br><span class="line">~                                                                               </span><br><span class="line">~                                                                                                                                                        </span><br><span class="line"><span class="symbol">:wq</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>执行安装<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="keyword">install</span></span><br><span class="line">或</span><br><span class="line">pod <span class="keyword">install</span> <span class="comment">--no-repo-update</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>好了，到此CocoaPods的安装与使用都介绍完毕。<br><img src="http://upload-images.jianshu.io/upload_images/3072214-62a28f0ddf50338a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-12-17 下午5.47.41.png"></p>
-<h5 id="更新三方库"><a href="#更新三方库" class="headerlink" title="更新三方库"></a>更新三方库</h5><ul>
-<li><p>更新所有三方库</p>
-<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//更新所有可更新的三方库</span></span><br><span class="line">pod <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>间接更新三方库</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~<span class="string">/.cocoapods</span></span><br><span class="line"><span class="keyword">ls</span></span><br><span class="line"><span class="keyword">cd</span> repos</span><br><span class="line"><span class="keyword">ls</span></span><br><span class="line"><span class="keyword">cd</span> master</span><br><span class="line"><span class="keyword">ls</span></span><br><span class="line"><span class="keyword">ls</span> -a</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新指定库</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pod update Masonry</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>省时更新方法</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="keyword">update</span> --<span class="keyword">verbose</span> --<span class="keyword">no</span>-repo-<span class="keyword">update</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="移除导入过的三方库"><a href="#移除导入过的三方库" class="headerlink" title="移除导入过的三方库"></a>移除导入过的三方库</h5><ul>
-<li>第一步：编辑<strong>podfile</strong>，将需要删除的三方库移除掉<br><del>pod ‘AFNetworking’, ‘~&gt;3.1.0’</del></li>
-<li>第二步：执行<code>pod install</code>，重新编译，如果没有报错则移除成功<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="移除工程中CocoaPods"><a href="#移除工程中CocoaPods" class="headerlink" title="移除工程中CocoaPods"></a>移除工程中CocoaPods</h5><ul>
-<li>删除工程文件夹下的Podfile、Podfile.lock和Pods文件夹</li>
-<li>删除xcworkspace文件</li>
-<li>打开xcodeproj文件，删除项目中的libpods.a和Pods.xcconfig引用</li>
-<li>打开Build Phases选项，删除Check Pods Manifest.lock和Copy Pods Resources<br>主要就是上面四个步骤。<h4 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h4><h5 id="1、执行gem-update-system报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了-方法是忽略证书验证。"><a href="#1、执行gem-update-system报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了-方法是忽略证书验证。" class="headerlink" title="1、执行gem update --system报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了,方法是忽略证书验证。"></a>1、执行<code>gem update --system</code>报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了,方法是忽略证书验证。</h5>步骤：<br>前往<code>~/.gemrc</code>，打开文件，并添加<code>:ssl_verify_mode: 0</code><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="meta">:backtrace:</span> false</span><br><span class="line"><span class="meta">:bulk_threshold:</span> 1000</span><br><span class="line"><span class="meta">:sources:</span></span><br><span class="line"><span class="meta">-</span> https://gems.ruby-china.org/</span><br><span class="line"><span class="meta">:update_sources:</span> true</span><br><span class="line"><span class="meta">:verbose:</span> true</span><br><span class="line"><span class="meta">:ssl_verify_mode:</span> 0</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><code>cmmand+s</code>保存，然后在执行<code>sudo gem update --system</code>，更新成功。</p>
-<h5 id="2、Unable-to-require-openssl-install-OpenSSL-and-rebuild-ruby"><a href="#2、Unable-to-require-openssl-install-OpenSSL-and-rebuild-ruby" class="headerlink" title="2、Unable to require openssl, install OpenSSL and rebuild ruby"></a>2、<a href="https://stackoverflow.com/questions/21201493/couldnt-require-openssl-in-ruby" target="_blank" rel="noopener">Unable to require openssl, install OpenSSL and rebuild ruby</a></h5><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果没有安装openssl，则用honebrew安装</span></span><br><span class="line">brew install openssl</span><br><span class="line"></span><br><span class="line"><span class="comment">//重装rvm并关联openssl</span></span><br><span class="line">rvm reinstall <span class="number">2.4</span><span class="number">.0</span> --<span class="keyword">with</span>-openssl-dir=`brew --prefix openssl`</span><br></pre></td></tr></table></figure>
-<p>如果安装了<strong>2.4.0</strong>版本则重新安装，没有安装则安装，安装成功之后，就能<code>sudo gem update --system</code>正常更新了。</p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><blockquote>
-<p>CocoaPods安装与使用就介绍到这里了，如果在以后CocoaPods安装使用工程中遇到问题，如果找到了解决方案，我也会贴出来。</p>
-<h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ul>
-<li><a href="https://www.jianshu.com/p/552f21a989ba" target="_blank" rel="noopener">iOS 删除已经配置的类库和移除CocoaPods</a></li>
-<li><a href="http://blog.csdn.net/jymn_chen/article/details/19213601" target="_blank" rel="noopener">使用CocoaPods（二）删除已经配置的类库和移除CocoaPods</a></li>
-</ul>
+<p>在项目中，我采用了代理的方法实现了网页视图的高度自适应，但在iOS 11以下遇到了一个问题，虽然<strong>WKWebView</strong>加载完成之后能返回网页视图内容高度，但内容下半部分出现了断层，出现了一片白板，在网上搜索了一下也没有找到问题所在，项目也在赶进度，于是就采用了根据系统版本加载不同的网页视图控件，这个问题也得以解决。这也是我写的第二篇文章，如有写的不对地方，欢迎大家批评指正。如果有更多更好的方法，希望也能多多交流。下面我也贴出自己写的小Demo，希望对需要的人有所帮助。</p>
+<h4 id="Demo请戳"><a href="#Demo请戳" class="headerlink" title="Demo请戳"></a>Demo请戳</h4><p><a href="https://github.com/wenmobo/WKWebViewAutoHeight" target="_blank" rel="noopener">WKWebViewAutoHeight</a></p>
 </blockquote>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.skyfox.org/ios-webview-autofit-content-height.html" target="_blank" rel="noopener">ios webview自适应实际内容高度5种方法</a>     </li>
+<li><a href="https://juejin.im/post/5a38c9055188254b8b3546bf" target="_blank" rel="noopener">iOS中webView嵌套tableView中动态高度问题</a></li>
+<li><a href="https://www.jianshu.com/p/1d739e2e7ed2" target="_blank" rel="noopener">WKWebView刷新机制小探</a></li>
+</ul>
 
       
     </div>
@@ -628,12 +511,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/01/24/Mac下CocoaPods安装与使用/">Mac下CocoaPods安装与使用</a></p>
+  <p><span>本文标题:</span><a href="/2018/02/12/WKWebView高度自适应/">WKWebView高度自适应</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 WenBo 的个人博客">WenBo</a></p>
-  <p><span>发布时间:</span>2018年01月24日 - 21:01</p>
-  <p><span>最后更新:</span>2018年01月31日 - 23:01</p>
-  <p><span>原始链接:</span><a href="/2018/01/24/Mac下CocoaPods安装与使用/" title="Mac下CocoaPods安装与使用">http://blogwenbo.com/2018/01/24/Mac下CocoaPods安装与使用/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blogwenbo.com/2018/01/24/Mac下CocoaPods安装与使用/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年02月12日 - 18:02</p>
+  <p><span>最后更新:</span>2018年02月12日 - 18:02</p>
+  <p><span>原始链接:</span><a href="/2018/02/12/WKWebView高度自适应/" title="WKWebView高度自适应">http://blogwenbo.com/2018/02/12/WKWebView高度自适应/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blogwenbo.com/2018/02/12/WKWebView高度自适应/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -664,11 +547,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MAC/" rel="tag"><i class="fa fa-tag"></i> MAC</a>
-          
             <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i> iOS</a>
           
-            <a href="/tags/CocoaPods/" rel="tag"><i class="fa fa-tag"></i> CocoaPods</a>
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
         </div>
       
@@ -681,8 +562,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/23/Hexo七牛插件安装与使用/" rel="next" title="Hexo七牛插件安装与使用">
-                <i class="fa fa-chevron-left"></i> Hexo七牛插件安装与使用
+              <a href="/2018/02/12/Mac-OS-X系统常用工具/" rel="next" title="Mac OS X系统常用工具">
+                <i class="fa fa-chevron-left"></i> Mac OS X系统常用工具
               </a>
             
           </div>
@@ -690,10 +571,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/30/MAC上Homebrew常用命令/" rel="prev" title="MAC上Homebrew常用命令">
-                MAC上Homebrew常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -907,7 +784,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一、安装RVM"><span class="nav-number">2.</span> <span class="nav-text">一、安装RVM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、升级RubyGems"><span class="nav-number">3.</span> <span class="nav-text">二、升级RubyGems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、CocoaPods安装"><span class="nav-number">4.</span> <span class="nav-text">三、CocoaPods安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、CocoaPods使用"><span class="nav-number">5.</span> <span class="nav-text">四、CocoaPods使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#工程导入三方库"><span class="nav-number">5.1.</span> <span class="nav-text">工程导入三方库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#更新三方库"><span class="nav-number">5.2.</span> <span class="nav-text">更新三方库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#移除导入过的三方库"><span class="nav-number">5.3.</span> <span class="nav-text">移除导入过的三方库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#移除工程中CocoaPods"><span class="nav-number">5.4.</span> <span class="nav-text">移除工程中CocoaPods</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题解决"><span class="nav-number">6.</span> <span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、执行gem-update-system报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了-方法是忽略证书验证。"><span class="nav-number">6.1.</span> <span class="nav-text">1、执行gem update --system报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了,方法是忽略证书验证。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、Unable-to-require-openssl-install-OpenSSL-and-rebuild-ruby"><span class="nav-number">6.2.</span> <span class="nav-text">2、Unable to require openssl, install OpenSSL and rebuild ruby</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文章"><span class="nav-number">8.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新日志"><span class="nav-number">2.</span> <span class="nav-text">更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">3.</span> <span class="nav-text">问题描述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一种：KVO"><span class="nav-number">3.1.</span> <span class="nav-text">第一种：KVO</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二种：通过WKNavigationDelegate代理方法（推荐）"><span class="nav-number">3.2.</span> <span class="nav-text">第二种：通过WKNavigationDelegate代理方法（推荐）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">3.3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Demo请戳"><span class="nav-number">3.4.</span> <span class="nav-text">Demo请戳</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">3.5.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
             
 
           </div>
