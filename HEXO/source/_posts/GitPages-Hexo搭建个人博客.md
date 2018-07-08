@@ -1,13 +1,13 @@
 ---
 title: GitPages+Hexo搭建个人博客
-tags: [Hexo,Github]
+tags: [Hexo,GitHub,GitPages]
 date: 2018-07-07 23:24:44
 permalink:
 categories: Hexo
-description:
-image:
+description: 这篇文章主要介绍如何用GitPages+Hexo搭建个人博客，如果你也有兴趣，那么这篇文章对你将有所帮助。
+image: https://ws2.sinaimg.cn/large/006tNc79ly1ft1psxc65cj31kw0m5tcg.jpg
 ---
-![](https://ws2.sinaimg.cn/large/006tNc79ly1ft1psxc65cj31kw0m5tcg.jpg)
+<p class="description"></p>
 
 <!-- more -->
 

@@ -89,5 +89,10 @@
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
   {% include '_scripts/third-party/mob_share.swig' %}
+
+{% if theme.canvas_nest %}
+  <script type="text/javascript" color="250,100,49" opacity='0.5' zIndex="-1" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+{% endif %}
+
 </body>
 </html>
