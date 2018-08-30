@@ -1,5 +1,5 @@
 ---
-title: CocoaPods进阶：私有库制作，看我就够了
+title: CocoaPods进阶：详解私有库制作
 tags: [CocoaPods,iOS,GitHub,Git]
 date: 2018-08-13 21:58:51
 permalink:
@@ -13,7 +13,7 @@ image: https://ws4.sinaimg.cn/large/006tNbRwly1funipf7wcfj31kw0s441m.jpg
 
 ### 前言
 
-自己一直想用CocoaPods制作pod库，在自己面试过程中也被面试官问到过组件化开发的概念，然尔自己那时也不是很了解，CocoaPods与组件化也息息相关，利用CocoaPods也便于维护pod组件，于是自己就决定学习用CocoaPods制作pod库，下面就开始讲解私有库的制作过程吧。
+> 自己一直想用CocoaPods制作pod库，在自己面试过程中也被面试官问到过组件化开发的概念，然尔自己那时也不是很了解，CocoaPods与组件化也息息相关，利用CocoaPods也便于维护pod组件，于是自己就决定学习用CocoaPods制作pod库，下面就开始讲解私有库的制作过程吧。
 
 ### 目录
 
@@ -101,6 +101,9 @@ Pod::Spec.new do |s|
   #库名称
   s.name             = 'WBAvoidCrash'
   
+  #指定支持的平台和版本，不写则默认支持所有的平台，如果支持多个平台，则使用下面的deployment_target定义
+  spec.platform = :ios
+  
   #版本号
   s.version          = '1.0.0'
   
@@ -120,26 +123,46 @@ TODO: iOS防crash库分类.
   
   #开源库作者
   s.author           = { 'wenmobo' => 'wenmobo2018@gmail.com' }
+  
   #开源库GitHub的路径与tag值，GitHub路径后必须有.git,tag实际就是上面的版本
   s.source           = { :git => 'https://github.com/wenmobo/WBAvoidCrash.git', :tag => s.version }
+  
   #社交网址
   s.social_media_url = 'http://blogwenbo.com/'
+  
   #开源库最低支持
   s.ios.deployment_target = '8.0'
+  
   #源库资源文件
   s.source_files = 'WBAvoidCrash/Classes/**/*'
+  
   #是否支持arc
   s.requires_arc = true
+  
   #依赖系统库
   s.frameworks = 'Foundation'
+  
   #开源库依赖库
   # s.dependency "Masonry", "~> 1.0"
+  
+  #添加系统依赖静态库
+  #s.library = 'sqlite3', 'xml2'
+  
+  #添加依赖第三方的framework
+  #s.vendored_frameworks = 'XXXX/XXXX/**/*.framework'
+  
+  #静态库.a
+  s.vendored_library = 'XXXX/XXX/XXX.a', 'YYY/YYY/Y.a'
+  
+  #添加资源文件
+  #s.resource = 'XXX/XXXX/**/*.bundle'
+  
+  #在 podspec 文件中添加 s.static_framework = true，CocoaPods 就会把这个库配置成static framework。同时支持 Swift 和 Objective-C
+  #s.static_framework = true
 end
 ```
 
-**补充**：
-
-关于s.source_files写法
+- **关于s.source_files写法**
 
 ```
 //表示匹配WBAvoidCrash/Classes下所有文件(主目录和子目录，其中**相当于省略中间层级)
@@ -152,9 +175,17 @@ end
 
 更多关于资源目录层级写法可以参考GitHub一些著名框架，[AFNetworking.podspec](https://github.com/AFNetworking/AFNetworking/blob/master/AFNetworking.podspec)、[ZFPlayer.podspec](https://github.com/renzifeng/ZFPlayer/blob/master/ZFPlayer.podspec)等。
 
+- **s.dependency关于依赖三库，依赖多个三方库如下：**
+
+- ```
+  s.dependency 'Masonry'
+  s.dependency 'MJRefresh'
+  s.dependency Masonry 'YYModel'
+  ```
+
 #### 验证本地是否通过
 
-配置好podspec之后，验证本地库是否通过验证，终端输入如下命令：
+- 配置好podspec之后，验证本地库是否通过验证，终端输入如下命令：
 
 ```
 pod lib lint
@@ -164,7 +195,7 @@ pod lib lint
 
 ![](https://ws2.sinaimg.cn/large/0069RVTdly1fuarsoxm53j30vi05ijso.jpg)
 
-报如下错误
+- 报如下错误
 
 ![屏幕快照 2018-08-14 上午12.21.07.png](https://upload-images.jianshu.io/upload_images/3072214-258e21287c18f67b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -172,17 +203,26 @@ pod lib lint
 
 ![屏幕快照 2018-08-14 上午12.34.17.png](https://upload-images.jianshu.io/upload_images/3072214-416eef1ea9e99431.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-如果pod库存在警告是不能通过验证的，如果要暂时忽略警告通过验证，可使用如下命令：
+- 如果pod库存在警告是不能通过验证的，如果要暂时忽略警告通过验证（如码云创建的私有库**s.homepage**地址不可达警告），可使用如下命令：
 
 ```
 pod lib lint --allow-warnings
 ```
 
+- 你制作的pod库依赖三方库，而三方库包含静态库（如：**xxxx.a**），在验证的时候，不能验证通过，可使用如下命令：
+
+- ```
+  pod lib lint --use-libraries
+  
+  //同时忽略警告
+  pod lib lint --use-libraries --allow-warnings
+  ```
+
 不管怎样都要解决pod库存在的警告，并通过验证。
 
 #### 关联本地仓库，并推送到远程仓库，打标签
 
-如果你还未创建远程仓库，你需要创建与之对应的远程仓库，我是在GitHub创建的仓库，这里也不再赘述创建方法。创建之后须与本地仓库关联，在终端执行如下命令：
+- 如果你还未创建远程仓库，你需要创建与之对应的远程仓库，我是在GitHub创建的仓库，这里也不再赘述创建方法。创建之后须与本地仓库关联，在终端执行如下命令：
 
 ```
 #提交代码到暂存区
@@ -195,7 +235,13 @@ git remote add origin git@github.com:wenmobo/WBAvoidCrash.git
 git push origin master
 ```
 
-提交完成之后进行打标签操作：
+- 最近在用码云制作私有库的时候按照上面git命令，在执行`git push origin master`会报错，需要执行以下命令或者按终端提示的信息操作，第一次才能成功推送到远程仓库：
+
+- ```
+  git pull --rebase origin master
+  ```
+
+- 提交完成之后进行打标签操作：
 
 ```
 #打标签
@@ -230,6 +276,14 @@ pod spec lint WBAvoidCrash.podspec
 验证通过终端输出如下：
 
 ![](https://ws3.sinaimg.cn/large/0069RVTdly1fuat21dm07j30ye08e3zt.jpg)
+
+- 同样这里如果还存在着警告或者错误，同样不能验证通过，同样可以用以下命令忽略警告通过验证：
+
+  ```
+  pod spec lint WBAvoidCrash.podspec --allow-warnings
+  pod spec lint WBAvoidCrash.podspec --use-libraries
+  pod spec lint WBAvoidCrash.podspec --allow-warnings --use-libraries
+  ```
 
 #### 验证私有仓库是否可用，pod集成私有库
 

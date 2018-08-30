@@ -4,8 +4,7 @@ tags: [HTML,JavaScript,iOS,WKWebView]
 date: 2018-08-27 22:27:00
 permalink:
 categories: iOS
-description: Important
-Starting in iOS 8.0 and OS X 10.10, use WKWebView to add web content to your app. Do not use UIWebView or WebView.
+description: WKWebVIew是iOS8新出的API，旨在替代原有的UIWebView，相对于UIWebView，WKWebView有着更为强大性能和丰富的API。在项目开发过程中，我也更倾向于用WKWebView,但在使用过程中也遇到许多的问题。
 image:
 ---
 <p class="description"></p>
