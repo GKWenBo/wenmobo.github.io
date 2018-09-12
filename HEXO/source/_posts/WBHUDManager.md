@@ -1,5 +1,5 @@
 ---
-title: 最新MBProgressHUD封装
+title: WBHUDManager
 tags: [MBProgressHUD,iOS,GitHub,Objective-C,Swift]
 date: 2018-07-08 18:26:42
 permalink:
@@ -14,6 +14,8 @@ image: https://ws3.sinaimg.cn/large/006tNc79ly1ft2mqzgb4zj31ii0pe0zb.jpg
 ### 更新日志
 
 2018-08-01：更新API，支持配置更多自定义设置，录制GIF。
+
+2018-09-09：支持pod安装
 
 ### 前言
 
@@ -377,7 +379,7 @@ image: https://ws3.sinaimg.cn/large/006tNc79ly1ft2mqzgb4zj31ii0pe0zb.jpg
     return hud;
 }
 ```
-感兴趣的朋友，可以下载Demo查看具体方法实现，请戳：[WBMBProgressHUDManager](https://github.com/wenmobo/WBMBProgressHUDManager)
+感兴趣的朋友，可以下载Demo查看具体方法实现，请戳：[WBHUDManager](https://github.com/wenmobo/WBHUDManager)
 ![](https://ws4.sinaimg.cn/large/006tKfTcly1ftuhtkjtapg308p0i80x9.gif)
 ### 结语
 > 选择哪一款提示框架，都要看自己喜好了，因为我代码水平有限，有些地方可能考虑的不够完善，只能说是抛砖引玉吧，大神们可能有更好的封装。要想基于这些框架自定义出自己需要风格的UI，还是要对框架提供的方法属性有一定的了解。
