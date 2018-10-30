@@ -12,45 +12,45 @@ image: https://ws3.sinaimg.cn/large/006tNc79ly1ft2laclcp7j31kw0qo1kx.jpg
 <!-- more -->
 
 # 分类目录
-> 版本控制
+> **版本控制**
 > -  Cornerstone
 > -  Sourcetree
 > -  Tower
 > -  GitHubDesktop
 
-> 办公
+> **办公**
 > - office2016
 
-> 效率
+> **效率**
 > -  Alfred
 
-> 实用
+> **实用**
 > -  Mounty
 > -  CleanMyMac
 > -  HideSwitch
 > -  LICEcap
 
-> iOS开发必备
+> **iOS开发必备**
 > -  Dash
 > -  真机调试包
 
-> 数据库管理
+> **数据库管理**
 > -  Navicat
 
-> 设计工具
+> **设计工具**
 > -  Sketch
 
-> MarkDown 工具
+> **MarkDown 工具**
 > - Typora
 > - iPic
+> - Cmd Markdown
+> - Sublime Text
 
-> 网络工具
->
+> **网络工具**
 > - shadowsocks
 > - Charles
 
-> 终端工具
->
+> **终端工具**
 > - iTerm 2
 
 # 版本控制
@@ -171,9 +171,7 @@ brew cask install mounty
 
 
 # 终端工具
-
 ### iTerm 2
-
 > iTerm2 is a replacement for Terminal and the successor to iTerm. It works on Macs with macOS 10.10 or newer. iTerm2 brings the terminal into the modern age with features you never knew you always wanted.
 
 MAC上最好用的终端工具。
@@ -194,3 +192,35 @@ Navicat是一套快速、可靠并价格相当便宜的[数据库管理](https:/
 #### 官方网址：[Navicat](https://www.navicat.com/en/)
 
 ![](https://ws4.sinaimg.cn/large/006tNc79ly1ft2mcnzraej31kw0ns4qp.jpg)
+
+# MarkDown 工具
+### Typora
+> Typora will give you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Replace them with a real live preview feature to help you concentrate the content itself.
+
+所见即所得，一款免费MarkDown编辑工具，自己也有使用一段时间，开始觉得挺好用的，后来发现有些操作有些卡顿不流畅，后来就放弃了，不过还是值得推荐。
+#### 官方网址：[Typora](https://www.typora.io/)
+![](https://ws1.sinaimg.cn/large/0069RVTdly1fv71n24v2pj31kw0rqjt3.jpg)
+
+### iPic
+> 一款图床神器，还在为MarkDown图传选择而烦恼吗，iPic将是你不错的选择，可直接在App Store下载。
+
+[介绍博客](https://toolinbox.net/iPic/)
+![](https://ws2.sinaimg.cn/large/0069RVTdly1fv71t4bw8xj30b6086mz5.jpg)
+
+### Cmd Markdown
+> 我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，Cmd Markdown 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。
+
+作业部落 Cmd Markdown这款编辑器，放弃**Typora**之后，最近在使用这款编辑器，感觉用起来比较稳定流畅，支持在线存储，如果你最求稳定，它将是一款不错的选择哦。
+
+#### 官方网址：[Cmd Markdown](https://www.zybuluo.com/cmd/)
+
+![](https://ws3.sinaimg.cn/large/0069RVTdly1fv71z0255mj31kw0rwq6v.jpg)
+
+### Sublime Text
+
+> A sophisticated text editor for code, markup and prose.
+
+Sublime Text是一套跨平台的文本编辑器，支持基于Python的插件。Sublime Text是专有软件，可透过包（Package）扩展。大多数的包使用自由软件授权发布，并由社群建置维护。在自己最开始接触Markdown的时候安装使用过，但是觉得写作的时候不够直观，就放弃了，最近发现这款工具真的很强大，对于代码块的编辑，有联想功能，非常值得推荐。
+#### 官方网址：[Sublime_Text](https://zh.wikipedia.org/wiki/Sublime_Text)
+
+![](https://ws4.sinaimg.cn/large/0069RVTdly1fv7241p9usj31kw0rukcf.jpg)

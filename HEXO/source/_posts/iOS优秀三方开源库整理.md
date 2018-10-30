@@ -12,281 +12,328 @@ image: https://ws3.sinaimg.cn/large/006tNc79ly1ft2a1l4r4cj31ic0a2gn5.jpg
 
 <!-- more -->
 
-### 一、前言
+# 一、前言
 > 在自己工作之余，收集整理了一些优秀的三方开源框架，自己整理的这些三方开源库涵盖了iOS开发面很多方面的知识。非常感谢这些开源库的作者们，正是因为这些库，提高了我们的开发效率，同样也是我们学习进步的源泉。现将这个整理工程文件分享出来，希望能给需要的朋友一些帮助，同时也自己也做下收集记录。
 
-**Github整理的地址**：    
-[WBCollectOCThirdLib](https://github.com/wenmobo/WBCollectOCThirdLib)     
-[WBCollectSwfitThirdLib](https://github.com/wenmobo/WBCollectSwfitThirdLib)
+### Github整理地址  
+- [Objective-C三方库整理](https://github.com/wenmobo/WBCollectOCThirdLib)  
+- [Swift三方库整理](https://github.com/wenmobo/WBCollectSwfitThirdLib)
 
-### 二、Objective-C三方开源库
-- 表格侧滑菜单  
-        [MGSwipeTableCell](https://github.com/MortimerGoro/MGSwipeTableCell) - **6300 star**  
-        [SWTableViewCell](https://github.com/CEWendel/SWTableViewCell) - **7088 star**    
-        [ZJSwipeTableView](https://github.com/jasnig/ZJSwipeTableView) - **7 star**
+# 二、Objective-C三方开源库
+### 表格侧滑菜单  
+- [MGSwipeTableCell](https://github.com/MortimerGoro/MGSwipeTableCell)  
+- [SWTableViewCell](https://github.com/CEWendel/SWTableViewCell)  
+- [ZJSwipeTableView](https://github.com/jasnig/ZJSwipeTableView)
 
-- 表格高度缓存库    
+### 表格高度缓存库    
+- [FDTemplateLayoutCell](https://github.com/forkingdog/UITableView-FDTemplateLayoutCell)  
+**Template auto layout cell for automatically UITableViewCell height calculating.**
 
-    - [FDTemplateLayoutCell](https://github.com/forkingdog/UITableView-FDTemplateLayoutCell) - **8992 star**   
+- [HYBMasonryAutoCellHeight](https://github.com/CoderJackyHuang/HYBMasonryAutoCellHeight)
 
-      Template auto layout cell for automatically UITableViewCell height calculating
+### 表格刷新控件  
+- [MJRefresh](https://github.com/CoderMJLee/MJRefresh)
 
-    ​    [HYBMasonryAutoCellHeight](https://github.com/CoderJackyHuang/HYBMasonryAutoCellHeight) - **595 star**
+- [KafkaRefresh](https://github.com/OpenFeyn/KafkaRefresh)
 
-- 表格刷新控件  
-        [MJRefresh](https://github.com/CoderMJLee/MJRefresh) - **12006 star**  
-        [KafkaRefresh](https://github.com/OpenFeyn/KafkaRefresh) - **627 star**
+### 弹出菜单（类似微信弹出菜单）  
+- [FTPopOverMenu](https://github.com/liufengting/FTPopOverMenu)   
+- [kxmenu](https://github.com/kolyvan/kxmenu)
+- [PopMenuTableView](https://github.com/KongPro/PopMenuTableView)
 
-- 弹出菜单（类似微信弹出菜单）  
-        [FTPopOverMenu](https://github.com/liufengting/FTPopOverMenu) - **712 star**    
-        [kxmenu](https://github.com/kolyvan/kxmenu) - **1776 star**  
-        [PopMenuTableView](https://github.com/KongPro/PopMenuTableView) - **217 star**  
+### 导航栏相关    
+- [FDFullscreenPopGesture](https://github.com/forkingdog/FDFullscreenPopGesture)  
+**全屏返回手势**
 
-- 导航栏    
-        [FDFullscreenPopGesture](https://github.com/forkingdog/FDFullscreenPopGesture) - **5010 star**  
-        [KMNavigationBarTransition](https://github.com/MoZhouqi/KMNavigationBarTransition) - **2549 star**  
-        [RTRootNavigationController](https://github.com/rickytan/RTRootNavigationController) - **1333 star**    
-        [WRNavigationBar](https://github.com/wangrui460/WRNavigationBar) - **1852 star**
+- [KMNavigationBarTransition](https://github.com/MoZhouqi/KMNavigationBarTransition)
 
-- 动画  
-        [lottie-ios](https://github.com/airbnb/lottie-ios) - **14103 star**  
-        [pop](https://github.com/facebook/pop) - **19064 star**     
-        [LSAnimator](https://github.com/Lision/LSAnimator) **1238 star**
+- [RTRootNavigationController](https://github.com/rickytan/RTRootNavigationController)  
+- [WRNavigationBar](https://github.com/wangrui460/WRNavigationBar)
 
-- 分段控件  
-        [HMSegmentedControl](https://github.com/HeshamMegid/HMSegmentedControl) - **3392 star**  
+### 动画  
+- [lottie-ios](https://github.com/airbnb/lottie-ios)  
+- [pop](https://github.com/facebook/pop)     
+- [LSAnimator](https://github.com/Lision/LSAnimator)
 
-- 富文本编辑    
-        [ZSSRichTextEditor](https://github.com/nnhubbard/ZSSRichTextEditor) - **2891 star**
+### 分段（分类）控件  
+- [HMSegmentedControl](https://github.com/HeshamMegid/HMSegmentedControl)     
+**比较经典的分段控件。**
 
-- 弹幕  
-        [HJDanmakuDemo](https://github.com/panghaijiao/HJDanmakuDemo) - **717 star**    
+- [JXCategoryView](https://github.com/pujiaxin33/JXCategoryView)      
+**A powerful and easy to use category view (segmentedcontrol, segmentview, pagingview, pagerview, pagecontrol) (腾讯新闻、今日头条、QQ音乐、网易云音乐、京东、爱奇艺、腾讯视频、淘宝、天猫、简书、微博等所有主流APP分类切换滚动视图)。**
 
-- 滚动视图  
-        [SwipeView](https://github.com/nicklockwood/SwipeView) - **2611 star**
+### 富文本编辑    
+- [ZSSRichTextEditor](https://github.com/nnhubbard/ZSSRichTextEditor)     
+**基于UIWebView实现富文本编辑功能，可能由于作者很少维护，使用有很多的bug**
 
-- 滚动视图嵌套  
-        [HJTabViewController](https://github.com/panghaijiao/HJTabViewController) - **191 star**    
-        [LTScrollView](https://github.com/gltwy/LTScrollView) - **236 star**
+### 弹幕  
+- [HJDanmakuDemo](https://github.com/panghaijiao/HJDanmakuDemo)   
 
-- 红点提示  
-        [JSBadgeView](https://github.com/JaviSoto/JSBadgeView) - **1209 star**   
-        [WZLBadge](https://github.com/weng1250/WZLBadge) - **1603 star**
+### 滚动视图  
+- [SwipeView](https://github.com/nicklockwood/SwipeView)
 
-- 键盘  
+### 滚动视图嵌套  
+- [HJTabViewController](https://github.com/panghaijiao/HJTabViewController) 
 
-    - [IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager) - **11697 star**  
+- [LTScrollView](https://github.com/gltwy/LTScrollView)
 
-      Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more.一款强大键盘管理库。
+### 红点提示  
+- [JSBadgeView](https://github.com/JaviSoto/JSBadgeView)
 
-    ​    [MMNumberKeyboard](https://github.com/matmartinez/MMNumberKeyboard) - **911 star**  
-        [TPKeyboardAvoiding](https://github.com/michaeltyson/TPKeyboardAvoiding) - **5568 star**    
+- [WZLBadge](https://github.com/weng1250/WZLBadge)
 
-- 界面布局 
+### 键盘  
+- [IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager)      
+**Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more.一款强大键盘管理库。**
 
-    - [FlexLib](https://github.com/zhenglibao/FlexLib) - **496 star**  
+- [MMNumberKeyboard](https://github.com/matmartinez/MMNumberKeyboard) 
+**数字键盘。**
 
-    - [Masonry](https://github.com/SnapKit/Masonry) - **16526 star**  
+- [TPKeyboardAvoiding](https://github.com/michaeltyson/TPKeyboardAvoiding)   
 
-      Harness the power of AutoLayout NSLayoutConstraints with a simplified, chainable and expressive syntax. Supports iOS and OSX Auto Layout.对苹果原生AutoLayout的封装，链式语法，纯代码开发必备布局库。
+### 界面布局 
+- [FlexLib](https://github.com/zhenglibao/FlexLib)  
+**FlexLib is a framework for creating native iOS applications using xml file, similar to Android and .NET development way.类似于安卓xml布局。**
 
-    - [SDAutoLayout](https://github.com/gsdios/SDAutoLayout) - **5241 star**   
+- [Masonry](https://github.com/SnapKit/Masonry)      
+**Harness the power of AutoLayout NSLayoutConstraints with a simplified, chainable and expressive syntax. Supports iOS and OSX Auto Layout.对苹果原生AutoLayout的封装，链式语法，纯代码开发必备布局库。**
 
-      One line of code to implement automatic layout. 一行代码搞定自动布局！支持Cell和Tableview高度自适应，Label和ScrollView内容自适应，致力于做最简单易用的AutoLayout库。The most easy way for autoLayout. Based on runtime.
+- [SDAutoLayout](https://github.com/gsdios/SDAutoLayout)  
+**One line of code to implement automatic layout. 一行代码搞定自动布局！支持Cell和Tableview高度自适应，Label和ScrollView内容自适应，致力于做最简单易用的AutoLayout库。The most easy way for autoLayout. Based on runtime.**
 
-    - [WHC_AutoLayoutKit](https://github.com/netyouli/WHC_AutoLayoutKit) - **786 star**
+- [WHC_AutoLayoutKit](https://github.com/netyouli/WHC_AutoLayoutKit) 
 
-    - [MyLinearLayout](https://github.com/youngsoft/MyLinearLayout) - **2990 star** 
+- [MyLinearLayout](https://github.com/youngsoft/MyLinearLayout)   
+**MyLayout是一套iOS界面视图布局框架。MyLayout的内核是基于对UIView的layoutSubviews方法的重载以及对子视图的bounds和center属性的设置而实现的。MyLayout功能强大而且简单易用，它集成了:iOS Autolayout和SizeClass、android的5大布局体系、HTML/CSS的浮动定位技术以及flex-box和bootstrap框架等市面上主流的平台的界面布局功能，同时提供了一套非常简单和完备的多屏幕尺寸适配的解决方案。之前自己布局一直用Frame、Masonry，Xib布局，最近也在学习这款强大的布局框架。**
 
-       MyLayout是一套iOS界面视图布局框架。MyLayout的内核是基于对UIView的layoutSubviews方法的重载以及对子视图的bounds和center属性的设置而实现的。MyLayout功能强大而且简单易用，它集成了:iOS Autolayout和SizeClass、android的5大布局体系、HTML/CSS的浮动定位技术以及flex-box和bootstrap框架等市面上主流的平台的界面布局功能，同时提供了一套非常简单和完备的多屏幕尺寸适配的解决方案。之前自己布局一直用Frame、Masonry，Xib布局，最近也在学习这款强大的布局框架。
+### 进度指示器    
+- [DACircularProgress](https://github.com/danielamitay/DACircularProgress)
 
-- 进度指示器    
-        [DACircularProgress](https://github.com/danielamitay/DACircularProgress) - **2307 star**    
-        [SDProgressView](https://github.com/gsdios/SDProgressView) - **378 star**
+- [SDProgressView](https://github.com/gsdios/SDProgressView)
 
-- 开发模式  
-        [KVOController](https://github.com/facebook/KVOController) - **6524 star**   
+### 开发模式  
+- [KVOController](https://github.com/facebook/KVOController)    
 
-- 控制器切换    
-        [DWQListOfDifferentOrderStatus](https://github.com/DevelopmentEngineer-DWQ/DWQListOfDifferentOrderStatus) **12 star**   
-        [HYPageView](https://github.com/runlhy/HYPageView) - **74 star**  
-        [SGPagingView](https://github.com/kingsic/SGPagingView) - **822 star**    
-        [WMPageController](https://github.com/wangmchn/WMPageController) - **2229 star**    
-        [ZJScrollPageView](https://github.com/jasnig/ZJScrollPageView) - **847 star**
+### 控制器切换    
+- [DWQListOfDifferentOrderStatus](https://github.com/DevelopmentEngineer-DWQ/DWQListOfDifferentOrderStatus)
 
-- 数据存储  
-        [fmdb](https://github.com/ccgus/fmdb) - **12533 star**   
-        [BGFMDB](https://github.com/huangzhibiao/BGFMDB) - **771 star**  
-        [JKDBModel](https://github.com/Haley-Wong/JKDBModel) - **683 star**  
-        [JRDB](https://github.com/scubers/JRDB) - **480 star**  
-        [LKDBHelper-SQLite-ORM](https://github.com/li6185377/LKDBHelper-SQLite-ORM) - **980 star**
-
-- 数据转模型  
-        [MJExtension](https://github.com/CoderMJLee/MJExtension) - **7667 star**   
-        [YYModel](https://github.com/ibireme/YYModel) - **3589 star**  
-        [Mantle](https://github.com/Mantle/Mantle)  - **11023 star**    
-        [jsonmodel](https://github.com/jsonmodel/jsonmodel) - **6559 star**  
-        [GDataXML-HTML](https://github.com/graetzer/GDataXML-HTML) - **261 star**
-
-- 搜索  
-        [PYSearch](https://github.com/ko1o/PYSearch) - **2976 star**
-
-- 提示框架  
-        [MBProgressHUD](https://github.com/jdg/MBProgressHUD/tree/master) - **14618 star**  
-        [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD) - **11046 star**    
-        [JGProgressHUD](https://github.com/JonasGessner/JGProgressHUD) - **2257 star**  
-        [KSToastView](https://github.com/c0ming/KSToastView) - **91 star**  
-        [MMPopupView](https://github.com/adad184/MMPopupView) - **1910 star**   
-        [SCLAlertView](https://github.com/dogo/SCLAlertView) - **3084 star**   
-        [Toast](https://github.com/scalessec/Toast) - **3085 star**
-
-- 图表绘制  
-        [AAChartKit](https://github.com/AAChartModel/AAChartKit) - **2241 star**   
-        [JHChart](https://github.com/China131/JHChart) - **508 star**  
-        [ZFChart](https://github.com/Zirkfied/ZFChart) - **670 star**  
-        [DVPieChart](https://github.com/FireMou/DVPieChart) - **63 star**  
-        [DVLineChart](https://github.com/FireMou/DVLineChart) - **56 star**
-
-- 图片缓存框架  
-        [SDWebImage](https://github.com/rs/SDWebImage) - **22089 star**  
-        [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) - **6691 star**     
-        [iOS-WebP](https://github.com/seanooi/iOS-WebP) - **739 star**  
-        [YYWebImage](https://github.com/ibireme/YYWebImage) - **3195 star**  
-
-- 图片浏览  
-        [MWPhotoBrowser](https://github.com/mwaterfall/MWPhotoBrowser) - **8238 star**  
-        [PYPhotoBrowser](https://github.com/ko1o/PYPhotoBrowser) - **1782 star**   
-        [SDPhotoBrowser](https://github.com/gsdios/SDPhotoBrowser) - **962 star**    
-        [STPhotoBrowser](https://github.com/STShenZhaoliang/STPhotoBrowser) - **299 star**  
-        [KSPhotoBrowser](https://github.com/skx926/KSPhotoBrowser) - **457 star**
+- [HYPageView](https://github.com/runlhy/HYPageView) 
 
-- 图片轮播  
-        [SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView) - **4921 star**    
-        [HYBLoopScrollView](https://github.com/CoderJackyHuang/HYBLoopScrollView) - **615 star**    
-        [TXScrollLabelView](https://github.com/tingxins/TXScrollLabelView) - **497 star**
+- [SGPagingView](https://github.com/kingsic/SGPagingView)
 
-- 图片拾取  
-        [TZImagePickerController](https://github.com/banchichen/TZImagePickerController) - **5065 star**    
-        [CTAssetsPickerController](https://github.com/chiunam/CTAssetsPickerController) - **2142 star**     
-        [DNImagePicker](https://github.com/AwesomeDennis/DNImagePicker) - **365 star**  
-        [HXWeiboPhotoPicker](https://github.com/KeenTeam1990/HXWeiboPhotoPicker) - **7 star**
+- [WMPageController](https://github.com/wangmchn/WMPageController)
 
-- 3D效果图  
-        [HelloPanoramaGL](https://github.com/heroims/HelloPanoramaGL) - **39 star**
+- [ZJScrollPageView](https://github.com/jasnig/ZJScrollPageView)
 
-- 网络请求  
-        [AFNetworking](https://github.com/AFNetworking/AFNetworking) - **31246 star**    
-        [YTKNetwork](https://github.com/yuantiku/YTKNetwork) - **5385 star**   
-        [PPNetworkHelper](https://github.com/jkpang/PPNetworkHelper) - **1180 star**     
-        [HYBNetworking](https://github.com/CoderJackyHuang/HYBNetworking) - **541 star**    
-        [SJNetwork](https://github.com/knightsj/SJNetwork) - **153 star**
+### 数据存储  
+- [fmdb](https://github.com/ccgus/fmdb)  
 
-- 网络状态监测  
-        [Reachability](https://github.com/tonymillion/Reachability) - **6665 star**
+- [BGFMDB](https://github.com/huangzhibiao/BGFMDB)  
 
-- 文件下载  
-        [TWRDownloadManager](https://github.com/chasseurmic/TWRDownloadManager) - **366 star**  
-        [ZFDownload](https://github.com/renzifeng/ZFDownload) - **291 star**
+- [JKDBModel](https://github.com/Haley-Wong/JKDBModel)
 
-- 旋转木马  
-        [iCarousel](https://github.com/nicklockwood/iCarousel) - **10628 star**  
-        [NewPagedFlowView](https://github.com/PageGuo/NewPagedFlowView) - **512 star**
+- [JRDB](https://github.com/scubers/JRDB)  
 
-- 音视频    
-        [ijkplayer](https://github.com/Bilibili/ijkplayer) - **19602 star**  
-        [ZFPlayer](https://github.com/renzifeng/ZFPlayer) - **4539 star**  
-        [WMPlayer](https://github.com/zhengwenming/WMPlayer) - **2397 star**   
-        [TBPlayer](https://github.com/suifengqjn/TBPlayer) - **1125 star**  
-        [TTAVPlayer](https://github.com/tangdiforx/TTAVPlayer) - **118 star**
+- [LKDBHelper-SQLite-ORM](https://github.com/li6185377/LKDBHelper-SQLite-ORM)
 
-- 占位图        
-        [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet) - **10439 star**  
-        [LYEmptyView](https://github.com/dev-liyang/LYEmptyView) - **657 star**
+### 数据转模型  
+- [MJExtension](https://github.com/CoderMJLee/MJExtension)  
+- [YYModel](https://github.com/ibireme/YYModel) 
 
-- C语言扩展库   
-        [libextobjc](https://github.com/jspahrsummers/libextobjc) - **3936 star**   
+- [Mantle](https://github.com/Mantle/Mantle)    
 
-- Socket编程    
-        [CocoaAsyncSocket](https://github.com/robbiehanson/CocoaAsyncSocket) - **10193 star**   
-        [SocketRocket](https://github.com/facebook/SocketRocket) - **7833 star**   
-        [socket.io](https://github.com/socketio/socket.io) - **42419 star**  
-        [MQTTKit](https://github.com/mobile-web-messaging/MQTTKit) - **407 star**
+- [jsonmodel](https://github.com/jsonmodel/jsonmodel) 
 
-- 内存泄露检测工具  
+- [GDataXML-HTML](https://github.com/graetzer/GDataXML-HTML)
 
-    - [MLeaksFinder](https://github.com/Tencent/MLeaksFinder) - **3568 star**   
+### 搜索  
+- [PYSearch](https://github.com/ko1o/PYSearch)
 
-      腾讯开源内存泄漏检测框架，非常好用，值得推荐。
+### 提示框架  
+- [MBProgressHUD](https://github.com/jdg/MBProgressHUD/tree/master) 
 
-    - [FBRetainCycleDetector](https://github.com/facebook/FBRetainCycleDetector) - **3068 star**
+- [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)  
 
-      iOS library to help detecting retain cycles in runtime.
+- [JGProgressHUD](https://github.com/JonasGessner/JGProgressHUD)
 
-- YYKit     
-        [YYKit](https://github.com/ibireme/YYKit) - **12185 star**
+- [KSToastView](https://github.com/c0ming/KSToastView)
 
-- LOG工具   
-        [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) - **10382 star**
+- [MMPopupView](https://github.com/adad184/MMPopupView)   
 
-- OC与JS交互    
-        [WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJavascriptBridge) - **11017 star**
+- [SCLAlertView](https://github.com/dogo/SCLAlertView)  
 
-- 输入框占位符  
-        [UITextView-Placeholder](https://github.com/devxoul/UITextView-Placeholder) - **797 star**  
-        [RPFloatingPlaceholders](https://github.com/iwasrobbed/RPFloatingPlaceholders) - **1115 star**  
-        [SZTextView](https://github.com/glaszig/SZTextView) - **652 star**  
+- [Toast](https://github.com/scalessec/Toast)
 
-- 分类  
-        [JKCategories](https://github.com/shaojiankui/JKCategories) - **2770 star**
+### 图表绘制  
+- [AAChartKit](https://github.com/AAChartModel/AAChartKit)
 
-- 图像处理  
-        [GPUImage](https://github.com/BradLarson/GPUImage) - **17606 star**
+- [JHChart](https://github.com/China131/JHChart)   
 
-- iOS开发知识集合   
+- [ZFChart](https://github.com/Zirkfied/ZFChart)  
 
-    - [iOS-Tips](https://github.com/awesome-tips/iOS-Tips) - **2187 star**   
+- [DVPieChart](https://github.com/FireMou/DVPieChart)  
 
-       iOS知识小集，`iOS知识小集`的初衷是希望用300字左右（外加代码和效果展示）来说明一个小知识点，这样读者可以在上下班路上，花个2分钟就能了解一个iOS开发的小知识。
+- [DVLineChart](https://github.com/FireMou/DVLineChart)
 
-- 面试题集锦    
+### 图片缓存框架  
+- [SDWebImage](https://github.com/rs/SDWebImage)
 
-    - [iOSInterviewQuestions](https://github.com/ChenYilong/iOSInterviewQuestions) - **6809 star**  
+- [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)    
 
-      iOS面试题集锦（附答案），分为两篇[《招聘一个靠谱的 iOS》—参考答案（上）](https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8A%EF%BC%89.md)   、[《招聘一个靠谱的 iOS》—参考答案（下）](https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8B%EF%BC%89.md)，面试前值得学习与了解。
+- [iOS-WebP](https://github.com/seanooi/iOS-WebP)  
 
-    - [iOS-InterviewQuestion-collection](https://github.com/liberalisman/iOS-InterviewQuestion-collection) - **1019 star** 
+- [YYWebImage](https://github.com/ibireme/YYWebImage) 
 
-      iOS 开发者在面试过程中，常见的一些面试题，建议尽量弄懂了原理，并且多实践。
+### 图片浏览  
+- [MWPhotoBrowser](https://github.com/mwaterfall/MWPhotoBrowser) 
 
-- 三方开源库分析    
+- [PYPhotoBrowser](https://github.com/ko1o/PYPhotoBrowser)    
+- [SDPhotoBrowser](https://github.com/gsdios/SDPhotoBrowser) 
 
-    - [analyze](https://github.com/Draveness/analyze) - **6077 star**
+- [STPhotoBrowser](https://github.com/STShenZhaoliang/STPhotoBrowser)
 
-      主要记录了Draveness大神阅读开源框架源代码的心得，主要框架包括**SDWebImage**、**MBProgressHUD**、**Masonry**、**AFNetworking**、**KVOController**等，有兴趣的朋友可以到GitHub阅读。
+- [KSPhotoBrowser](https://github.com/skx926/KSPhotoBrowser)
 
-### 三、Swift三方开源库
-- 动画  
+### 图片轮播  
+- [SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView)  
 
-    - [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView) - **7098 star**
+- [HYBLoopScrollView](https://github.com/CoderJackyHuang/HYBLoopScrollView)   
 
-      一组极棒的加载动画集合。
+- [TXScrollLabelView](https://github.com/tingxins/TXScrollLabelView)
 
-- 网络请求  
+### 图片拾取  
+- [TZImagePickerController](https://github.com/banchichen/TZImagePickerController)      
+**一个支持多选、选原图和视频的图片选择器，同时有预览、裁剪功能，支持iOS6+。**
 
-    - [Alamofire](https://github.com/Alamofire/Alamofire) - **28292 star**
+- [CTAssetsPickerController](https://github.com/chiunam/CTAssetsPickerController)    
 
-      Swift优雅的HTTP网络请求库。
+- [DNImagePicker](https://github.com/AwesomeDennis/DNImagePicker)
 
-- 占位图    
-        [SkeletonView](https://github.com/Juanpe/SkeletonView) - **5083 star**
+- [HXWeiboPhotoPicker](https://github.com/KeenTeam1990/HXWeiboPhotoPicker)
 
-- 二维码扫描    
-        [EFQRCode](https://github.com/EyreFree/EFQRCode) - **2751 star**
+### 3D效果图  
 
-- 布局框架  
-        [SnapKit](https://github.com/SnapKit/SnapKit) - **12978 star**  
+- [HelloPanoramaGL](https://github.com/heroims/HelloPanoramaGL)
 
-- 图表绘制  
-        [Charts](https://github.com/danielgindi/Charts) - **18605 star**
+### 网络请求  
+- [AFNetworking](https://github.com/AFNetworking/AFNetworking)     
+**A delightful networking framework for iOS, macOS, watchOS, and tvOS.**
+
+- [YTKNetwork](https://github.com/yuantiku/YTKNetwork)   
+
+- [PPNetworkHelper](https://github.com/jkpang/PPNetworkHelper)    
+
+- [HYBNetworking](https://github.com/CoderJackyHuang/HYBNetworking)   
+
+- [SJNetwork](https://github.com/knightsj/SJNetwork)
+
+### 网络状态监测  
+- [Reachability](https://github.com/tonymillion/Reachability)
+
+### 文件下载  
+- [TWRDownloadManager](https://github.com/chasseurmic/TWRDownloadManager)
+
+- [ZFDownload](https://github.com/renzifeng/ZFDownload)
+
+### 旋转木马  
+- [iCarousel](https://github.com/nicklockwood/iCarousel)  
+
+- [NewPagedFlowView](https://github.com/PageGuo/NewPagedFlowView)
+
+### 音视频    
+- [ijkplayer](https://github.com/Bilibili/ijkplayer) 
+
+- [ZFPlayer](https://github.com/renzifeng/ZFPlayer)
+
+- [WMPlayer](https://github.com/zhengwenming/WMPlayer) 
+
+- [TBPlayer](https://github.com/suifengqjn/TBPlayer)
+
+- [TTAVPlayer](https://github.com/tangdiforx/TTAVPlayer)
+
+### 占位图        
+- [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet)   
+**A drop-in UITableView/UICollectionView superclass category for showing empty datasets whenever the view has no content to display.集合视图表格视图无数据占位图设置框架，使用只需设置代理、实现代理方法，就能完成占位图设置，非常值得推荐**
+
+- [LYEmptyView](https://github.com/dev-liyang/LYEmptyView)
+
+### C语言扩展库   
+- [libextobjc](https://github.com/jspahrsummers/libextobjc)  
+
+### Socket编程    
+- [CocoaAsyncSocket](https://github.com/robbiehanson/CocoaAsyncSocket)  
+
+- [SocketRocket](https://github.com/facebook/SocketRocket)   
+- [socket.io](https://github.com/socketio/socket.io) 
+
+- [MQTTKit](https://github.com/mobile-web-messaging/MQTTKit)
+
+### 内存泄露检测工具  
+- [MLeaksFinder](https://github.com/Tencent/MLeaksFinder)     
+**腾讯开源内存泄漏检测框架，非常好用，值得推荐。**
+
+- [FBRetainCycleDetector](https://github.com/facebook/FBRetainCycleDetector)  
+**iOS library to help detecting retain cycles in runtime.**
+
+### YYKit     
+- [YYKit](https://github.com/ibireme/YYKit)
+
+### LOG工具   
+- [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)   
+**A fast & simple, yet powerful & flexible logging framework for Mac and iOS.**
+
+### OC与JS交互    
+- [WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJavascriptBridge)
+
+### 输入框占位符  
+- [UITextView-Placeholder](https://github.com/devxoul/UITextView-Placeholder) 
+
+- [RPFloatingPlaceholders](https://github.com/iwasrobbed/RPFloatingPlaceholders)
+
+- [SZTextView](https://github.com/glaszig/SZTextView)  
+
+### 分类  
+- [JKCategories](https://github.com/shaojiankui/JKCategories)
+
+### 图像处理
+
+- [GPUImage](https://github.com/BradLarson/GPUImage)
+
+### iOS开发知识集合   
+
+- [iOS-Tips](https://github.com/awesome-tips/iOS-Tips)    
+**iOS知识小集，`iOS知识小集`的初衷是希望用300字左右（外加代码和效果展示）来说明一个小知识点，这样读者可以在上下班路上，花个2分钟就能了解一个iOS开发的小知识。**
+
+### 面试题集锦    
+- [iOSInterviewQuestions](https://github.com/ChenYilong/iOSInterviewQuestions)     
+**iOS面试题集锦（附答案），分为两篇[《招聘一个靠谱的 iOS》—参考答案（上）](https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8A%EF%BC%89.md)   、[《招聘一个靠谱的 iOS》—参考答案（下）](https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8B%EF%BC%89.md)，面试前值得学习与了解。**
+
+- [iOS-InterviewQuestion-collection](https://github.com/liberalisman/iOS-InterviewQuestion-collection)    
+**iOS 开发者在面试过程中，常见的一些面试题，建议尽量弄懂了原理，并且多实践。**
+
+### 三方开源库分析    
+- [analyze](https://github.com/Draveness/analyze)   
+**主要记录了Draveness大神阅读开源框架源代码的心得，主要框架包括``SDWebImage``、``MBProgressHUD``、``Masonry``、``AFNetworking``、``KVOController``等，有兴趣的朋友可以到GitHub阅读。**
+
+# 三、Swift三方开源库
+### 动画  
+
+- [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView) 
+**一组极棒的加载动画集合。**
+
+### 网络请求  
+- [Alamofire](https://github.com/Alamofire/Alamofire) **Swift优雅的HTTP网络请求库。** 
+
+### 占位图    
+- [SkeletonView](https://github.com/Juanpe/SkeletonView)
+
+### 二维码扫描    
+- [EFQRCode](https://github.com/EyreFree/EFQRCode)
+
+### 布局框架  
+- [SnapKit](https://github.com/SnapKit/SnapKit)  
+
+### 图表绘制  
+- [Charts](https://github.com/danielgindi/Charts)
 ### 四、结语
 > 上面这些三方开源库按照自己的理解分类整理了一遍，其中OC语言库居多，自己现在也是基于OC开发，Swift收集的相对较少，这些库也是自己现在所了解到的，当然还有很多优秀的三方库自己也未发现和接触，我以后会不断在这篇博客中更新优秀的三方开源库。
