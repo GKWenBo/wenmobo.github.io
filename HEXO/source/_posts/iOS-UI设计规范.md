@@ -38,7 +38,7 @@ image:
 |iPhone SE|	640px × 1136px|1136px × 640px|
 
 ### 图像大小与分辨率
-|Device|	Scale Factor|
+|Device|Scale Factor|
 |:---|:---|
 |12.9" iPad Pro|@2x|
 |10.5" iPad Pro|@2x|
@@ -58,7 +58,7 @@ image:
 |iPhone SE|@2x|
 
 ### App Icon Sizes
-|Device or context|	Icon size|
+|Device or context|Icon size|
 |:---|:---|
 |iPhone|	180px × 180px (60pt × 60pt @3x)|
 ||120px × 120px (60pt × 60pt @2x)|
@@ -74,7 +74,7 @@ image:
 |iPad Pro, iPad, iPad mini|	80px × 80px (40pt × 40pt @2x)|
 
 - Settings
-|Device|	Settings icon size|
+|Device|Settings icon size|
 |:---|:---|
 |iPhone|	87px × 87px (29pt × 29pt @3x)|
 ||58px × 58px (29pt × 29pt @2x)|
@@ -88,7 +88,7 @@ image:
 |iPad Pro, iPad, iPad mini|40px × 40px (20pt × 20pt @2x)|
 
 ### Launch Screen
-|Device|	Portrait size|	Landscape size|
+|Device|Portrait size|Landscape size|
 |:---|:---|:---|
 |12.9" iPad Pro|	2048px × 2732px|2732px × 2048px|
 |10.5" iPad Pro|	1668px × 2224px|2224px × 1668px|
@@ -107,7 +107,7 @@ image:
 |iPhone SE|640px × 1136px|	1136px × 640px|
 
 ### Navigation Bar and Toolbar Icon Size（导航栏与工具条）
-|Target sizes（标准大小）|	Maximum sizes（最大尺寸）|
+|Target sizes（标准大小）|Maximum sizes（最大尺寸）|
 |:---|:---|
 |72px × 72px (24pt × 24pt @3x)|	84px × 84px (28pt × 28pt @3x)|
 |48px × 48px (24pt × 24pt @2x)|	56px × 56px (28pt × 28pt @2x)|

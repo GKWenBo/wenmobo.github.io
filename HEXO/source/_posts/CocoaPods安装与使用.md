@@ -19,9 +19,10 @@ image:
 
 - 一、安装RVM
 - 二、配置RubyGems
-- 三 、CocoaPods安装
-- 四 、CocoaPods使用
-- 五、问题解决
+- 三、CocoaPods安装
+- 四、CocoaPods使用
+- 五、卸载CocoaPods
+- 六、问题解决
 ### 一、安装[RVM](https://rvm.io/)
 - 安装RVM命令如下：
 ```
@@ -230,7 +231,36 @@ pod install
 - 打开xcodeproj文件，删除项目中的libpods.a和Pods.xcconfig引用
 - 打开Build Phases选项，删除Check Pods Manifest.lock和Copy Pods Resources
   主要就是上面四个步骤。
-### 五、问题解决
+
+### 五、卸载CocoaPods
+- 查看pod的地址，终端输入
+```
+which pod
+```
+- 删除pod，终端输入
+```
+sudo rm -rf [pod地址]
+```
+- 查看gem安装包，终端输入
+```
+gem list
+```
+- 按版本号卸载cocoapods
+```
+sudo gem uninstall cocoapods -v [版本号]
+```
+卸载cocoapods其他组件同理，只需替换名字卸载即可，如：``gem uninstall cocoapods-downloader``。
+- 卸载所有版本
+```
+sudo gem uninstall cocoapods
+```
+- 验证是否删除成功
+```
+pod --version
+```
+如果提示命令未找到，说明卸载成功
+
+### 六、问题解决
 #### 1、执行`gem update --system`报证书错误，在网上找了很久也没有找到解决方法，后来还是找到了,方法是忽略证书验证。
 步骤：
 前往`~/.gemrc`，打开文件，并添加`:ssl_verify_mode: 0`
