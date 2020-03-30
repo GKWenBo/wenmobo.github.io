@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "69a9214b"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="iOS,fastlane,Jenkins,fir.im,蒲公英," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Mr.Wen" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="从事iOS开发也有一段时间了，实习的时候自己就了解了iOS打包分发的一些方式，自己也写了一篇博客[iOS打测试包与分发测试](https://www.jianshu.com/p/fc6721cf5c7f),介绍了如何打测试包以及上传相关的分发平台，也提到了脚本自动打包。现在自己负责几个项目的维护与开发工作，发现打一个包出来到上传到iTunes Connect上实在是太慢了，步骤也多，比较的耗时间，">
+<meta name="keywords" content="iOS,fastlane,Jenkins,fir.im,蒲公英">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS持续集成与自动打包">
+<meta property="og:url" content="http://blogwenbo.com/2018/12/23/iOS持续集成与自动打包/index.html">
+<meta property="og:site_name" content="Mr.Wen">
+<meta property="og:description" content="从事iOS开发也有一段时间了，实习的时候自己就了解了iOS打包分发的一些方式，自己也写了一篇博客[iOS打测试包与分发测试](https://www.jianshu.com/p/fc6721cf5c7f),介绍了如何打测试包以及上传相关的分发平台，也提到了脚本自动打包。现在自己负责几个项目的维护与开发工作，发现打一个包出来到上传到iTunes Connect上实在是太慢了，步骤也多，比较的耗时间，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fygs2adp2jj31ub0u0k95.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwly1fygra84uobj30oa0jmacm.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwly1fygs1hjn5vj31x00myq9g.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fygsr4wnd8j30vc090taq.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fyh1dmhh2nj31xs0pgtdp.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwly1fyh1e6hitnj31q20u046x.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fyh1wi0sxfj31qp0u0456.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwly1fyh27arftqj31dz0u0dkr.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fyh2d6gsq6j31dx0u07an.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwly1fyh2kfsk7dj31b60u0jwq.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwly1fyh2nuyi25j31g80hejt9.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwly1fyh307sh6fj31gi0hg40l.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwly1fyh33asqc7j31f80gq425.jpg">
+<meta property="og:updated_time" content="2020-03-30T14:09:57.148Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS持续集成与自动打包">
+<meta name="twitter:description" content="从事iOS开发也有一段时间了，实习的时候自己就了解了iOS打包分发的一些方式，自己也写了一篇博客[iOS打测试包与分发测试](https://www.jianshu.com/p/fc6721cf5c7f),介绍了如何打测试包以及上传相关的分发平台，也提到了脚本自动打包。现在自己负责几个项目的维护与开发工作，发现打一个包出来到上传到iTunes Connect上实在是太慢了，步骤也多，比较的耗时间，">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fygs2adp2jj31ub0u0k95.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blogwenbo.com/2018/12/23/iOS持续集成与自动打包/"/>
+
+
+
+
+
+  <title>iOS持续集成与自动打包 | Mr.Wen</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/wenmobo" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mr.Wen</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To strive, to seek, to find, and not to yield</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-top">
+          <a href="/top/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-signal"></i> <br />
+            
+            阅读排行
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/12/23/iOS持续集成与自动打包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Wen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/3072214/ccbcba49-0a5c-4b7e-b1e4-aea15ab4419f.png?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.Wen">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">iOS持续集成与自动打包</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-23T23:36:03+08:00">
+                2018-12-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/23/iOS持续集成与自动打包/" class="leancloud_visitors" data-flag-title="iOS持续集成与自动打包">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span><span>℃</span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,505
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  从事iOS开发也有一段时间了，实习的时候自己就了解了iOS打包分发的一些方式，自己也写了一篇博客[iOS打测试包与分发测试](https://www.jianshu.com/p/fc6721cf5c7f),介绍了如何打测试包以及上传相关的分发平台，也提到了脚本自动打包。现在自己负责几个项目的维护与开发工作，发现打一个包出来到上传到iTunes Connect上实在是太慢了，步骤也多，比较的耗时间，也不够自动化。后面自己了解了Jenkins持续构建工具，和fastlane自动打包工具，能够提高打包效率，下面开始介绍如何使用这些工具吧。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p class="description"></p>
+
+
+
+<a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>从事iOS开发也有一段时间了，实习的时候自己就了解了iOS打包分发的一些方式，自己也写了一篇博客<a href="https://www.jianshu.com/p/fc6721cf5c7f" target="_blank" rel="noopener">iOS打测试包与分发测试</a>,介绍了如何打测试包以及上传相关的分发平台，也提到了脚本自动打包。现在自己负责几个项目的维护与开发工作，发现打一个包出来到上传到iTunes Connect上实在是太慢了，步骤也多，比较的耗时间，也不够自动化。后面自己了解了Jenkins持续构建工具，和fastlane自动打包工具，能够提高打包效率，下面开始介绍如何使用这些工具吧。</p>
+</blockquote>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li><h2 id="fastlane"><a href="#fastlane" class="headerlink" title="fastlane"></a>fastlane</h2></li>
+<li><h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2></li>
+</ul>
+<h1 id="fastlane-1"><a href="#fastlane-1" class="headerlink" title="fastlane"></a>fastlane</h1><p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fygs2adp2jj31ub0u0k95.jpg" alt=""></p>
+<p>The easiest way to build and release mobile apps.fastlane* handles tedious tasks so you don’t have to.</p>
+<p>一种快捷的方式去构建和发布手机APP，它可以帮我们处理冗长无味的工作。<br>最新公司项目打包频率增加，每次打包上传到三方分发平台或testflight上，都要耽搁好长的时间，我就在想有没有一种好的方式，帮我省去打包繁琐的过程，而是通过脚本自动打包上产到相应的平台，于是我就研究了一下fastlane工具，这篇博客主要是做相关记录，方便自己以后查阅，同时也希望能给需要的朋友一些参考帮助。</p>
+<h3 id="相关地址"><a href="#相关地址" class="headerlink" title="相关地址"></a>相关地址</h3><ul>
+<li>GitHub地址：<a href="https://github.com/fastlane/fastlane" target="_blank" rel="noopener">fastlane</a></li>
+<li>官方地址：<a href="https://fastlane.tools/" target="_blank" rel="noopener">fastlane.tools</a></li>
+<li>文档地址：<a href="https://docs.fastlane.tools/" target="_blank" rel="noopener">官方文档</a></li>
+</ul>
+<h3 id="安装fastlane"><a href="#安装fastlane" class="headerlink" title="安装fastlane"></a>安装fastlane</h3><ul>
+<li><p>安装command line tools</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install fastlane</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install fastlane</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换到工程目录，初始化fastlane</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd [工程目录]</span><br><span class="line"></span><br><span class="line">fastlane init</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>初始化完成之后，工程目录大概是这个样子：</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fygra84uobj30oa0jmacm.jpg" alt=""></p>
+<h3 id="配置相关打包脚本"><a href="#配置相关打包脚本" class="headerlink" title="配置相关打包脚本"></a>配置相关打包脚本</h3><p>自己也是最近才熟悉了解fastlane相关命令的使用，我现在配置了打包到上传App Store和上传到Testflight上的脚本。我们可以通过不同的脚本配置，打出不同环境的ipa包，也可以直接通过fastlane配置上传APP相关信息到iTunes Connect上，比如应用截图，APP提交审核时一些信息等，自己暂时还没配置上传信息这些，下面只介绍我用到的吧。</p>
+<ul>
+<li><p>上传App Store</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">default_platform(<span class="symbol">:ios</span>)</span><br><span class="line"></span><br><span class="line">platform <span class="symbol">:ios</span> <span class="keyword">do</span></span><br><span class="line">desc <span class="string">"upload appstore lane"</span></span><br><span class="line">  lane <span class="symbol">:release</span> <span class="keyword">do</span></span><br><span class="line">    <span class="comment"># add actions here: https://docs.fastlane.tools/actions</span></span><br><span class="line">    <span class="comment">#pod资源更新</span></span><br><span class="line">    cocoapods</span><br><span class="line"></span><br><span class="line">    <span class="comment">#增加build版本号,需要先配置build setting</span></span><br><span class="line">    <span class="comment">#increment_build_number</span></span><br><span class="line">    <span class="comment">#自动增加build号</span></span><br><span class="line">    increment_build_number_in_plist</span><br><span class="line"></span><br><span class="line">    <span class="comment">#scheme_name</span></span><br><span class="line">    scheme_name = <span class="string">"xxxx"</span></span><br><span class="line">    <span class="comment">#workspace_name</span></span><br><span class="line">    workspace_name  = <span class="string">"xxxx.xcworkspace"</span></span><br><span class="line">    <span class="comment">#导出ipa路径</span></span><br><span class="line">    output_directory = <span class="string">"fastlanebuild_ipa"</span></span><br><span class="line">    <span class="comment">#导出名称 </span></span><br><span class="line">    output_name = <span class="string">"<span class="subst">#&#123;scheme_name&#125;</span>_<span class="subst">#&#123;Time.now.strftime(<span class="string">'%Y%m%d%H%M%S'</span>)&#125;</span>.ipa"</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#打包,别名build_app</span></span><br><span class="line">    gym(</span><br><span class="line">         <span class="comment">#代码签名方式,"app-store", "ad-hoc", "package", "enterprise", "development", "developer-id"]</span></span><br><span class="line">        <span class="symbol">export_method:</span> <span class="string">"app-store"</span>,</span><br><span class="line">        <span class="symbol">export_xcargs:</span> <span class="string">"-allowProvisioningUpdates"</span>,</span><br><span class="line">        <span class="symbol">scheme:</span> scheme_name,</span><br><span class="line">        <span class="symbol">workspace:</span> workspace_name,</span><br><span class="line">        <span class="comment">#build之前先clean，减小包体积</span></span><br><span class="line">        <span class="symbol">clean:</span> <span class="literal">true</span>,</span><br><span class="line">        <span class="symbol">output_directory:</span> output_directory,</span><br><span class="line">        <span class="symbol">output_name:</span> output_name,</span><br><span class="line">        <span class="symbol">include_bitcode:</span> <span class="literal">false</span></span><br><span class="line">        )</span><br><span class="line">    <span class="comment">#发布到AppStore</span></span><br><span class="line">    upload_to_app_store(<span class="symbol">skip_metadata:</span> <span class="literal">true</span>,</span><br><span class="line">                        <span class="comment">#忽略上传截图</span></span><br><span class="line">                        <span class="symbol">skip_screenshots:</span> <span class="literal">true</span>,</span><br><span class="line">                        <span class="symbol">force:</span> <span class="literal">true</span>)</span><br><span class="line">  <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>上传到App Store主要用到了gym，upload_to_app_store命令（他们都有别名，官方文档有描述），他们的配置参数都可以在fastlane官方文档里查到，通过简单的几行的脚本配置，就能打包上传App Store啦，是不是很方便easy！</p>
+<ul>
+<li><p>上传Testflight</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">default_platform(<span class="symbol">:ios</span>)</span><br><span class="line"></span><br><span class="line">platform <span class="symbol">:ios</span> <span class="keyword">do</span></span><br><span class="line">desc <span class="string">"upload to testflight lane"</span></span><br><span class="line">  lane <span class="symbol">:beta</span> <span class="keyword">do</span></span><br><span class="line">    <span class="comment">#保证推送证书可用</span></span><br><span class="line">    get_push_certificate</span><br><span class="line">    <span class="comment">#pod资源更新</span></span><br><span class="line">    cocoapods</span><br><span class="line">    <span class="comment">#代码签名方式,"app-store", "ad-hoc", "package", "enterprise", "development", "developer-id"]</span></span><br><span class="line">    <span class="comment">#sync_code_signing(type: "appstore")</span></span><br><span class="line">    <span class="comment">#自动增加build号</span></span><br><span class="line">    increment_build_number_in_plist</span><br><span class="line">    <span class="comment">#scheme_name</span></span><br><span class="line">    scheme_name = <span class="string">"xxxx"</span></span><br><span class="line">    <span class="comment">#workspace_name</span></span><br><span class="line">    workspace_name  = <span class="string">"xxx.xcworkspace"</span></span><br><span class="line">    <span class="comment">#导出ipa路径</span></span><br><span class="line">    output_directory = <span class="string">"fastlanebuild_ipa"</span></span><br><span class="line">    <span class="comment">#building app</span></span><br><span class="line">    build_app(<span class="symbol">scheme:</span> scheme_name,</span><br><span class="line">              <span class="symbol">workspace:</span> workspace_name,</span><br><span class="line">              <span class="symbol">include_bitcode:</span> <span class="literal">false</span>,</span><br><span class="line">              <span class="symbol">clean:</span> <span class="literal">true</span>,</span><br><span class="line">              <span class="symbol">output_name:</span> <span class="string">"<span class="subst">#&#123;scheme_name&#125;</span>_<span class="subst">#&#123;Time.now.strftime(<span class="string">'%Y%m%d%H%M%S'</span>)&#125;</span>.ipa"</span>,</span><br><span class="line">              <span class="symbol">output_directory:</span> output_directory,</span><br><span class="line">              <span class="symbol">export_method:</span> <span class="string">"app-store"</span>)</span><br><span class="line">    <span class="comment">#上传到Testflight</span></span><br><span class="line">    upload_to_testflight(<span class="symbol">skip_waiting_for_build_processing:</span> <span class="literal">true</span>)</span><br><span class="line">    <span class="comment">#slack(message: "Successfully distributed a new beta build")</span></span><br><span class="line">  <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>脚本配置和上传App Store差不太多，唯一不同是用到了upload_to_testflight命令。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<p>自己能使用fastlane正常打出ipa包来，倒腾了一两天，网上介绍fastlane使用资料也是一搜一大堆，但大部分介绍都不是很全，最全的资料还是官方文档，这次的折腾也给了我很多启示，要学会看官方文档资料，现在也只用到了fastlane提供的部分功能，遇到的坑不是很多，等以后有更深入的使用，在更新博客与大家分享。</p>
+</blockquote>
+<h1 id="Jenkins-1"><a href="#Jenkins-1" class="headerlink" title="Jenkins"></a>Jenkins</h1><p><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fygs1hjn5vj31x00myq9g.jpg" alt=""></p>
+<blockquote>
+<p>Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.</p>
+<p>Jenkins can be installed through native system packages, Docker, or even run standalone by any machine with a Java Runtime Environment (JRE) installed.</p>
+</blockquote>
+<p>怎么说呢，我也不太清楚自己是怎么接触到Jenkins持续集成工具的，当我有最初由持续集成概念的时候应该是我学习cocoapods制作私有共有库的时候，有一个GitHub的徽标是表示项目持续集成状态，叫<a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI</a>，貌似是开源项目免费，私有项目需要收费。自己那时候发布的pod库Travis CI没有通过，自己倒腾好久了才让这个徽标变为绿色。好了，不闲聊了，关于Jenkins介绍，我这里也不做介绍了，网上资料也是一搜一大堆，我只介绍集成和使用关键的几个步骤吧！</p>
+<h3 id="相关地址-1"><a href="#相关地址-1" class="headerlink" title="相关地址"></a>相关地址</h3><ul>
+<li>GitHub：<a href="https://github.com/jenkinsci/jenkins" target="_blank" rel="noopener">jenkins</a></li>
+<li>官方网址：<a href="https://jenkins.io/" target="_blank" rel="noopener">https://jenkins.io/</a></li>
+</ul>
+<h3 id="安装Java环境（MAC）"><a href="#安装Java环境（MAC）" class="headerlink" title="安装Java环境（MAC）"></a>安装Java环境（MAC）</h3><ul>
+<li>因为Jenkins是基于Java语言开发的，首先要检查自己的电脑是否安装Java。没有安装会报以下错误</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fygsr4wnd8j30vc090taq.jpg" alt=""></p>
+<p>错误已经给出提示了，按照提示安装java8吧：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install homebrew/cask-versions/java8</span><br></pre></td></tr></table></figure>
+<p>通过命令<code>java -version</code>查看是否安装成功。</p>
+<ul>
+<li>安装成功之后配置一下环境变量：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#查看java home 目录</span><br><span class="line">/usr/libexec/java_home</span><br><span class="line">输出是</span><br><span class="line">/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home</span><br><span class="line"></span><br><span class="line">#之后编辑bash_profile</span><br><span class="line">vi .bash_profile</span><br><span class="line"></span><br><span class="line">#编辑以下内容</span><br><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH  </span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line"></span><br><span class="line">:wq</span><br><span class="line">保存即可</span><br></pre></td></tr></table></figure>
+<h3 id="安装Jenkin"><a href="#安装Jenkin" class="headerlink" title="安装Jenkin"></a>安装Jenkin</h3><ul>
+<li>Jenkins安装方式有很多，可以在官方下载安装包安装，也可以通过brew安装，但我个人更推荐通过brew：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install jenkins</span><br></pre></td></tr></table></figure>
+<p>安装成功之后，会默认打开网址<a href="http://localhost:8080，如果没有打开我们在终端手动启动Jenkins" target="_blank" rel="noopener">http://localhost:8080，如果没有打开我们在终端手动启动Jenkins</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jenkins</span><br></pre></td></tr></table></figure>
+<p>第一次登录需要用初始化密码，将初始化密码拷贝进去就可以登录了，之后需要安装一些默认的插件，等待安装完成就可以进入主界面啦。</p>
+<h3 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h3><ul>
+<li><p>创建项目（Create New Job）</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fyh1dmhh2nj31xs0pgtdp.jpg" alt=""></p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fyh1e6hitnj31q20u046x.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="常规设置（general）"><a href="#常规设置（general）" class="headerlink" title="常规设置（general）"></a>常规设置（general）</h3><ul>
+<li>丢弃旧的构建</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fyh1wi0sxfj31qp0u0456.jpg" alt=""></p>
+<ul>
+<li><p>参数化构建过程</p>
+<p>如果我们项目用的git托管，这时候可能会有多个分支，在构建的时候我们需要选择一个分支。这功能我们需要装一个插件<strong><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Parameter+Plugin" target="_blank" rel="noopener">Git Parameter</a></strong>，然后做以下配置：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fyh27arftqj31dz0u0dkr.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="源代码管理（Source-Code-Management）"><a href="#源代码管理（Source-Code-Management）" class="headerlink" title="源代码管理（Source Code Management）"></a>源代码管理（Source Code Management）</h3><ul>
+<li>因为我的项目是用git托管的，这里源代码管理我选的git</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fyh2d6gsq6j31dx0u07an.jpg" alt=""></p>
+<ul>
+<li><p>Build Trigger</p>
+<p>这里是指怎么触发构建操作，一搬选择定时构建和轮询构建，看情况而定，这里我暂时都没有勾选，需要注意的是时间书写的格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#每天下午18：00构建一次</span><br><span class="line">H 18 * * *</span><br><span class="line"></span><br><span class="line">#每5分钟构建一次</span><br><span class="line">H/5 * * * *</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fyh2kfsk7dj31b60u0jwq.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="构建环境（Build-Environment）"><a href="#构建环境（Build-Environment）" class="headerlink" title="构建环境（Build Environment）"></a>构建环境（Build Environment）</h3><p>暂时没有用到，不做介绍啦。</p>
+<h3 id="构建（Build）"><a href="#构建（Build）" class="headerlink" title="构建（Build）"></a>构建（Build）</h3><p>构建完成之后执行的操作，有如下选项</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fyh2nuyi25j31g80hejt9.jpg" alt=""></p>
+<p>这里我认为是比较重要的地方啦，build成功之后，这里我们可已选择执行shell打包脚本，根据脚本配置导出ipa包，也可以执行fastlane命令上传App Store，也可以上传蒲公英或fir.im三方分发平台。</p>
+<ul>
+<li><p>shell打包脚本</p>
+<p>用苹果提供的原生打包命令编写shell，这里我没有采用这种方式啦，网上也可以搜到相关的脚本，就不做介绍了。</p>
+</li>
+<li><p>执行fastlane命令上传App Store</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastlane release</span><br></pre></td></tr></table></figure>
+<p><strong>release</strong>是之前介绍fastlane的时候编写的一个上传App Store的脚本，这里我们也可以上传Testflight。</p>
+</li>
+<li><p>上传蒲公英或fir.im三方分发平台</p>
+<p>这里我做了上传蒲公英平台的操作，蒲公英文档也有介绍相关的命令<a href="https://www.pgyer.com/doc/view/jenkins_plugin，我也是通过插件的方式，也可以通过命令。" target="_blank" rel="noopener">https://www.pgyer.com/doc/view/jenkins_plugin，我也是通过插件的方式，也可以通过命令。</a></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fyh307sh6fj31gi0hg40l.jpg" alt=""></p>
+<ul>
+<li>参数配置，配置好如下两个参数就可以自动帮我们上传到蒲公英平台啦，是不是很方便</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fyh33asqc7j31f80gq425.jpg" alt=""></p>
+<h3 id="Post-build-Actions"><a href="#Post-build-Actions" class="headerlink" title="Post-build Actions"></a>Post-build Actions</h3><p>构建完成之后的操作，实用的就是发邮件通知构建结果，暂时不做介绍，有兴趣的朋友可以自行研究。</p>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<p>总算介绍完成了，从零开始倒腾公司的项目，到支持Jenkins持续集成以及后续的操作，中间过程还是经历了很多的坑，但最后的结果还是令自己满意的，自己从中也学到了许多新知识，还是自己太“懒”吧，不然怎么会不折不休倒腾那么久，哈哈。现在打包还是比之前方便了许多，也省去了许多重复乏味的工作。如果文章中有描述不对的地方，还请大家不吝批评指正，自己也是最近才实践自动打包相关的工具，希望能和大家多多学习交流。</p>
+</blockquote>
+<h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><ul>
+<li><p>自己设置账号密码无法登陆</p>
+<p>去.jenkins目录下，修改config.xml参数，改为false就好了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;useSecurity&gt;false&lt;/useSecurity&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
+<li><a href="https://www.jianshu.com/p/d5bfa5c4d86a" target="_blank" rel="noopener">Max OS上Java环境变量配置</a></li>
+<li><a href="https://www.pgyer.com/doc/view/jenkins_plugin" target="_blank" rel="noopener">使用 Jenkins 插件上传应用到蒲公英</a></li>
+<li><a href="https://blog.csdn.net/u012076316/article/details/52056107" target="_blank" rel="noopener">jenkins构建时支持git选择分支</a></li>
+<li><p><a href="https://juejin.im/post/5a7b10bb6fb9a0636263bfd5" target="_blank" rel="noopener">iOS 持续交付之 Fastlane</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/41ecb06ae95f" target="_blank" rel="noopener">手把手教你利用Jenkins持续集成iOS项目</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+<div>
+      
+        
+      
+</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i> iOS</a>
+          
+            <a href="/tags/fastlane/" rel="tag"><i class="fa fa-tag"></i> fastlane</a>
+          
+            <a href="/tags/Jenkins/" rel="tag"><i class="fa fa-tag"></i> Jenkins</a>
+          
+            <a href="/tags/fir-im/" rel="tag"><i class="fa fa-tag"></i> fir.im</a>
+          
+            <a href="/tags/蒲公英/" rel="tag"><i class="fa fa-tag"></i> 蒲公英</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+<div style="color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px">(&gt;看完记得五星好评哦亲&lt;)</div>
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/06/iOS-文件获取与选择/" rel="next" title="iOS 文件获取与选择">
+                <i class="fa fa-chevron-left"></i> iOS 文件获取与选择
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/03/MAC切换host/" rel="prev" title="MAC切换host">
+                MAC切换host <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+      <!--MOB SHARE BEGIN-->
+<div class="-hoofoo-share-title">分享到：</div>
+<div class="-hoofoo-share-buttons">
+    <div class="-mob-share-weibo -hoofoo-share-weibo -hoofoo-share-ui-button"><i class="fa fa-weibo" aria-hidden="true"></i></div>
+    <div class="-mob-share-weixin -hoofoo-share-weixin -hoofoo-share-ui-button"><i class="fa fa-weixin" aria-hidden="true"></i></div>
+    <div class="-mob-share-qq -hoofoo-share-qq -hoofoo-share-ui-button"><i class="fa fa-qq" aria-hidden="true"></i></div>
+    <div class="-mob-share-twitter -hoofoo-share-twitter -hoofoo-share-ui-button"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+    <div class="-hoofoo-share-more -hoofoo-share-ui-button -mob-share-open"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+</div>
+<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-renren"><p>人人网</p></li>
+        <li class="-mob-share-kaixin"><p>开心网</p></li>
+        <li class="-mob-share-douban"><p>豆瓣</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+        <li class="-mob-share-pengyou"><p>朋友网</p></li>
+        <li class="-mob-share-facebook"><p>Facebook</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-pocket"><p>Pocket</p></li>
+        <li class="-mob-share-google"><p>Google+</p></li>
+        <li class="-mob-share-tumblr"><p>Tumblr</p></li>
+        <li class="-mob-share-instapaper"><p>Instapaper</p></li>
+        <li class="-mob-share-linkedin"><p>Linkedin</p></li>
+    </ul>
+    <div class="-mob-share-close">取消</div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=26bd318095f14"></script>
+<!--MOB SHARE END-->
+
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyMy85OTc5"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://upload.jianshu.io/users/upload_avatars/3072214/ccbcba49-0a5c-4b7e-b1e4-aea15ab4419f.png?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240"
+                alt="Mr.Wen" />
+            
+              <p class="site-author-name" itemprop="name">Mr.Wen</p>
+              <p class="site-description motion-element" itemprop="description">To strive, to seek, to find, and not to yield</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/wenmobo" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-GitHub"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="wenmobo2018@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/63445e24e8bf" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://juejin.im/user/5a371ae551882512d0607108" target="_blank" title="掘金">
+                      
+                        <i class="fa fa-fw fa-spinner"></i>掘金</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://developer.apple.com/swift/" title="Swift 4" target="_blank">Swift 4</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://developer.apple.com/documentation/objectivec" title="Objective-C" target="_blank">Objective-C</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          <div id="days"></div>
+</script>
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("10/01/2017 00:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">2.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fastlane"><span class="nav-number">2.1.</span> <span class="nav-text">fastlane</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins"><span class="nav-number">2.2.</span> <span class="nav-text">Jenkins</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fastlane-1"><span class="nav-number">3.</span> <span class="nav-text">fastlane</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关地址"><span class="nav-number">3.0.1.</span> <span class="nav-text">相关地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装fastlane"><span class="nav-number">3.0.2.</span> <span class="nav-text">安装fastlane</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置相关打包脚本"><span class="nav-number">3.0.3.</span> <span class="nav-text">配置相关打包脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.0.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Jenkins-1"><span class="nav-number">4.</span> <span class="nav-text">Jenkins</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关地址-1"><span class="nav-number">4.0.1.</span> <span class="nav-text">相关地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Java环境（MAC）"><span class="nav-number">4.0.2.</span> <span class="nav-text">安装Java环境（MAC）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Jenkin"><span class="nav-number">4.0.3.</span> <span class="nav-text">安装Jenkin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目创建"><span class="nav-number">4.0.4.</span> <span class="nav-text">项目创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常规设置（general）"><span class="nav-number">4.0.5.</span> <span class="nav-text">常规设置（general）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源代码管理（Source-Code-Management）"><span class="nav-number">4.0.6.</span> <span class="nav-text">源代码管理（Source Code Management）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建环境（Build-Environment）"><span class="nav-number">4.0.7.</span> <span class="nav-text">构建环境（Build Environment）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建（Build）"><span class="nav-number">4.0.8.</span> <span class="nav-text">构建（Build）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Post-build-Actions"><span class="nav-number">4.0.9.</span> <span class="nav-text">Post-build Actions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-1"><span class="nav-number">4.0.10.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题解决"><span class="nav-number">5.</span> <span class="nav-text">问题解决</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">6.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Wen</span>
+
+  
+</div>
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<span class="post-meta-divider">|</span>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+-->
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共26.9k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("dSEzksBvVcKjRW17O9ks40ew-gzGzoHsz", "x5zy0MVMa4Ch9FK2rOxXjM4q");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 12509,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript">
+    //微信二维码点击背景关闭
+    $('body').delegate('.-mob-share-weixin-qrcode-bg','click', function(){
+         $(".-mob-share-weixin-qrcode-close").trigger("click");
+    }); 
+</script>
+
+
+
+
+  <script type="text/javascript" color="250,100,49" opacity='0.5' zIndex="-1" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+</body>
+</html>
