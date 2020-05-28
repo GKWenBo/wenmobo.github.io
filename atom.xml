@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blogwenbo.com/"/>
-  <updated>2020-05-26T14:21:24.333Z</updated>
+  <updated>2020-05-28T03:39:46.697Z</updated>
   <id>http://blogwenbo.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://blogwenbo.com/2020/05/26/iOS%E5%BA%94%E7%94%A8%E5%AE%A1%E6%A0%B8%E8%A2%AB%E6%8B%92%E6%95%B4%E7%90%86-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://blogwenbo.com/2020/05/26/iOS应用审核被拒整理-解决方案/</id>
     <published>2020-05-26T14:12:08.000Z</published>
-    <updated>2020-05-26T14:21:24.333Z</updated>
+    <updated>2020-05-28T03:39:46.697Z</updated>
     
     <content type="html"><![CDATA[<p class="description"></p><p><img src="https://" alt="" style="width:100%"></p><a id="more"></a><h3 id="IPV6"><a href="#IPV6" class="headerlink" title="IPV6"></a>IPV6</h3><ul><li>服务器最好兼容ipv6协议</li><li>尝试多次提交，运气好就pass了</li><li>录视频上传到<a href="http://www.baidu.com/link?url=7udouveXh7f6Kot3AusUycrbkNmdyxC73y2_xugK_hZNpuWToPzRxlTwZsKmllag" target="_blank" rel="noopener"><em>You</em>Tube</a>，给审核团队证明，能在ipv6网络下访问</li></ul><p>可参考这篇博客<a href="https://github.com/wg689/Solve-App-Store-Review-Problem" target="_blank" rel="noopener">Solve-App-Store-Review-Problem</a>，处理方案很全。</p><hr><h3 id="包含三方未授权内容"><a href="#包含三方未授权内容" class="headerlink" title="包含三方未授权内容"></a>包含三方未授权内容</h3><ul><li>提供相关授权证明</li><li>删除相关内容</li></ul><h3 id="权限申请被拒"><a href="#权限申请被拒" class="headerlink" title="权限申请被拒"></a>权限申请被拒</h3><ul><li>info.plist里的权限描述要能准确，表明用途</li></ul>]]></content>
     
     <summary type="html">
     
-      记录iOS被拒记录，哪些与苹果审核团队的唇枪舌战的日子。
+      iOS被拒记录，哪些与苹果审核团队的唇枪舌战的日子。
     
     </summary>
     
