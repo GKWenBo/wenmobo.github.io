@@ -1,4 +1,5 @@
 ---
+
 title: CocoaPods进阶：详解私有库制作
 tags: [CocoaPods,iOS,GitHub,Git]
 date: 2018-08-13 21:58:51
@@ -11,11 +12,11 @@ image: https://ws4.sinaimg.cn/large/006tNbRwly1funipf7wcfj31kw0s441m.jpg
 
 <!-- more -->
 
-### 前言
+## 一、前言
 
 > 自己一直想用CocoaPods制作pod库，在自己面试过程中也被面试官问到过组件化开发的概念，然尔自己那时也不是很了解，CocoaPods与组件化也息息相关，利用CocoaPods也便于维护pod组件，于是自己就决定学习用CocoaPods制作pod库，下面就开始讲解私有库的制作过程吧。
 
-### 目录
+## 二、目录
 
 - 安装CocoaPods
 - 创建远程内部私有Spec Repo仓库
@@ -23,11 +24,11 @@ image: https://ws4.sinaimg.cn/large/006tNbRwly1funipf7wcfj31kw0s441m.jpg
 - 编辑***.podspec文件
 - 验证本地是否通过
 - 关联本地仓库，并推送到远程仓库，打标签
-- 推送***.podspec到远程
+- 推送***.podspec到远程spec仓库
 - 验证远程是否通过
 - 验证私有仓库是否可用，pod集成私有库
 
-#### 安装CocoaPods
+### 安装CocoaPods
 
 首先要安装CocoaPods，没有安装可以参考我的博客[CocoaPods安装与使用](https://www.jianshu.com/p/f218fe3baff8)。
 
@@ -58,7 +59,7 @@ pod repo add WBSpecs git@github.com:wenmobo/WBSpecs.git
 
   接着会需要回答一些问题：
 
-  ```
+  ```ruby
   # 你想使用哪个平台？
   1、What platform do you want to use?? [ iOS / macOS ]
   iOS
@@ -96,7 +97,7 @@ pod repo add WBSpecs git@github.com:wenmobo/WBSpecs.git
 
 #### 编辑***.podspec文件
 
-```
+```ruby
 Pod::Spec.new do |s|
   #库名称
   s.name             = 'WBAvoidCrash'
@@ -111,54 +112,77 @@ Pod::Spec.new do |s|
   s.summary          = 'iOS 防Crash库'
   
   #开源库描述 
-  s.description      = <<-DESC
-TODO: iOS防crash库分类.
-                       DESC
+  s.description      = ""
                        
-  #开源库地址，或者是博客、社交地址等
+  # 开源库地址，或者是博客、社交地址等
   s.homepage         = 'https://github.com/wenmobo/WBAvoidCrash'
   
-  #开源协议
+  # 开源协议
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   
-  #开源库作者
+  # 开源库作者
   s.author           = { 'wenmobo' => 'wenmobo2018@gmail.com' }
   
-  #开源库GitHub的路径与tag值，GitHub路径后必须有.git,tag实际就是上面的版本
+  # 开源库GitHub的路径与tag值，GitHub路径后必须有.git,tag实际就是上面的版本
   s.source           = { :git => 'https://github.com/wenmobo/WBAvoidCrash.git', :tag => s.version }
   
-  #社交网址
+  # 社交网址
   s.social_media_url = 'http://blogwenbo.com/'
   
-  #开源库最低支持
+  # 开源库最低支持
   s.ios.deployment_target = '8.0'
   
-  #源库资源文件
+  # 源库资源文件
   s.source_files = 'WBAvoidCrash/Classes/**/*'
   
-  #是否支持arc
+  # 是否支持arc
   s.requires_arc = true
+  
+  # ---------------- Dependency --------------
+  #开源库依赖库
+  s.dependency "Masonry"
+  # 指定版本
+  s.dependency "Masonry", "~> 1.0"
+  
+  # ---------------- Project Linking ----------------
+  # 添加系统依赖静态库
+  s.library = 'sqlite3', 'xml2'
   
   #依赖系统库
   s.frameworks = 'Foundation'
   
-  #开源库依赖库
-  # s.dependency "Masonry", "~> 1.0"
-  
-  #添加系统依赖静态库
-  #s.library = 'sqlite3', 'xml2'
-  
   #添加依赖第三方的framework
-  #s.vendored_frameworks = 'XXXX/XXXX/**/*.framework'
+  s.vendored_frameworks = 'XXXX/XXXX/**/*.framework'
   
   #静态库.a
   s.vendored_library = 'XXXX/XXX/XXX.a', 'YYY/YYY/Y.a'
   
-  #添加资源文件
-  #s.resource = 'XXX/XXXX/**/*.bundle'
+  # ---------------- Resource ------------------
+  s.resource  = "icon.png"
+  s.resources = "Resources/*.png"
+  s.resource_bundles = {
+   'ATCategory' => ['ATCategory/Images/*.png']
+  }
   
-  #在 podspec 文件中添加 s.static_framework = true，CocoaPods 就会把这个库配置成static framework。同时支持 Swift 和 Objective-C
-  #s.static_framework = true
+  #添加资源文件
+  s.resource = 'XXX/XXXX/**/*.bundle'
+  
+  # ---------------- Project Setting ----------------
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  
+  # pod工程配置，指模拟器指令集配置
+  ss.pod_target_xcconfig = {
+    'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
+  }
+  
+  # 在 podspec 文件中添加 s.static_framework = true，CocoaPods 就会把这个库配置成static framework。同时支持 Swift 和 Objective-C
+  s.static_framework = true
+  
+  # ---------------- Subspec ----------------
+  s.subspec 'sub' do |ss|
+    ss.source_files = 'WBAvoidCrash/Classes/**/*'
+  end
+  
 end
 ```
 
@@ -177,11 +201,12 @@ end
 
 - **s.dependency关于依赖三库，依赖多个三方库如下：**
 
-- ```
+  ```
   s.dependency 'Masonry'
   s.dependency 'MJRefresh'
-  s.dependency Masonry 'YYModel'
+  s.dependency 'Masonry' 'YYModel'
   ```
+
 
 #### 验证本地是否通过
 
@@ -353,46 +378,145 @@ pod install --no-repo-update
 
 [WBAvoidCrash](https://github.com/wenmobo/WBAvoidCrash)
 
-### 相关命令
+## 三、相关命令
 
 #### cocoapods
 
+- 查看所有repo
+
+  ```ruby
+  pod repo list
+  ```
+
+- 移除某个repo
+
+  ```ruby
+  pod repo remove [spec]
+  ```
+
+  
+
 - 更新repo
 
-  ```
-  //更新所有repo
+  ```ruby
+  # 更新所有repo
   pod repo update
-  
-  pod repo [spec库名]
+  # 更新指定
+  pod repo update [spec库名]
   ```
 
-- 验证pod库
+- 验证可选参数
 
+  ```ruby
+  --quick                                Lint skips checks that would require
+                                             to download and build the spec
+  --allow-warnings                       Lint validates even if warnings are
+                                       present
+  --subspec=NAME                         Lint validates only the given subspec
+  --no-subspecs                          Lint skips validation of subspecs
+  --no-clean                             Lint leaves the build directory
+                                       intact for inspection
+  --fail-fast                            Lint stops on the first failing
+                                       platform or subspec
+  --use-libraries                        Lint uses static libraries to install
+                                       the spec
+  --use-modular-headers                  Lint uses modular headers during
+                                       installation
+  --sources=https://cdn.cocoapods.org/   The sources from which to pull
+                                       dependent pods (defaults to
+                                       https://cdn.cocoapods.org/). Multiple
+                                       sources must be comma-delimited
+  --platforms=ios,macos                  Lint against specific platforms
+                                       (defaults to all platforms supported
+                                       by the podspec). Multiple platforms
+                                       must be comma-delimited
+  --private                              Lint skips checks that apply only to
+                                       public specs
+  --swift-version=VERSION                The `SWIFT_VERSION` that should be
+                                       used to lint the spec. This takes
+                                       precedence over the Swift versions
+                                       specified by the spec or a
+                                       `.swift-version` file
+  --include-podspecs=**/*.podspec        Additional ancillary podspecs which
+                                       are used for linting via :path
+  --external-podspecs=**/*.podspec       Additional ancillary podspecs which
+                                       are used for linting via :podspec. If
+                                       there are --include-podspecs, then
+                                       these are removed from them
+  --skip-import-validation               Lint skips validating that the pod
+                                       can be imported
+  --skip-tests                           Lint skips building and running tests
+                                       during validation
+  --analyze                              Validate with the Xcode Static
+                                       Analysis tool
+  --silent                               Show nothing
+  --verbose                              Show more debugging information
+  --no-ansi                              Show output without ANSI codes
+  --help                                 Show help banner of specified command
   ```
-  //验证本地pod库
+
+  可通过如下命令查看可选参数
+
+  ```ruby
+  pod lib lint --help
+  ```
+
+- 验证本地pod库
+
+  ```ruby
+  # 验证本地pod库
   pod lib lint
-  //本地验证忽略警告
+  # 本地验证忽略警告
   pod lib lint --allow-warnings
+  ```
   
-  //验证远程
+- 验证远程
+
+  ```
+  #验证远程
   pod spec lint [name].podspec
   ```
-
+  
 - 搜索pod库
 
   ```
   pod search [库名]
   ```
 
-### 结语
+## 四、问题解决
+
+### 4.1、JPush制作私有库lint时报错 symbol(s) not found for architecture i386
+
+```ruby
+valid_archs = ['armv7s','arm64',]
+s.xcconfig = {
+  'VALID_ARCHS' =>  valid_archs.join(' '),
+}
+s.pod_target_xcconfig = {
+    'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
+}
+```
+
+### 4.2、私有库依赖私有库验证不通过
+
+```ruby
+--sources=[private spec],[cocoapods spec]
+# 如下写法
+pod lib lint --no-clean --sources=https://xxx.git,https://github.com/CocoaPods/Specs.git --allow-warnings --use-libraries --use-modular-headers --verbose
+```
+
+
+
+## 五、结语
 
 > 终于完成这篇博客了，从自己比较熟悉GitHub之后，也想过自己能够开源一款三方库，然而自己水平有限，现在还没有拿的出来好的封装库或一些好的封装思想。但自己还是要学会制作pod库，在写博客之前，自己在谷歌浏览器查了许多的资料，资料也是比较的凌乱，自己在制作过程中也踩了许多的坑，最后自己也成功制作了一个私有库[WBAvoidCrash](https://github.com/wenmobo/WBAvoidCrash)，过程虽然有些坎坷，但自己还是很有成就感。自己也是第一次制作，如果有描述不对的地方，希望大家能够批评指正，我也会第一时间修改，同时也希望这篇博客对需要的朋友一些帮助，接下来我也会写一篇记录公开库制作过程的博客。
 
-### 参考文章
+## 六、参考文章
 1、[ CocoaPods创建公有和私有Pod库方法总结](https://segmentfault.com/a/1190000007947371)
 2、[出现Unable to find a pod with name, author, summary, or description matching解决方法](https://blog.csdn.net/conglin1991/article/details/55096422)
 3、[如何发布自己的开源框架到CocoaPods](https://www.jianshu.com/p/d2d81b58d716)
 4、[使用CocoaPods管理iOS库---制作pod篇](https://www.jianshu.com/p/d2d81b58d716)
 5、[如何创建私有 CocoaPods 仓库](https://www.jianshu.com/p/ddc2490bff9f)
-6、[Making a CocoaPod](https://guides.cocoapods.org/making/making-a-cocoapod.html)
-7、[Create and Distribute Private Libraries with Cocoapods](https://medium.com/@shahabejaz/create-and-distribute-private-libraries-with-cocoapods-5b6507b57a03)
+6、[Making a CocoaPod](https://guides.cocoapods.org/making/making-a-cocoapod.html)	
+7、[Create and Distribute Private Libraries with Cocoapods](https://medium.com/@shahabejaz/create-and-distribute-private-libraries-with-cocoapods-5b6507b57a03)	
+8、[CocoaPods使用总结](https://www.jianshu.com/p/7d0ad4cde012)
