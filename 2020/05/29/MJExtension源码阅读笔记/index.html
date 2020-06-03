@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="MAC,DMG," />
+  <meta name="keywords" content="iOS,JSON解析,MJExtension,开源库," />
 
 
 
@@ -101,38 +101,20 @@
 
 
 
-<meta name="description" content="自己使用Mac OS X系统也有一段时间了，也使用过许多MAC上好用的软件，下面是我对使用过和了解的软件资源一些整理。以后可能也会接触使用新的软件，我也会对文章进行更新。">
-<meta name="keywords" content="MAC,DMG">
+<meta name="description" content="编写native界面，就避免不了和JSON数据打交道，界面数据填充，我们可以通过原生的字典取值，这样做似乎不是很优雅，于是我们通过一个字典去初始化一个模型类，通过属性名取值，但这样似乎不是很自动化。于是后来就有了JSON自动转模型框架，如MJExtension、YYModel等高性能转化框架。MJExtension可以轻松实现JSON和模型互转，自定义别名，自定义转换，归档解档，总之相当的强大。">
+<meta name="keywords" content="iOS,JSON解析,MJExtension,开源库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac OS X系统常用工具">
-<meta property="og:url" content="http://blogwenbo.com/2018/07/08/Mac-OS-X系统常用工具/index.html">
+<meta property="og:title" content="MJExtension源码阅读笔记">
+<meta property="og:url" content="http://blogwenbo.com/2020/05/29/MJExtension源码阅读笔记/index.html">
 <meta property="og:site_name" content="Mr.Wen">
-<meta property="og:description" content="自己使用Mac OS X系统也有一段时间了，也使用过许多MAC上好用的软件，下面是我对使用过和了解的软件资源一些整理。以后可能也会接触使用新的软件，我也会对文章进行更新。">
+<meta property="og:description" content="编写native界面，就避免不了和JSON数据打交道，界面数据填充，我们可以通过原生的字典取值，这样做似乎不是很优雅，于是我们通过一个字典去初始化一个模型类，通过属性名取值，但这样似乎不是很自动化。于是后来就有了JSON自动转模型框架，如MJExtension、YYModel等高性能转化框架。MJExtension可以轻松实现JSON和模型互转，自定义别名，自定义转换，归档解档，总之相当的强大。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/6/20/1641ddfd2b663a3b?w=1240&h=567&f=png&s=277892">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1ft2lp2voypj31kw0qjhda.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1ft2lnzddz9j31kw0rctjc.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1ft2lm9pqnuj31kw0v80zi.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1ft2lkqycsjj31kw07ataf.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1ft2m8kkhc4j31kw0eq12y.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1ft2lft1yk1j31kw0loqak.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1ft2ljbjo8nj31kw0iujw8.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1ft2li35swmj31g60so44q.jpg">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/6/20/1641ddfd8a452070?w=520&h=158&f=webp&s=3692">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/6/20/1641ddfdc473d485?w=1240&h=724&f=png&s=348857">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1ft2laclcp7j31kw0qo1kx.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1ft2ldy5lvyj31kw0nu7wh.jpg">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/20/1637e1a0a82db7fe?w=1240&h=484&f=jpeg&s=30907">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1ft2mcnzraej31kw0ns4qp.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/0069RVTdly1fv71n24v2pj31kw0rqjt3.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/0069RVTdly1fv71t4bw8xj30b6086mz5.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/0069RVTdly1fv71z0255mj31kw0rwq6v.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/0069RVTdly1fv7241p9usj31kw0rukcf.jpg">
-<meta property="og:updated_time" content="2020-03-30T14:09:57.143Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfai6ntgzjj322w0u047h.jpg">
+<meta property="og:updated_time" content="2020-05-30T09:28:33.909Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac OS X系统常用工具">
-<meta name="twitter:description" content="自己使用Mac OS X系统也有一段时间了，也使用过许多MAC上好用的软件，下面是我对使用过和了解的软件资源一些整理。以后可能也会接触使用新的软件，我也会对文章进行更新。">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/6/20/1641ddfd2b663a3b?w=1240&h=567&f=png&s=277892">
+<meta name="twitter:title" content="MJExtension源码阅读笔记">
+<meta name="twitter:description" content="编写native界面，就避免不了和JSON数据打交道，界面数据填充，我们可以通过原生的字典取值，这样做似乎不是很优雅，于是我们通过一个字典去初始化一个模型类，通过属性名取值，但这样似乎不是很自动化。于是后来就有了JSON自动转模型框架，如MJExtension、YYModel等高性能转化框架。MJExtension可以轻松实现JSON和模型互转，自定义别名，自定义转换，归档解档，总之相当的强大。">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfai6ntgzjj322w0u047h.jpg">
 
 
 
@@ -162,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://blogwenbo.com/2018/07/08/Mac-OS-X系统常用工具/"/>
+  <link rel="canonical" href="http://blogwenbo.com/2020/05/29/MJExtension源码阅读笔记/"/>
 
 
 
 
 
-  <title>Mac OS X系统常用工具 | Mr.Wen</title>
+  <title>MJExtension源码阅读笔记 | Mr.Wen</title>
   
 
 
@@ -349,7 +331,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2018/07/08/Mac-OS-X系统常用工具/">
+    <link itemprop="mainEntityOfPage" href="http://blogwenbo.com/2020/05/29/MJExtension源码阅读笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Wen">
@@ -366,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac OS X系统常用工具</h1>
+          <h1 class="post-title" itemprop="name headline">MJExtension源码阅读笔记</h1>
         
 
         <div class="post-meta">
@@ -378,8 +360,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-08T17:33:50+08:00">
-                2018-07-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-29T21:11:48+08:00">
+                2020-05-29
               </time>
             
 
@@ -401,8 +383,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -418,7 +400,7 @@
 
           
           
-             <span id="/2018/07/08/Mac-OS-X系统常用工具/" class="leancloud_visitors" data-flag-title="Mac OS X系统常用工具">
+             <span id="/2020/05/29/MJExtension源码阅读笔记/" class="leancloud_visitors" data-flag-title="MJExtension源码阅读笔记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -448,7 +430,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,920
+                  1,814
                 </span>
               
 
@@ -464,7 +446,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  9
                 </span>
               
             </div>
@@ -472,7 +454,7 @@
 
           
               <div class="post-description">
-                  自己使用Mac OS X系统也有一段时间了，也使用过许多MAC上好用的软件，下面是我对使用过和了解的软件资源一些整理。以后可能也会接触使用新的软件，我也会对文章进行更新。
+                  编写native界面，就避免不了和JSON数据打交道，界面数据填充，我们可以通过原生的字典取值，这样做似乎不是很优雅，于是我们通过一个字典去初始化一个模型类，通过属性名取值，但这样似乎不是很自动化。于是后来就有了JSON自动转模型框架，如MJExtension、YYModel等高性能转化框架。MJExtension可以轻松实现JSON和模型互转，自定义别名，自定义转换，归档解档，总之相当的强大。
               </div>
           
 
@@ -492,181 +474,169 @@
         <p class="description"></p>
 
 <a id="more"></a>
-<h1 id="分类目录"><a href="#分类目录" class="headerlink" title="分类目录"></a>分类目录</h1><blockquote>
-<p><strong>版本控制</strong></p>
-<ul>
-<li>Cornerstone</li>
-<li>Sourcetree</li>
-<li>Tower</li>
-<li>GitHubDesktop</li>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>编写native界面，就避免不了和JSON数据打交道，界面数据填充，我们可以通过原生的字典取值，这样做似乎不是很优雅，于是我们通过一个字典去初始化一个模型类，通过属性名取值，但这样似乎不是很自动化。于是后来就有了JSON自动转模型框架，如MJExtension、YYModel等高性能转化框架。MJExtension可以轻松实现JSON和模型互转，自定义别名，自定义转换，归档解档，总之相当的强大。</p>
+</blockquote>
+<h2 id="实现原理浅析"><a href="#实现原理浅析" class="headerlink" title="实现原理浅析"></a>实现原理浅析</h2><p>通过阅读源码，其实现原理主要运用了Runtime技术、KVC实现的。</p>
+<h2 id="框架思维导图"><a href="#框架思维导图" class="headerlink" title="框架思维导图"></a>框架思维导图</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfai6ntgzjj322w0u047h.jpg" alt=""></p>
+<h2 id="实用技巧"><a href="#实用技巧" class="headerlink" title="实用技巧"></a>实用技巧</h2><h3 id="标注方法过期"><a href="#标注方法过期" class="headerlink" title="标注方法过期"></a>标注方法过期</h3><p>当我们设计一个开源库的时候，有时候考虑的可能并不是很全面，比如方法命名不准确，不能表明用途，或者不推荐使用了，可以给出相应的提示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/// MJExtensionConst</span><br><span class="line"></span><br><span class="line">/// 过期</span><br><span class="line">#define MJExtensionDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)</span><br><span class="line"></span><br><span class="line">/// 具体使用</span><br><span class="line">- (void)mj_keyValuesDidFinishConvertingToObject MJExtensionDeprecated(&quot;请使用`mj_didConvertToObjectWithKeyValues:`替代&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="遍历Protocol的PropertyList"><a href="#遍历Protocol的PropertyList" class="headerlink" title="遍历Protocol的PropertyList"></a>遍历Protocol的PropertyList</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">+ (BOOL)isFromNSObjectProtocolProperty:(NSString *)propertyName</span><br><span class="line">&#123;</span><br><span class="line">    if (!propertyName) return NO;</span><br><span class="line">    </span><br><span class="line">    static NSSet&lt;NSString *&gt; *objectProtocolPropertyNames;</span><br><span class="line">    static dispatch_once_t onceToken;</span><br><span class="line">    dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">        unsigned int count = 0;</span><br><span class="line">        objc_property_t *propertyList = protocol_copyPropertyList(@protocol(NSObject), &amp;count);</span><br><span class="line">        NSMutableSet *propertyNames = [NSMutableSet setWithCapacity:count];</span><br><span class="line">        for (int i = 0; i &lt; count; i++) &#123;</span><br><span class="line">            objc_property_t property = propertyList[i];</span><br><span class="line">            NSString *propertyName = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];</span><br><span class="line">            if (propertyName) &#123;</span><br><span class="line">                [propertyNames addObject:propertyName];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        objectProtocolPropertyNames = [propertyNames copy];</span><br><span class="line">        free(propertyList);</span><br><span class="line">    &#125;);</span><br><span class="line">    </span><br><span class="line">    return [objectProtocolPropertyNames containsObject:propertyName];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="获得类所有成员变量"><a href="#获得类所有成员变量" class="headerlink" title="获得类所有成员变量"></a>获得类所有成员变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">/// NSObject+MJKeyValue</span><br><span class="line">+ (NSMutableArray *)mj_properties</span><br><span class="line">&#123;</span><br><span class="line">    NSMutableArray *cachedProperties = [self mj_propertyDictForKey:&amp;MJCachedPropertiesKey][NSStringFromClass(self)];</span><br><span class="line">    if (cachedProperties == nil) &#123;</span><br><span class="line">    </span><br><span class="line">        if (cachedProperties == nil) &#123;</span><br><span class="line">            cachedProperties = [NSMutableArray array];</span><br><span class="line">            </span><br><span class="line">            /// 遍历类</span><br><span class="line">            [self mj_enumerateClasses:^(__unsafe_unretained Class c, BOOL *stop) &#123;</span><br><span class="line">                // 1.获得所有的成员变量</span><br><span class="line">                unsigned int outCount = 0;</span><br><span class="line">                objc_property_t *properties = class_copyPropertyList(c, &amp;outCount);</span><br><span class="line">                </span><br><span class="line">                // 2.遍历每一个成员变量</span><br><span class="line">                for (unsigned int i = 0; i&lt;outCount; i++) &#123;</span><br><span class="line">                    MJProperty *property = [MJProperty cachedPropertyWithProperty:properties[i]];</span><br><span class="line">                    // 过滤掉Foundation框架类里面的属性</span><br><span class="line">                    if ([MJFoundation isClassFromFoundation:property.srcClass]) continue;</span><br><span class="line">                    // 过滤掉`hash`, `superclass`, `description`, `debugDescription`</span><br><span class="line">                    if ([MJFoundation isFromNSObjectProtocolProperty:property.name]) continue;</span><br><span class="line">                    </span><br><span class="line">                    property.srcClass = c;</span><br><span class="line">                    [property setOriginKey:[self mj_propertyKey:property.name] forClass:self];</span><br><span class="line">                    [property setObjectClassInArray:[self mj_propertyObjectClassInArray:property.name] forClass:self];</span><br><span class="line">                    [cachedProperties addObject:property];</span><br><span class="line">                &#125;</span><br><span class="line">                </span><br><span class="line">                // 3.释放内存</span><br><span class="line">                free(properties);</span><br><span class="line">            &#125;];</span><br><span class="line">            </span><br><span class="line">            [self mj_propertyDictForKey:&amp;MJCachedPropertiesKey][NSStringFromClass(self)] = cachedProperties;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return cachedProperties;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="属性类型说明"><a href="#属性类型说明" class="headerlink" title="属性类型说明"></a><a href="https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtPropertyIntrospection.html#//apple_ref/doc/uid/TP40008048-CH101-SW1" target="_blank" rel="noopener">属性类型说明</a></h3><p>Objective-C type encodings</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>c</code></td>
+<td style="text-align:left">A <code>char</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i</code></td>
+<td style="text-align:left">An <code>int</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s</code></td>
+<td style="text-align:left">A <code>short</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>l</code></td>
+<td style="text-align:left">A <code>long`</code>l` is treated as a 32-bit quantity on 64-bit programs.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>q</code></td>
+<td style="text-align:left">A <code>long long</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>C</code></td>
+<td style="text-align:left">An <code>unsigned char</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>I</code></td>
+<td style="text-align:left">An <code>unsigned int</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>S</code></td>
+<td style="text-align:left">An <code>unsigned short</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L</code></td>
+<td style="text-align:left">An <code>unsigned long</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Q</code></td>
+<td style="text-align:left">An <code>unsigned long long</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>f</code></td>
+<td style="text-align:left">A <code>float</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>d</code></td>
+<td style="text-align:left">A <code>double</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>B</code></td>
+<td style="text-align:left">A C++ <code>bool</code> or a C99 <code>_Bool</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>v</code></td>
+<td style="text-align:left">A <code>void</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>*</code></td>
+<td style="text-align:left">A character string (<code>char *</code>)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@</code></td>
+<td style="text-align:left">An object (whether statically typed or typed <code>id</code>)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>#</code></td>
+<td style="text-align:left">A class object (<code>Class</code>)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:</code></td>
+<td style="text-align:left">A method selector (<code>SEL</code>)</td>
+</tr>
+<tr>
+<td style="text-align:left">[<em>array type</em>]</td>
+<td style="text-align:left">An array</td>
+</tr>
+<tr>
+<td style="text-align:left">{<em>name=type…</em>}</td>
+<td style="text-align:left">A structure</td>
+</tr>
+<tr>
+<td style="text-align:left">(<em>name</em>=<em>type…</em>)</td>
+<td style="text-align:left">A union</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>b</code>num</td>
+<td style="text-align:left">A bit field of <em>num</em> bits</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>^</code>type</td>
+<td style="text-align:left">A pointer to <em>type</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>?</code></td>
+<td style="text-align:left">An unknown type (among other things, this code is used for function pointers)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="对于可变字典或数组，添加信号量锁保证线程安全"><a href="#对于可变字典或数组，添加信号量锁保证线程安全" class="headerlink" title="对于可变字典或数组，添加信号量锁保证线程安全"></a>对于可变字典或数组，添加信号量锁保证线程安全</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/// MJProperty</span><br><span class="line">_propertyKeysLock = dispatch_semaphore_create(1);</span><br><span class="line"></span><br><span class="line">- (NSArray *)propertyKeysForClass:(Class)c</span><br><span class="line">&#123;</span><br><span class="line">    NSString *key = NSStringFromClass(c);</span><br><span class="line">    if (!key) return nil;</span><br><span class="line">    </span><br><span class="line">    MJ_LOCK(self.propertyKeysLock);</span><br><span class="line">    NSArray *propertyKeys = self.propertyKeysDict[key];</span><br><span class="line">    MJ_UNLOCK(self.propertyKeysLock);</span><br><span class="line">    return propertyKeys;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="通过block实现类遍历"><a href="#通过block实现类遍历" class="headerlink" title="通过block实现类遍历"></a>通过block实现类遍历</h3><p>类似系统数组Block遍历可，可通过<code>stop</code>控制遍历结束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> *  遍历所有类的block（父类）</span><br><span class="line"> */</span><br><span class="line">typedef void (^MJClassesEnumeration)(Class c, BOOL *stop);</span><br><span class="line"></span><br><span class="line">+ (void)mj_enumerateClasses:(MJClassesEnumeration)enumeration</span><br><span class="line">&#123;</span><br><span class="line">    // 1.没有block就直接返回</span><br><span class="line">    if (enumeration == nil) return;</span><br><span class="line">    </span><br><span class="line">    // 2.停止遍历的标记</span><br><span class="line">    BOOL stop = NO;</span><br><span class="line">    </span><br><span class="line">    // 3.当前正在遍历的类</span><br><span class="line">    Class c = self;</span><br><span class="line">    </span><br><span class="line">    // 4.开始遍历每一个类</span><br><span class="line">    while (c &amp;&amp; !stop) &#123;</span><br><span class="line">        // 4.1.执行操作</span><br><span class="line">        enumeration(c, &amp;stop);</span><br><span class="line">        </span><br><span class="line">        // 4.2.获得父类</span><br><span class="line">        c = class_getSuperclass(c);</span><br><span class="line">        </span><br><span class="line">        if ([MJFoundation isClassFromFoundation:c]) break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="基于Runtime自动归档解档"><a href="#基于Runtime自动归档解档" class="headerlink" title="基于Runtime自动归档解档"></a>基于Runtime自动归档解档</h3><ul>
+<li>如果模型属性很多的话，手动实现每个属性的归档解档，还是相当麻烦的，通过Runtime遍历成员变量，调用KVC，实现自动化归档解档</li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>办公</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">/// NSObject (MJCoding)</span><br><span class="line">@implementation NSObject (MJCoding)</span><br><span class="line"></span><br><span class="line">- (void)mj_encode:(NSCoder *)encoder</span><br><span class="line">&#123;</span><br><span class="line">    Class clazz = [self class];</span><br><span class="line">    </span><br><span class="line">    NSArray *allowedCodingPropertyNames = [clazz mj_totalAllowedCodingPropertyNames];</span><br><span class="line">    NSArray *ignoredCodingPropertyNames = [clazz mj_totalIgnoredCodingPropertyNames];</span><br><span class="line">    </span><br><span class="line">    [clazz mj_enumerateProperties:^(MJProperty *property, BOOL *stop) &#123;</span><br><span class="line">        // 检测是否被忽略</span><br><span class="line">        if (allowedCodingPropertyNames.count &amp;&amp; ![allowedCodingPropertyNames containsObject:property.name]) return;</span><br><span class="line">        if ([ignoredCodingPropertyNames containsObject:property.name]) return;</span><br><span class="line">        </span><br><span class="line">        id value = [property valueForObject:self];</span><br><span class="line">        if (value == nil) return;</span><br><span class="line">        [encoder encodeObject:value forKey:property.name];</span><br><span class="line">    &#125;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)mj_decode:(NSCoder *)decoder</span><br><span class="line">&#123;</span><br><span class="line">    Class clazz = [self class];</span><br><span class="line">    </span><br><span class="line">    NSArray *allowedCodingPropertyNames = [clazz mj_totalAllowedCodingPropertyNames];</span><br><span class="line">    NSArray *ignoredCodingPropertyNames = [clazz mj_totalIgnoredCodingPropertyNames];</span><br><span class="line">    </span><br><span class="line">    [clazz mj_enumerateProperties:^(MJProperty *property, BOOL *stop) &#123;</span><br><span class="line">        // 检测是否被忽略</span><br><span class="line">        if (allowedCodingPropertyNames.count &amp;&amp; ![allowedCodingPropertyNames containsObject:property.name]) return;</span><br><span class="line">        if ([ignoredCodingPropertyNames containsObject:property.name]) return;</span><br><span class="line">        </span><br><span class="line">        id value = [decoder decodeObjectForKey:property.name];</span><br><span class="line">        if (value == nil) &#123; // 兼容以前的MJExtension版本</span><br><span class="line">            value = [decoder decodeObjectForKey:[@&quot;_&quot; stringByAppendingString:property.name]];</span><br><span class="line">        &#125;</span><br><span class="line">        if (value == nil) return;</span><br><span class="line">        [property setValue:value forObject:self];</span><br><span class="line">    &#125;];</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
 <ul>
-<li>office2016</li>
+<li>具体使用，在.h文件遵循<code>NSCoding</code>协议，在.m添加<code>MJExtensionCodingImplementation</code>宏定义即可</li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>效率</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@implementation xxx</span><br><span class="line">  </span><br><span class="line">MJExtensionCodingImplementation</span><br><span class="line">  </span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Alfred</li>
+<li><code>NSCoding</code>从源码可以看出只实现了<code>NSCoding</code>编码解码，如果想使用更安全的编码解码，可以遵循<code>NSSecureCoding</code></li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>实用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// Objects which are safe to be encoded and decoded across privilege boundaries should adopt NSSecureCoding instead of NSCoding. Secure coders (those that respond YES to requiresSecureCoding) will only encode objects that adopt the NSSecureCoding protocol.</span><br><span class="line">// NOTE: NSSecureCoding guarantees only that an archive contains the classes it claims. It makes no guarantees about the suitability for consumption by the receiver of the decoded content of the archive. Archived objects which  may trigger code evaluation should be validated independently by the consumer of the objects to verify that no malicious code is executed (i.e. by checking key paths, selectors etc. specified in the archive).</span><br><span class="line"></span><br><span class="line">@protocol NSSecureCoding &lt;NSCoding&gt;</span><br><span class="line">@required</span><br><span class="line">// This property must return YES on all classes that allow secure coding. Subclasses of classes that adopt NSSecureCoding and override initWithCoder: must also override this method and return YES.</span><br><span class="line">// The Secure Coding Guide should be consulted when writing methods that decode data.</span><br><span class="line">@property (class, readonly) BOOL supportsSecureCoding;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Mounty</li>
-<li>CleanMyMac</li>
-<li>HideSwitch</li>
-<li>LICEcap</li>
+<li>在.m文件重写getter方法</li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>iOS开发必备</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ (BOOL)supportsSecureCoding &#123;</span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><ul>
+<li>自定义属性别名</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> *  将属性名换为其他key去字典中取值</span><br><span class="line"> *</span><br><span class="line"> *  @return 字典中的key是属性名，value是从字典中取值用的key</span><br><span class="line"> */</span><br><span class="line">+ (NSDictionary *)mj_replacedKeyFromPropertyName;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Dash</li>
-<li>真机调试包</li>
+<li>模型包含数组模型</li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>数据库管理</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> *  数组中需要转换的模型类</span><br><span class="line"> *</span><br><span class="line"> *  @return 字典中的key是数组属性名，value是数组中存放模型的Class（Class类型或者NSString类型）</span><br><span class="line"> */</span><br><span class="line">+ (NSDictionary *)mj_objectClassInArray;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Navicat</li>
+<li>字典转模型</li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>设计工具</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> *  通过字典来创建一个模型</span><br><span class="line"> *  @param keyValues 字典(可以是NSDictionary、NSData、NSString)</span><br><span class="line"> *  @return 新建的对象</span><br><span class="line"> */</span><br><span class="line">+ (instancetype)mj_objectWithKeyValues:(id)keyValues;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Sketch</li>
+<li>模型转字典</li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>MarkDown 工具</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> *  将模型转成字典</span><br><span class="line"> *  @return 字典</span><br><span class="line"> */</span><br><span class="line">- (NSMutableDictionary *)mj_keyValues;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Typora</li>
-<li>iPic</li>
-<li>Cmd Markdown</li>
-<li>Sublime Text</li>
+<li>当字典转模型完毕时调用</li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>网络工具</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)mj_didConvertToObjectWithKeyValues:(NSDictionary *)keyValues;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>shadowsocks</li>
-<li>Charles</li>
+<li>自定义转换,返回新的值</li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>终端工具</strong></p>
-<ul>
-<li>iTerm 2</li>
-</ul>
-</blockquote>
-<h1 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h1><h3 id="Cornerstone"><a href="#Cornerstone" class="headerlink" title="Cornerstone"></a>Cornerstone</h3><blockquote>
-<p>Cornerstone is an elegant SVN client designed specifically for the Mac. It is built on Subversion, a popular version control system well-known for its performance, flexibility, and scalability. Cornerstone excels in tracking &amp; displaying changes to data; its comparison tools enable users to view differences in multi-language formats. Better yet, Planio is now integrated into the Cornerstone environment — so you can now easily sync a local folder with your <a href="https://plan.io/subversion-hosting-and-git-hosting/" target="_blank" rel="noopener">Planio repositories</a> using your Mac!  </p>
-</blockquote>
-<p>MAC上一款优雅的SVN客服端，进入公司后，使用的第一款项目版本控制工具就是它了。它是建立在Subversion之上的，因其简洁、灵活、可扩展性而闻名。</p>
-<h4 id="官方网站：planio"><a href="#官方网站：planio" class="headerlink" title="官方网站：planio"></a>官方网站：<a href="https://plan.io/cornerstone-svn/" target="_blank" rel="noopener">planio</a></h4><p><img src="https://user-gold-cdn.xitu.io/2018/6/20/1641ddfd2b663a3b?w=1240&amp;h=567&amp;f=png&amp;s=277892" alt="1615c2235a0ed7ce.png"></p>
-<hr>
-<h3 id="Sourcetree"><a href="#Sourcetree" class="headerlink" title="Sourcetree"></a>Sourcetree</h3><blockquote>
-<p>Simplicity and power in a beautiful Git GUI. </p>
-</blockquote>
-<p>一款免费非常值得推荐的Git GUI图形客户端。自己托管在GitHub上的demo就是用的这款软件，使用很方便，免去了git繁琐命令，极大提高了工作效率。</p>
-<h4 id="官方网站：Sourcetree"><a href="#官方网站：Sourcetree" class="headerlink" title="官方网站：Sourcetree"></a>官方网站：<a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">Sourcetree</a></h4><h4 id="相关博客：Sourcetree安装与使用"><a href="#相关博客：Sourcetree安装与使用" class="headerlink" title="相关博客：Sourcetree安装与使用"></a>相关博客：<a href="https://www.jianshu.com/p/fdbf7c0bca93" target="_blank" rel="noopener">Sourcetree安装与使用</a></h4><p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1ft2lp2voypj31kw0qjhda.jpg" alt=""></p>
-<hr>
-<h3 id="Tower"><a href="#Tower" class="headerlink" title="Tower"></a>Tower</h3><blockquote>
-<p>Version control with Git - made easy.<br>In a beautiful, efficient, and powerful app.</p>
-</blockquote>
-<p>MAC&amp;&amp;Windows平台上最好用的Git GUI客户端。不像Sourcetree，这个款软件是付费的，RMB大概500元左右，不过也有破解版的，我也没有使用过，感觉功能和Sourcetree差不多吧。</p>
-<h4 id="官方网址：git-tower"><a href="#官方网址：git-tower" class="headerlink" title="官方网址：git-tower"></a>官方网址：<a href="https://www.git-tower.com/mac/" target="_blank" rel="noopener">git-tower</a></h4><p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1ft2lnzddz9j31kw0rctjc.jpg" alt=""></p>
-<hr>
-<h3 id="GitHubDesktop"><a href="#GitHubDesktop" class="headerlink" title="GitHubDesktop"></a>GitHubDesktop</h3><blockquote>
-<p>Extend your GitHub workflow beyond your browser with GitHub Desktop, completely redesigned with Electron. Get a unified cross-platform experience that’s completely open source and ready to customize.</p>
-</blockquote>
-<p>在我搜索MAC上好用的Git GUI客户端时下载用过，功能不是很多，基本的Git操都有，可以自己去了解下吧。</p>
-<h4 id="官方网址：GitHubDesktop"><a href="#官方网址：GitHubDesktop" class="headerlink" title="官方网址：GitHubDesktop"></a>官方网址：<a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHubDesktop</a></h4><p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1ft2lm9pqnuj31kw0v80zi.jpg" alt=""></p>
-<hr>
-<h1 id="网络工具"><a href="#网络工具" class="headerlink" title="网络工具"></a>网络工具</h1><h3 id="shadowsocks"><a href="#shadowsocks" class="headerlink" title="shadowsocks"></a>shadowsocks</h3><blockquote>
-<p>A secure socks5 proxy, designed to protect your Internet traffic.</p>
-</blockquote>
-<p>一个安全的socks5代理，旨在保护你的网络流量。ShadowsocksX-NG有些文件是用swift写的，也是最近才接触，配置VPN时用到。</p>
-<h4 id="官网网址：shadowsocks"><a href="#官网网址：shadowsocks" class="headerlink" title="官网网址：shadowsocks"></a>官网网址：<a href="https://github.com/shadowsocks" target="_blank" rel="noopener">shadowsocks</a></h4><p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1ft2lkqycsjj31kw07ataf.jpg" alt=""></p>
-<hr>
-<h3 id="Charles"><a href="#Charles" class="headerlink" title="Charles"></a>Charles</h3><blockquote>
-<p>Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet. This includes requests, responses and the HTTP headers (which contain the cookies and caching information). </p>
-</blockquote>
-<p><a href="http://www.charlesproxy.com/" target="_blank" rel="noopener">Charles</a> 是在 Mac 下常用的网络封包截取工具，在做<br>移动开发时，我们为了调试与服务器端的网络通讯协议，常常需要截取网络封包来分析。</p>
-<p>Charles 通过将自己设置成系统的网络访问代理服务器，使得所有的网络访问请求都通过它来完成，从而实现了网络封包的截取和分析。</p>
-<p>除了在做移动开发中调试端口外，Charles 也可以用于分析第三方应用的通讯协议。配合 Charles 的 SSL 功能，Charles 还可以分析 Https 协议。</p>
-<p>Charles 是收费软件，可以免费试用 30 天。试用期过后，未付费的用户仍然可以继续使用，但是每次使用时间不能超过 30 分钟，并且启动时将会有 10 秒种的延时。因此，该付费方案对广大用户还是相当友好的，即使你长期不付费，也能使用完整的软件功能。只是当你需要长时间进行封包调试时，会因为 Charles 强制关闭而遇到影响。</p>
-<h4 id="官方网址：Charles"><a href="#官方网址：Charles" class="headerlink" title="官方网址：Charles"></a>官方网址：<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles</a></h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1ft2m8kkhc4j31kw0eq12y.jpg" alt=""></p>
-<h1 id="iOS开发必备"><a href="#iOS开发必备" class="headerlink" title="iOS开发必备"></a>iOS开发必备</h1><h3 id="Dash"><a href="#Dash" class="headerlink" title="Dash"></a>Dash</h3><blockquote>
-<p>Dash is an API Documentation Browser and Code Snippet Manager. Dash stores snippets of code and instantly searches offline documentation sets for 200+ APIs, 100+ cheat sheets and more. You can even generate your own docsets or request docsets to be included.</p>
-</blockquote>
-<p>开发人员不可缺少的杰作。作为一名开发开者，我们可以通过这款软件阅读官方文档，存储代码片段，离线搜索API文档集，开发必备软件。</p>
-<h4 id="官方网站：Dash"><a href="#官方网站：Dash" class="headerlink" title="官方网站：Dash"></a>官方网站：<a href="https://kapeli.com/dash" target="_blank" rel="noopener">Dash</a></h4><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1ft2lft1yk1j31kw0loqak.jpg" alt="1615c3aa45f22f8c.png"></p>
-<h1 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h1><h3 id="LICEcap"><a href="#LICEcap" class="headerlink" title="LICEcap"></a>LICEcap</h3><blockquote>
-<p>simple animated screen captures   </p>
-</blockquote>
-<p>一款简单好用的屏幕GIF录制软件。比如做demo的时候，录制demo效果。</p>
-<h4 id="官网网址：LICEcap"><a href="#官网网址：LICEcap" class="headerlink" title="官网网址：LICEcap"></a>官网网址：<a href="https://www.cockos.com/licecap/" target="_blank" rel="noopener">LICEcap</a></h4><h4 id="相关博客：licecap-For-Mac安装与使用"><a href="#相关博客：licecap-For-Mac安装与使用" class="headerlink" title="相关博客：licecap For Mac安装与使用"></a>相关博客：<a href="https://www.jianshu.com/p/ea8f828802a3" target="_blank" rel="noopener">licecap For Mac安装与使用</a></h4><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1ft2ljbjo8nj31kw0iujw8.jpg" alt=""></p>
-<hr>
-<h3 id="Mounty"><a href="#Mounty" class="headerlink" title="Mounty"></a>Mounty</h3><blockquote>
-<p>A tiny tool to re-mount write-protected NTFS volumes under Mac OS X 10.9+ in read-write mode.</p>
-</blockquote>
-<p>一款MAC上mini的NTFS读写软件，相比付费的NTFS读写软件，这款软件值得推荐哦。</p>
-<h4 id="官网：Mounty"><a href="#官网：Mounty" class="headerlink" title="官网：Mounty"></a>官网：<a href="http://enjoygineering.com/mounty/" target="_blank" rel="noopener">Mounty</a></h4><h4 id="通过Homebrew安装："><a href="#通过Homebrew安装：" class="headerlink" title="通过Homebrew安装："></a>通过Homebrew安装：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install mounty</span><br></pre></td></tr></table></figure>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1ft2li35swmj31g60so44q.jpg" alt=""></p>
-<hr>
-<h3 id="HideSwitch"><a href="#HideSwitch" class="headerlink" title="HideSwitch"></a>HideSwitch</h3><blockquote>
-<p>一款实用小工具，显示和隐藏系统隐藏文件，和Show Or Hide这个款软件类似。<br><img src="https://user-gold-cdn.xitu.io/2018/6/20/1641ddfd8a452070?w=520&amp;h=158&amp;f=webp&amp;s=3692" alt="1615c2b4f7a59971.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (id)mj_newValueFromOldValue:(id)oldValue property:(MJProperty *)property;</span><br></pre></td></tr></table></figure>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><blockquote>
+<p>对MJExtension源码阅读了一遍，从中还是收获颇多。作者优秀的框架设计能力，每个类都有其单一的功能，通过组合统一，实现了一套友好易于使用的API接口，上手非常方便。从中也了解了Runtime技术的强大，应用也是非常的广泛。由于自己技术水平有限，对于作者高度封装的一些方法，现在理解还是有些吃力，对于runtime技术在项目中的使用，也并不是很多。以后有时间，还会重新阅读，更新新的体会与心得。对于开源库的阅读，更多的是要理解作者的设计思想，底层实现原理，希望自己能从开源库的阅读，能够学习优秀编程思想，经验，提升自己编码水平、风格、和健壮性。最后，文章如有描述不对的地方，希望不吝批评指教。</p>
 </blockquote>
 <hr>
-<h3 id="CleanMyMac"><a href="#CleanMyMac" class="headerlink" title="CleanMyMac"></a>CleanMyMac</h3><blockquote>
-<p>MAC系统清理软件，MAC上非常值得推荐的一款软件，不过是需要付费的，不过也有破解版的哦。</p>
-</blockquote>
-<h4 id="官方中文网站：mycleanmymac"><a href="#官方中文网站：mycleanmymac" class="headerlink" title="官方中文网站：mycleanmymac"></a>官方中文网站：<a href="http://www.mycleanmymac.com/" target="_blank" rel="noopener">mycleanmymac</a></h4><p><img src="https://user-gold-cdn.xitu.io/2018/6/20/1641ddfdc473d485?w=1240&amp;h=724&amp;f=png&amp;s=348857" alt="屏幕快照 2018-02-03 下午11.19.21.png"></p>
-<hr>
-<h1 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h1><h3 id="Alfred"><a href="#Alfred" class="headerlink" title="Alfred"></a>Alfred</h3><blockquote>
-<p>Alfred is an award-winning app for Mac OS X which boosts your efficiency with hotkeys, keywords, text expansion and more. Search your Mac and the web, and be more productive with custom actions to control your Mac.</p>
-</blockquote>
-<p>它是MAC OS X一款可以极大提高操作效率的软件，被人称之为一款神器。我们可以通过快捷键唤出Alfred，然后通过关键词搜索，总之，它是一款强大的软件。我也是最近才安装，了解的也不是很多，有兴趣的朋友可以下载使用吧。</p>
-<h4 id="官方网站：Alfred"><a href="#官方网站：Alfred" class="headerlink" title="官方网站：Alfred"></a>官方网站：<a href="https://www.alfredapp.com/" target="_blank" rel="noopener">Alfred</a></h4><p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1ft2laclcp7j31kw0qo1kx.jpg" alt=""></p>
-<hr>
-<h1 id="办公"><a href="#办公" class="headerlink" title="办公"></a>办公</h1><h3 id="office2016"><a href="#office2016" class="headerlink" title="office2016"></a>office2016</h3><blockquote>
-<p>MAC平台下的办公软件。<br><img src="https://ws1.sinaimg.cn/large/006tNc79ly1ft2ldy5lvyj31kw0nu7wh.jpg" alt="1615c30cc3cfe199.png"></p>
-</blockquote>
-<h1 id="终端工具"><a href="#终端工具" class="headerlink" title="终端工具"></a>终端工具</h1><h3 id="iTerm-2"><a href="#iTerm-2" class="headerlink" title="iTerm 2"></a>iTerm 2</h3><blockquote>
-<p>iTerm2 is a replacement for Terminal and the successor to iTerm. It works on Macs with macOS 10.10 or newer. iTerm2 brings the terminal into the modern age with features you never knew you always wanted.</p>
-</blockquote>
-<p>MAC上最好用的终端工具。</p>
-<h4 id="官方网站：iTerm-2"><a href="#官方网站：iTerm-2" class="headerlink" title="官方网站：iTerm 2"></a>官方网站：<a href="http://www.iterm2.com/" target="_blank" rel="noopener">iTerm 2</a></h4><p>相关博客：<a href="https://www.jianshu.com/p/34e0f4d6f7c0" target="_blank" rel="noopener">MAC上iTerm 2安装与使用</a><br><img src="https://user-gold-cdn.xitu.io/2018/5/20/1637e1a0a82db7fe?w=1240&amp;h=484&amp;f=jpeg&amp;s=30907" alt=""></p>
-<hr>
-<h1 id="数据库管理"><a href="#数据库管理" class="headerlink" title="数据库管理"></a>数据库管理</h1><h3 id="Navicat"><a href="#Navicat" class="headerlink" title="Navicat"></a>Navicat</h3><blockquote>
-<p>Powerful . Intuitive . Easy-to-use The ultimate solution for MongoDB management and development</p>
-</blockquote>
-<p>Navicat是一套快速、可靠并价格相当便宜的<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86/10509024" target="_blank" rel="noopener">数据库管理</a>工具，专为简化数据库的管理及降低系统管理成本而设。它的设计符合<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98/1216449" target="_blank" rel="noopener">数据库管理员</a>、开发人员及中小企业的需要。Navicat 是以直觉化的<a href="https://baike.baidu.com/item/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/3352324" target="_blank" rel="noopener">图形用户界面</a>而建的，让你可以以安全并且简单的方式创建、组织、访问并共用信息。</p>
-<h4 id="官方网址：Navicat"><a href="#官方网址：Navicat" class="headerlink" title="官方网址：Navicat"></a>官方网址：<a href="https://www.navicat.com/en/" target="_blank" rel="noopener">Navicat</a></h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1ft2mcnzraej31kw0ns4qp.jpg" alt=""></p>
-<h1 id="MarkDown-工具"><a href="#MarkDown-工具" class="headerlink" title="MarkDown 工具"></a>MarkDown 工具</h1><h3 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h3><blockquote>
-<p>Typora will give you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Replace them with a real live preview feature to help you concentrate the content itself.</p>
-</blockquote>
-<p>所见即所得，一款免费MarkDown编辑工具，自己也有使用一段时间，开始觉得挺好用的，后来发现有些操作有些卡顿不流畅，后来就放弃了，不过还是值得推荐。</p>
-<h4 id="官方网址：Typora"><a href="#官方网址：Typora" class="headerlink" title="官方网址：Typora"></a>官方网址：<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a></h4><p><img src="https://ws1.sinaimg.cn/large/0069RVTdly1fv71n24v2pj31kw0rqjt3.jpg" alt=""></p>
-<h3 id="iPic"><a href="#iPic" class="headerlink" title="iPic"></a>iPic</h3><blockquote>
-<p>一款图床神器，还在为MarkDown图传选择而烦恼吗，iPic将是你不错的选择，可直接在App Store下载。</p>
-</blockquote>
-<p><a href="https://toolinbox.net/iPic/" target="_blank" rel="noopener">介绍博客</a><br><img src="https://ws2.sinaimg.cn/large/0069RVTdly1fv71t4bw8xj30b6086mz5.jpg" alt=""></p>
-<h3 id="Cmd-Markdown"><a href="#Cmd-Markdown" class="headerlink" title="Cmd Markdown"></a>Cmd Markdown</h3><blockquote>
-<p>我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，Cmd Markdown 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。</p>
-</blockquote>
-<p>作业部落 Cmd Markdown这款编辑器，放弃<strong>Typora</strong>之后，最近在使用这款编辑器，感觉用起来比较稳定流畅，支持在线存储，如果你最求稳定，它将是一款不错的选择哦。</p>
-<h4 id="官方网址：Cmd-Markdown"><a href="#官方网址：Cmd-Markdown" class="headerlink" title="官方网址：Cmd Markdown"></a>官方网址：<a href="https://www.zybuluo.com/cmd/" target="_blank" rel="noopener">Cmd Markdown</a></h4><p><img src="https://ws3.sinaimg.cn/large/0069RVTdly1fv71z0255mj31kw0rwq6v.jpg" alt=""></p>
-<h3 id="Sublime-Text"><a href="#Sublime-Text" class="headerlink" title="Sublime Text"></a>Sublime Text</h3><blockquote>
-<p>A sophisticated text editor for code, markup and prose.</p>
-</blockquote>
-<p>Sublime Text是一套跨平台的文本编辑器，支持基于Python的插件。Sublime Text是专有软件，可透过包（Package）扩展。大多数的包使用自由软件授权发布，并由社群建置维护。在自己最开始接触Markdown的时候安装使用过，但是觉得写作的时候不够直观，就放弃了，最近发现这款工具真的很强大，对于代码块的编辑，有联想功能，非常值得推荐。</p>
-<h4 id="官方网址：Sublime-Text"><a href="#官方网址：Sublime-Text" class="headerlink" title="官方网址：Sublime_Text"></a>官方网址：<a href="https://zh.wikipedia.org/wiki/Sublime_Text" target="_blank" rel="noopener">Sublime_Text</a></h4><p><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv7241p9usj31kw0rukcf.jpg" alt=""></p>
 
       
     </div>
@@ -700,9 +670,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MAC/" rel="tag"><i class="fa fa-tag"></i> MAC</a>
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i> iOS</a>
           
-            <a href="/tags/DMG/" rel="tag"><i class="fa fa-tag"></i> DMG</a>
+            <a href="/tags/JSON解析/" rel="tag"><i class="fa fa-tag"></i> JSON解析</a>
+          
+            <a href="/tags/MJExtension/" rel="tag"><i class="fa fa-tag"></i> MJExtension</a>
+          
+            <a href="/tags/开源库/" rel="tag"><i class="fa fa-tag"></i> 开源库</a>
           
         </div>
       
@@ -728,8 +702,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/08/WBCategoryKit/" rel="next" title="WBCategoryKit">
-                <i class="fa fa-chevron-left"></i> WBCategoryKit
+              <a href="/2020/05/26/读AFNetworking收获与心得/" rel="next" title="读AFNetworking收获与心得">
+                <i class="fa fa-chevron-left"></i> 读AFNetworking收获与心得
               </a>
             
           </div>
@@ -737,10 +711,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/08/WBHUDManager/" rel="prev" title="WBHUDManager">
-                WBHUDManager <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -998,7 +968,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分类目录"><span class="nav-number">1.</span> <span class="nav-text">分类目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#版本控制"><span class="nav-number">2.</span> <span class="nav-text">版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cornerstone"><span class="nav-number">2.0.1.</span> <span class="nav-text">Cornerstone</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网站：planio"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">官方网站：planio</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sourcetree"><span class="nav-number">2.0.2.</span> <span class="nav-text">Sourcetree</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网站：Sourcetree"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">官方网站：Sourcetree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关博客：Sourcetree安装与使用"><span class="nav-number">2.0.2.2.</span> <span class="nav-text">相关博客：Sourcetree安装与使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tower"><span class="nav-number">2.0.3.</span> <span class="nav-text">Tower</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网址：git-tower"><span class="nav-number">2.0.3.1.</span> <span class="nav-text">官方网址：git-tower</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHubDesktop"><span class="nav-number">2.0.4.</span> <span class="nav-text">GitHubDesktop</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网址：GitHubDesktop"><span class="nav-number">2.0.4.1.</span> <span class="nav-text">官方网址：GitHubDesktop</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络工具"><span class="nav-number">3.</span> <span class="nav-text">网络工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shadowsocks"><span class="nav-number">3.0.1.</span> <span class="nav-text">shadowsocks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官网网址：shadowsocks"><span class="nav-number">3.0.1.1.</span> <span class="nav-text">官网网址：shadowsocks</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Charles"><span class="nav-number">3.0.2.</span> <span class="nav-text">Charles</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网址：Charles"><span class="nav-number">3.0.2.1.</span> <span class="nav-text">官方网址：Charles</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS开发必备"><span class="nav-number">4.</span> <span class="nav-text">iOS开发必备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dash"><span class="nav-number">4.0.1.</span> <span class="nav-text">Dash</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网站：Dash"><span class="nav-number">4.0.1.1.</span> <span class="nav-text">官方网站：Dash</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实用工具"><span class="nav-number">5.</span> <span class="nav-text">实用工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LICEcap"><span class="nav-number">5.0.1.</span> <span class="nav-text">LICEcap</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官网网址：LICEcap"><span class="nav-number">5.0.1.1.</span> <span class="nav-text">官网网址：LICEcap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关博客：licecap-For-Mac安装与使用"><span class="nav-number">5.0.1.2.</span> <span class="nav-text">相关博客：licecap For Mac安装与使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mounty"><span class="nav-number">5.0.2.</span> <span class="nav-text">Mounty</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官网：Mounty"><span class="nav-number">5.0.2.1.</span> <span class="nav-text">官网：Mounty</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过Homebrew安装："><span class="nav-number">5.0.2.2.</span> <span class="nav-text">通过Homebrew安装：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HideSwitch"><span class="nav-number">5.0.3.</span> <span class="nav-text">HideSwitch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CleanMyMac"><span class="nav-number">5.0.4.</span> <span class="nav-text">CleanMyMac</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方中文网站：mycleanmymac"><span class="nav-number">5.0.4.1.</span> <span class="nav-text">官方中文网站：mycleanmymac</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#效率"><span class="nav-number">6.</span> <span class="nav-text">效率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Alfred"><span class="nav-number">6.0.1.</span> <span class="nav-text">Alfred</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网站：Alfred"><span class="nav-number">6.0.1.1.</span> <span class="nav-text">官方网站：Alfred</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#办公"><span class="nav-number">7.</span> <span class="nav-text">办公</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#office2016"><span class="nav-number">7.0.1.</span> <span class="nav-text">office2016</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#终端工具"><span class="nav-number">8.</span> <span class="nav-text">终端工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iTerm-2"><span class="nav-number">8.0.1.</span> <span class="nav-text">iTerm 2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网站：iTerm-2"><span class="nav-number">8.0.1.1.</span> <span class="nav-text">官方网站：iTerm 2</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库管理"><span class="nav-number">9.</span> <span class="nav-text">数据库管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Navicat"><span class="nav-number">9.0.1.</span> <span class="nav-text">Navicat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网址：Navicat"><span class="nav-number">9.0.1.1.</span> <span class="nav-text">官方网址：Navicat</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MarkDown-工具"><span class="nav-number">10.</span> <span class="nav-text">MarkDown 工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Typora"><span class="nav-number">10.0.1.</span> <span class="nav-text">Typora</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网址：Typora"><span class="nav-number">10.0.1.1.</span> <span class="nav-text">官方网址：Typora</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iPic"><span class="nav-number">10.0.2.</span> <span class="nav-text">iPic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cmd-Markdown"><span class="nav-number">10.0.3.</span> <span class="nav-text">Cmd Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网址：Cmd-Markdown"><span class="nav-number">10.0.3.1.</span> <span class="nav-text">官方网址：Cmd Markdown</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sublime-Text"><span class="nav-number">10.0.4.</span> <span class="nav-text">Sublime Text</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官方网址：Sublime-Text"><span class="nav-number">10.0.4.1.</span> <span class="nav-text">官方网址：Sublime_Text</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现原理浅析"><span class="nav-number">2.</span> <span class="nav-text">实现原理浅析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架思维导图"><span class="nav-number">3.</span> <span class="nav-text">框架思维导图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实用技巧"><span class="nav-number">4.</span> <span class="nav-text">实用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标注方法过期"><span class="nav-number">4.1.</span> <span class="nav-text">标注方法过期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历Protocol的PropertyList"><span class="nav-number">4.2.</span> <span class="nav-text">遍历Protocol的PropertyList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获得类所有成员变量"><span class="nav-number">4.3.</span> <span class="nav-text">获得类所有成员变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性类型说明"><span class="nav-number">4.4.</span> <span class="nav-text">属性类型说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对于可变字典或数组，添加信号量锁保证线程安全"><span class="nav-number">4.5.</span> <span class="nav-text">对于可变字典或数组，添加信号量锁保证线程安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过block实现类遍历"><span class="nav-number">4.6.</span> <span class="nav-text">通过block实现类遍历</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于Runtime自动归档解档"><span class="nav-number">4.7.</span> <span class="nav-text">基于Runtime自动归档解档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用方法"><span class="nav-number">5.</span> <span class="nav-text">常用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a></li></ol></div>
             
 
           </div>
