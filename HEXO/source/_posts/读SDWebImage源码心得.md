@@ -9,8 +9,6 @@ image: https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr9lek4rj31110dk0uo.jpg
 ---
 <p class="description"></p>
 
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr9lek4rj31110dk0uo.jpg" alt="" style="width:100%" />
-
 <!-- more -->
 
 ## 一、前言
