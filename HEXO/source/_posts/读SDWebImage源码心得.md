@@ -4,7 +4,7 @@ tags: [iOS,SDWebImage]
 date: 2020-06-07 15:17:52
 permalink:
 categories: iOS
-description: 笔者在业余时间对iOS著名图片加载框架[SDWebImage ](https://github.com/SDWebImage/SDWebImage)**V5.8.0**源码进行了阅读，发现和V5.0之前版本架构设计有很大的不同，V5.0之后的版本是面向协议的架构设计，将图片缓存、编码解码、下载、自定义转换定义了一套标准协议方法，使用者想自定义一些操作，通过遵循协议，可以很方便的进行扩展。总之，SDWebImage源码是非常值得阅读，它应用了软件设计原则，和设计模式，使软件架构层次清晰，更容易理解阅读，扩展。SDWebImage源码还是有点多的，在零零散散的时间花了好几天粗略的读了一遍，收获还是颇多的，由于笔者现在水平有限，对于有些源码理解不是很到位，有理解描述不对的地方，希望能批评指正。
+description: 笔者在业余时间对iOS著名图片加载框架[SDWebImage ](https://github.com/SDWebImage/SDWebImage)**V5.8.0**源码进行了阅读，发现和V5.0之前版本架构设计有很大的不同，V5.0之后的版本是面向协议的架构设计，将图片缓存、编码解码、下载、自定义转换定义了一套标准协议方法，使用者想自定义一些操作，通过遵循协议，可以很方便的进行扩展。总之，SDWebImage源码是非常值得阅读，它应用了软件设计原则，和设计模式，使软件架构层次清晰，更容易理解阅读，扩展。SDWebImage源码还是有点多的，笔者零零散散花了几天，对源码粗略的读了一遍，收获还是颇多的，由于笔者现在水平有限，对于有些源码理解不是很到位，有理解描述不对的地方，希望能批评指正。
 image: https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr9lek4rj31110dk0uo.jpg
 ---
 <p class="description"></p>
@@ -13,7 +13,7 @@ image: https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr9lek4rj31110dk0uo.jpg
 
 ## 一、前言
 
-> 笔者在业余时间对iOS著名图片加载框架[SDWebImage ](https://github.com/SDWebImage/SDWebImage)**V5.8.0**源码进行了阅读，发现和V5.0之前版本架构设计有很大的不同，V5.0之后的版本是面向协议的架构设计，将图片缓存、编码解码、下载、自定义转换定义了一套标准协议方法，使用者想自定义一些操作，通过遵循协议，可以很方便的进行扩展。总之，SDWebImage源码是非常值得阅读，它应用了软件设计原则，和设计模式，使软件架构层次清晰，更容易理解阅读，扩展。SDWebImage源码还是有点多的，在零零散散的时间花了几天粗略的读了一遍，收获还是颇多的，由于笔者现在水平有限，对于有些源码理解不是很到位，有理解描述不对的地方，希望能批评指正。
+> 笔者在业余时间对iOS著名图片加载框架[SDWebImage ](https://github.com/SDWebImage/SDWebImage)**V5.8.0**源码进行了阅读，发现和V5.0之前版本架构设计有很大的不同，V5.0之后的版本是面向协议的架构设计，将图片缓存、编码解码、下载、自定义转换定义了一套标准协议方法，使用者想自定义一些操作，通过遵循协议，可以很方便的进行扩展。总之，SDWebImage源码是非常值得阅读，它应用了软件设计原则，和设计模式，使软件架构层次清晰，更容易理解阅读，扩展。SDWebImage源码还是有点多的，笔者零零散散花了几天，对源码粗略的读了一遍，收获还是颇多的，由于笔者现在水平有限，对于有些源码理解不是很到位，有理解描述不对的地方，希望能批评指正。
 
 ## 二、官方架构图解
 
@@ -1194,7 +1194,7 @@ UIKit相关UI控件分类API调用上游类， 管理图片缓存、下载、编
 
 ### 3.8、AnimatedImage
 
-类似[FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)高性能播放GIF格式图片，对于大容量GIF图片，直接加载会导致内存暴涨，这点在我负责的APP深有体会，由于GIF图片过大，导致首次加载界面会出现卡顿，界面渲染延迟，后来换成了[FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)，解决了播放GIF大图内存的问题。现在SDWebImage也提供了GIT图片加载类，提高性能。
+类似[FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)高性能播放GIF格式图片，对于大容量GIF图片，直接加载会导致内存暴涨，这点在我负责的APP深有体会，由于GIF图片过大，导致首次加载界面会出现卡顿，界面渲染延迟，后来换成了[FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)，解决了播放GIF大图内存的问题。现在SDWebImage也提供了GIF图片加载类，提高性能。
 
 - **SDAnimatedImage**：继承自UIImage
 - **SDAnimatedImageView**：继承UIImageView，处理GIF图片播放
