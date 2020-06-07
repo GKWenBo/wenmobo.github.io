@@ -110,11 +110,10 @@ image:
 
 #### 弹幕
 
-| 开源库名                                                     | 简介                    | 推荐指数 |
-| ------------------------------------------------------------ | ----------------------- | -------- |
-| [HJDanmakuDemo](https://github.com/panghaijiao/HJDanmakuDemo) | 弹幕库                  | ⭐️⭐️⭐️      |
-| [BarrageRenderer](https://github.com/unash/BarrageRenderer)  | 一个 iOS 上的弹幕渲染库 | ⭐️⭐️⭐️⭐️     |
-|                                                              |                         |          |
+|                           开源库名                           |          简介           | 推荐指数 |
+| :----------------------------------------------------------: | :---------------------: | :------: |
+| [HJDanmakuDemo](https://github.com/panghaijiao/HJDanmakuDemo) |         弹幕库          |   ⭐️⭐️⭐️    |
+| [BarrageRenderer](https://github.com/unash/BarrageRenderer)  | 一个 iOS 上的弹幕渲染库 |   ⭐️⭐️⭐️⭐️   |
 
 
 
@@ -458,10 +457,10 @@ image:
 
 #### 图像处理
 
-| 开源库名                                                     | 简介 | 推荐指数                                                     |
-| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
-| [GPUImage](https://github.com/BradLarson/GPUImage)           |      | ⭐️⭐️⭐️⭐️⭐️                                                        |
-| [TOCropViewController](https://github.com/TimOliver/TOCropViewController) |      | A view controller for iOS that allows users to crop portions of UIImage objects |
+|                           开源库名                           |                             简介                             | 推荐指数 |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :------: |
+|      [GPUImage](https://github.com/BradLarson/GPUImage)      |                                                              |  ⭐️⭐️⭐️⭐️⭐️   |
+| [TOCropViewController](https://github.com/TimOliver/TOCropViewController) | A view controller for iOS that allows users to crop portions of UIImage objects |   ⭐️⭐️⭐️⭐️   |
 
 
 
@@ -511,10 +510,10 @@ image:
 
 #### 界面动态化方案
 
-| 开源库名                                                    | 简介                                                         | 推荐指数                                                     |
-| ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Tangram-iOS](https://github.com/alibaba/Tangram-iOS)       | Tangram is a modular UI solution for building native page dynamically, including Tangram for Android, Tangram for iOS and even backend CMS. This project provides the sdk on iOS platform. | ⭐️⭐️⭐️                                                          |
-| [LazyScrollView](https://github.com/alibaba/LazyScrollView) |                                                              | An iOS ScrollView to resolve the problem of reusability in views. |
+|                          开源库名                           |                             简介                             | 推荐指数 |
+| :---------------------------------------------------------: | :----------------------------------------------------------: | :------: |
+|    [Tangram-iOS](https://github.com/alibaba/Tangram-iOS)    | Tangram is a modular UI solution for building native page dynamically, including Tangram for Android, Tangram for iOS and even backend CMS. This project provides the sdk on iOS platform. |   ⭐️⭐️⭐️    |
+| [LazyScrollView](https://github.com/alibaba/LazyScrollView) | An iOS ScrollView to resolve the problem of reusability in views. |   ⭐️⭐️⭐️    |
 
 
 
@@ -622,12 +621,12 @@ image:
 
 #### Hook
 
-| 开源库名                                                     | 简介                                                         | 推荐指数 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
-| [Aspects](https://github.com/steipete/Aspects)               | Delightful, simple library for aspect oriented programming in Objective-C and Swift | ⭐️⭐️⭐️⭐️     |
-| [fishhook](https://github.com/facebook/fishhook)             | A library that enables dynamically rebinding symbols in Mach-O binaries running on iOS. | ⭐️⭐️⭐️⭐️     |
-| [TrampolineHook](https://github.com/SatanWoo/TrampolineHook) | A solution for centralized method redirection                | ⭐️⭐️⭐️⭐️     |
-| [Stinger](https://github.com/eleme/Stinger)                  | https://github.com/eleme/Stinger                             | ⭐️⭐️⭐️⭐️     |
+|                           开源库名                           |                             简介                             | 推荐指数 |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :------: |
+|        [Aspects](https://github.com/steipete/Aspects)        | Delightful, simple library for aspect oriented programming in Objective-C and Swift |   ⭐️⭐️⭐️⭐️   |
+|       [fishhook](https://github.com/facebook/fishhook)       | A library that enables dynamically rebinding symbols in Mach-O binaries running on iOS. |   ⭐️⭐️⭐️⭐️   |
+| [TrampolineHook](https://github.com/SatanWoo/TrampolineHook) |        A solution for centralized method redirection         |   ⭐️⭐️⭐️⭐️   |
+|         [Stinger](https://github.com/eleme/Stinger)          | Stinger is a high-efficiency library with great compatibility, for aop in Objective-C, using libffi instead of Objective-C message forwarding. |   ⭐️⭐️⭐️⭐️   |
 
 
 
