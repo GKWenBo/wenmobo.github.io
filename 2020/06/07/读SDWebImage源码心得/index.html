@@ -109,18 +109,17 @@
 <meta property="og:site_name" content="Mr.Wen">
 <meta property="og:description" content="笔者在业余时间对iOS著名图片加载框架[SDWebImage ](https://github.com/SDWebImage/SDWebImage)**V5.8.0**源码进行了阅读，发现和V5.0之前版本架构设计有很大的不同，V5.0之后的版本是面向协议的架构设计，将图片缓存、编码解码、下载、自定义转换定义了一套标准协议方法，使用者想自定义一些操作，通过遵循协议，可以很方便的进行扩展。总之，SD">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr9lek4rj31110dk0uo.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr6cmcxxj30sg0lcjtb.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr7pni02j30zo0u0gwu.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr8tfo67j31ac0hn438.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr9lek4rj31110dk0uo.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjrxs5kkfj30u00xb4lh.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjtj8emsuj311p0u0478.jpg">
-<meta property="og:updated_time" content="2020-06-07T14:55:28.545Z">
+<meta property="og:updated_time" content="2020-06-07T15:03:47.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读SDWebImage源码心得">
 <meta name="twitter:description" content="笔者在业余时间对iOS著名图片加载框架[SDWebImage ](https://github.com/SDWebImage/SDWebImage)**V5.8.0**源码进行了阅读，发现和V5.0之前版本架构设计有很大的不同，V5.0之后的版本是面向协议的架构设计，将图片缓存、编码解码、下载、自定义转换定义了一套标准协议方法，使用者想自定义一些操作，通过遵循协议，可以很方便的进行扩展。总之，SD">
-<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr9lek4rj31110dk0uo.jpg">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr6cmcxxj30sg0lcjtb.jpg">
 
 
 
@@ -479,7 +478,6 @@
       
         <p class="description"></p>
 
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjr9lek4rj31110dk0uo.jpg" alt="" style="width:100%"></p>
 <a id="more"></a>
 <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><blockquote>
 <p>笔者在业余时间对iOS著名图片加载框架<a href="https://github.com/SDWebImage/SDWebImage" target="_blank" rel="noopener">SDWebImage </a><strong>V5.8.0</strong>源码进行了阅读，发现和V5.0之前版本架构设计有很大的不同，V5.0之后的版本是面向协议的架构设计，将图片缓存、编码解码、下载、自定义转换定义了一套标准协议方法，使用者想自定义一些操作，通过遵循协议，可以很方便的进行扩展。总之，SDWebImage源码是非常值得阅读，它应用了软件设计原则，和设计模式，使软件架构层次清晰，更容易理解阅读，扩展。SDWebImage源码还是有点多的，在零零散散的时间花了几天粗略的读了一遍，收获还是颇多的，由于笔者现在水平有限，对于有些源码理解不是很到位，有理解描述不对的地方，希望能批评指正。</p>
