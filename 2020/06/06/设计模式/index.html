@@ -111,7 +111,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfingk7lqtj31490lbju6.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1gfimwh5vk2j315r0u0jw8.jpg">
-<meta property="og:updated_time" content="2020-06-07T15:04:16.776Z">
+<meta property="og:updated_time" content="2020-06-12T16:07:23.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式">
 <meta name="twitter:description" content="设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。">
@@ -431,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,322
+                  1,676
                 </span>
               
 
@@ -447,7 +447,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  6
                 </span>
               
             </div>
@@ -527,13 +527,28 @@
 <p>前5中被称之为SOLID原则</p>
 <h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfingk7lqtj31490lbju6.jpg" alt=""></p>
 <h2 id="设计原则定义"><a href="#设计原则定义" class="headerlink" title="设计原则定义"></a>设计原则定义</h2><h3 id="开闭原则（Open-Close-Principle）"><a href="#开闭原则（Open-Close-Principle）" class="headerlink" title="开闭原则（Open Close Principle）"></a>开闭原则（Open Close Principle）</h3><p>一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>1、类别，在不修改现有类，为类添加方法</p>
+</li>
+</ul>
 <h3 id="单一职责原则（Single-Responsibility-Principle）"><a href="#单一职责原则（Single-Responsibility-Principle）" class="headerlink" title="单一职责原则（Single Responsibility Principle）"></a>单一职责原则（Single Responsibility Principle）</h3><p>一个类只允许有一个职责，即只有一个导致该类变更的原因。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>1、UIView与CALayer，UIView负责事件管理，提供内容，CALayer负责渲染。</p>
+</li>
+</ul>
 <h3 id="依赖倒置原则（Dependency-Inversion-Principle）"><a href="#依赖倒置原则（Dependency-Inversion-Principle）" class="headerlink" title="依赖倒置原则（Dependency Inversion Principle）"></a>依赖倒置原则（Dependency Inversion Principle）</h3><ul>
 <li>依赖抽象，而不是依赖实现。</li>
 <li>抽象不应该依赖细节；细节应该依赖抽象。</li>
 <li>高层模块不能依赖低层模块，二者都应该依赖抽象。</li>
 </ul>
 <h3 id="接口分离原则（Interface-Segregation-Principle）"><a href="#接口分离原则（Interface-Segregation-Principle）" class="headerlink" title="接口分离原则（Interface Segregation Principle）"></a>接口分离原则（Interface Segregation Principle）</h3><p>多个特定的客户端接口要好于一个通用性的总接口。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>1、UITableViewDelegate，UITableViewDataSource，一个专门负责事件响应，一个专门负责数据提供</p>
+</li>
+</ul>
 <h3 id="迪米特法则（Law-of-Demeter）"><a href="#迪米特法则（Law-of-Demeter）" class="headerlink" title="迪米特法则（Law of Demeter）"></a>迪米特法则（Law of Demeter）</h3><p>一个对象应该对尽可能少的对象有接触，也就是只接触那些真正需要接触的对象。</p>
 <h3 id="里氏替换原则（Liskov-Substitution-Principle）"><a href="#里氏替换原则（Liskov-Substitution-Principle）" class="headerlink" title="里氏替换原则（Liskov Substitution Principle）"></a>里氏替换原则（Liskov Substitution Principle）</h3><p>所有引用基类的地方必须能透明地使用其子类的对象，也就是说子类对象可以替换其父类对象，而程序执行效果不变。</p>
 <h3 id="组合-聚合复用原则"><a href="#组合-聚合复用原则" class="headerlink" title="组合/聚合复用原则"></a>组合/聚合复用原则</h3><p>要尽量使用合成/聚合，尽量不要使用继承。</p>
@@ -542,15 +557,40 @@
 <p>结构型模式：把类或对象结合在一起形成一个更大的结构。</p>
 <p>行为型模式：类和对象如何交互，及划分责任和算法。</p>
 <h2 id="分类模式的关键点"><a href="#分类模式的关键点" class="headerlink" title="分类模式的关键点"></a>分类模式的关键点</h2><h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>某个类只能有一个实例，提供一个全局的访问点。</p>
+<ul>
+<li><p>iOS应用场景</p>
+<p>1、Cocoa中框架中的<strong>NSFileManager</strong>、<strong>NSUserDefaults</strong>，自己实现的单例等。</p>
+</li>
+</ul>
 <h3 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h3><p>一个工厂类根据传入的参量决定创建出那一种产品类的实例。</p>
 <h3 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h3><p>定义一个创建对象的接口，让子类决定实例化那个类。</p>
 <h3 id="抽象工厂"><a href="#抽象工厂" class="headerlink" title="抽象工厂"></a>抽象工厂</h3><p>创建相关或依赖对象的家族，而无需明确指定具体类。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>1、Cocoa将类簇限制在数据存储可能因环境而变的对象生成上。Foundation框架为<code>NSString</code>、<code>NSData</code>、<code>NSDictionary</code>、<code>NSSet</code>、和<code>NSArray</code>对象定义了类簇。公共超类包括上述的不可变类和与其相互补充的可变类<code>NSMutableString</code>、<code>NSMutableData</code>、<code>NSMutableDictionary</code>、<code>NSMutableSet</code>、和<code>NSMutableArray</code>。</p>
+</li>
+</ul>
 <h3 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h3><p>封装一个复杂对象的构建过程，并可以按步骤构造。</p>
 <h3 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h3><p>通过复制现有的实例来创建新的实例。</p>
+<ul>
+<li><p>iOS应用场景</p>
+<p>1、在Objective-C中使用原型模式, 首先要遵循NSCoping协议(OC中一些内置类遵循该协议, 例如NSArray, NSMutableArray等)</p>
+</li>
+</ul>
 <h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><p>将一个类的方法接口转换成客户希望的另外一个接口。</p>
 <h3 id="组合模式"><a href="#组合模式" class="headerlink" title="组合模式"></a>组合模式</h3><p>将对象组合成树形结构以表示“”部分-整体“”的层次结构。</p>
 <h3 id="装饰模式"><a href="#装饰模式" class="headerlink" title="装饰模式"></a>装饰模式</h3><p>动态的给对象添加新的功能。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>1、Cocoa在实现某些类时用到了装饰模式，包括<code>NSAttributedString</code>、<code>NSScrollView</code>、和<code>NSTableView</code>。</p>
+</li>
+</ul>
 <h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><p>为其他对象提供一个代理以便控制这个对象的访问。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>UITableView，UIScrollView，AppDelegate</p>
+</li>
+</ul>
 <h3 id="亨元（蝇量）模式"><a href="#亨元（蝇量）模式" class="headerlink" title="亨元（蝇量）模式"></a>亨元（蝇量）模式</h3><p>通过共享技术来有效的支持大量细粒度的对象。</p>
 <h3 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h3><p>对外提供一个统一的方法，来访问子系统中的一群接口。</p>
 <h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><p>将抽象部分和它的实现部分分离，使它们都可以独立的变化。</p>
@@ -559,12 +599,32 @@
 <h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><p>定义一系列算法，把他们封装起来，并且使它们可以相互替换。</p>
 <h3 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h3><p>允许一个对象在其对象内部状态改变时改变它的行为。</p>
 <h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><p>对象间的一对多的依赖关系。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>1、通知、KVO</p>
+</li>
+</ul>
 <h3 id="备忘录模式"><a href="#备忘录模式" class="headerlink" title="备忘录模式"></a>备忘录模式</h3><p>在不破坏封装的前提下，保持对象的内部状态。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>1、归档、序列化、CoreData等</p>
+</li>
+</ul>
 <h3 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h3><p>用一个中介对象来封装一系列的对象交互。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>1、CTMediator组件化</p>
+</li>
+</ul>
 <h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p>将命令请求封装为一个对象，使得可以用不同的请求来进行参数化。</p>
 <h3 id="访问者模式"><a href="#访问者模式" class="headerlink" title="访问者模式"></a>访问者模式</h3><p>在不改变数据结构的前提下，增加作用于一组对象元素的新功能。</p>
 <h3 id="责任链模式"><a href="#责任链模式" class="headerlink" title="责任链模式"></a>责任链模式</h3><p>将请求的发送者和接收者解耦，使的多个对象都有处理这个请求的机会。</p>
 <h3 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h3><p>一种遍历访问聚合对象中各个元素的方法，不暴露该对象的内部结构。</p>
+<ul>
+<li><p>iOS应用例子</p>
+<p>1、Foundation框架中的<code>NSEnumerator</code>类实现了迭代器模式。<code>NSEnumerator</code>抽象类的私有具体子类返回的枚举器对象可以顺序遍历不同类型的集合—数组、集合、字典（值和键）—并将集合中的对象返回给客户代码。</p>
+</li>
+</ul>
 <hr>
 
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.jianshu.com/p/e5c69c7b8c00" target="_blank" rel="noopener">iOS设计模式详解</a></p>
@@ -769,7 +829,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -791,7 +851,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -924,7 +984,7 @@ show_date_time();
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="heart">
     <i class="fa fa-heart"></i>
   </span>
@@ -960,7 +1020,7 @@ show_date_time();
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共43.2k字</span>
+  <span class="post-count">博客全站共44.0k字</span>
 </div>
 
         
