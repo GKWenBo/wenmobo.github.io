@@ -99,8 +99,8 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>Xcode</tag>
         <tag>iOS 13</tag>
+        <tag>Xcode</tag>
       </tags>
   </entry>
   <entry>
@@ -313,8 +313,8 @@
       </categories>
       <tags>
         <tag>iOS</tag>
-        <tag>Objective-C</tag>
         <tag>CocoaPods</tag>
+        <tag>Objective-C</tag>
         <tag>GitHub</tag>
       </tags>
   </entry>
@@ -380,8 +380,8 @@
       </categories>
       <tags>
         <tag>iOS</tag>
-        <tag>Objective-C</tag>
         <tag>Chisel</tag>
+        <tag>Objective-C</tag>
         <tag>Swift</tag>
         <tag>Xcode</tag>
       </tags>
@@ -422,8 +422,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
         <tag>Hexo</tag>
+        <tag>GitHub</tag>
         <tag>GitPages</tag>
       </tags>
   </entry>
